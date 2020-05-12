@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May 12 12:45:29 2020
+# Process ID: 8398
+# Current directory: /home/benjamin/Repositories/PynqDemo/MinimalDesign/MinimalDesign.runs/impl_1
+# Command line: vivado -log bidir.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bidir.tcl -notrace
+# Log file: /home/benjamin/Repositories/PynqDemo/MinimalDesign/MinimalDesign.runs/impl_1/bidir.vdi
+# Journal file: /home/benjamin/Repositories/PynqDemo/MinimalDesign/MinimalDesign.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source bidir.tcl -notrace
