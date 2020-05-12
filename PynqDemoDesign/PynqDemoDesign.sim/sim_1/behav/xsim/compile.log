@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ClkDivider'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sim_1/new/ClkDivTB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ClkDivTB'

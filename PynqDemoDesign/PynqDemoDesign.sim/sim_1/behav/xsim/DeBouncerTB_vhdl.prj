@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd" \
+"../../../../PynqDemoDesign.srcs/sim_1/new/DeBouncerTB.vhd" \
+
+# Do not sort compile order
+nosort
