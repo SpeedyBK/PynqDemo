@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd" \
+"../../../../PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd" \
+"../../../../PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd" \
+"../../../../PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd" \
+"../../../../PynqDemoDesign.srcs/sources_1/new/ascii_p.vhd" \
+"../../../../PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd" \
+"../../../../PynqDemoDesign.srcs/sim_1/new/ControlMenuTB.vhd" \
+
+# Do not sort compile order
+nosort

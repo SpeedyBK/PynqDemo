@@ -1,4 +1,9 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ClkDivider'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sim_1/new/ClkDivTB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ClkDivTB'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ClockEnableManager'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ControlMenu'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ascii_p.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DisplayController'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sim_1/new/ControlMenuTB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ControlMenuTB'

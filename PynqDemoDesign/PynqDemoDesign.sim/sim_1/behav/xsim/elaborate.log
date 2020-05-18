@@ -1,6 +1,6 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 839af8cf95c04b7684a57be431689ec7 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ClkDivTB_behav xil_defaultlib.ClkDivTB -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 839af8cf95c04b7684a57be431689ec7 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot ControlMenuTB_behav xil_defaultlib.ControlMenuTB -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,6 +11,12 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.ClkDivider [\ClkDivider(f_in=10,f_out=1)\]
-Compiling architecture behavioral of entity xil_defaultlib.clkdivtb
-Built simulation snapshot ClkDivTB_behav
+Compiling package xil_defaultlib.ascii_p
+Compiling architecture behavioral of entity xil_defaultlib.Debouncer [\Debouncer(prescaler=12)\]
+Compiling architecture behavioral of entity xil_defaultlib.ClkDivider [clkdivider_default]
+Compiling architecture behavioral of entity xil_defaultlib.ClkDivider [\ClkDivider(f_out=10000000)\]
+Compiling architecture behavioral of entity xil_defaultlib.ClockEnableManager [\ClockEnableManager(digiten=1000...]
+Compiling architecture behavioral of entity xil_defaultlib.DisplayController [displaycontroller_default]
+Compiling architecture behavioral of entity xil_defaultlib.ControlMenu [\ControlMenu(digiten=10000000)\]
+Compiling architecture behavioral of entity xil_defaultlib.controlmenutb
+Built simulation snapshot ControlMenuTB_behav

@@ -3,6 +3,13 @@
 May 24 2019
 14:51:52
 /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sim_1/new/ClkDivTB.vhd,1589306834,vhdl,,,,clkdivtb,,,,,,,,
+/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sim_1/new/ControlMenuTB.vhd,1589717843,vhdl,,,,controlmenutb,,,,,,,,
 /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sim_1/new/DeBouncerTB.vhd,1589306435,vhdl,,,,debouncertb,,,,,,,,
+/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sim_1/new/PongTB.vhd,1589385426,vhdl,,,,pongtb,,,,,,,,
 /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd,1589295235,vhdl,,,,clkdivider,,,,,,,,
+/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd,1589295770,vhdl,,,,clockenablemanager,,,,,,,,
+/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd,1589717510,vhdl,,,,controlmenu,,,,,,,,
 /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd,1589306249,vhdl,,,,debouncer,,,,,,,,
+/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd,1589716844,vhdl,,,,displaycontroller,,,,,,,,
+/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd,1589385888,vhdl,,,,pong,,,,,,,,
+/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ascii_p.vhd,1589620094,vhdl,/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd,,,ascii_p,,,,,,,,
