@@ -6,4 +6,4 @@
 # Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log ControlMenu.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ControlMenu.tcl -notrace
+vivado -log PynqDemoTop.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source PynqDemoTop.tcl -notrace

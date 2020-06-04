@@ -1,0 +1,823 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:31:13 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Thu May 23 14:28:42 2019
+# Process ID: 13277
+# Current directory: /media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.runs/synth_1
+# Command line: vivado -log pong_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pong_top.tcl
+# Log file: /media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.runs/synth_1/pong_top.vds
+# Journal file: /media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source pong_top.tcl -notrace
+Command: synth_design -top pong_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13304 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1295.262 ; gain = 87.809 ; free physical = 7497 ; free virtual = 28721
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-2488] overwriting existing primary unit sine_lut_pkg [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/sine_lut_8_x_8.vhd:11]
+WARNING: [Synth 8-2600] re-analyze unit dds_synthesizer_pkg since unit sine_lut_pkg is overwritten or removed [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd:25]
+WARNING: [Synth 8-2600] re-analyze unit dds since unit dds_synthesizer_pkg is overwritten or removed [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds.vhd:32]
+WARNING: [Synth 8-2600] re-analyze unit melody_player_arch since unit dds is overwritten or removed [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:30]
+WARNING: [Synth 8-2600] re-analyze unit dds_synthesizer since unit sine_lut_pkg is overwritten or removed [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd:53]
+WARNING: [Synth 8-2600] re-analyze unit vol_ctrl since unit sine_lut_pkg is overwritten or removed [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/volume_control/vol_ctrl.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'pong_top' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/pong_toplevel.vhd:84]
+	Parameter game_enable_clocks bound to: 2100000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'clock_enable' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:57]
+	Parameter game_enable_clocks bound to: 2100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable' (1#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'controller_interface' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/controller_interface.vhd:24]
+	Parameter clk_frequency_in_Hz bound to: 125000000 - type: integer 
+	Parameter racket_steps bound to: 10 - type: integer 
+	Parameter debounce_time_in_us bound to: 2000 - type: integer 
+	Parameter racket_height bound to: 60 - type: integer 
+	Parameter screen_height bound to: 480 - type: integer 
+	Parameter debounce_clks bound to: 250000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:40' bound to instance 'deb_rot_enc0' of component 'debounce' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/controller_interface.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'debounce' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:53]
+	Parameter debounce_clks bound to: 250000 - type: integer 
+WARNING: [Synth 8-614] signal 'x_i' is read in the process but is not in the sensitivity list [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (2#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:53]
+	Parameter debounce_clks bound to: 250000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:40' bound to instance 'deb_rot_enc1' of component 'debounce' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/controller_interface.vhd:58]
+	Parameter debounce_clks bound to: 250000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:40' bound to instance 'deb_push_but' of component 'debounce' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/controller_interface.vhd:69]
+INFO: [Synth 8-3491] module 'rot_enc_decoder' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd:4' bound to instance 'rot_enc_decoder_inst' of component 'rot_enc_decoder' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/controller_interface.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'rot_enc_decoder' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'rot_enc_decoder' (3#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'controller_interface' (4#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/controller_interface.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'collision_detection' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/collision_detection/src/collision_detection.vhd:62]
+	Parameter ball_length bound to: 6 - type: integer 
+	Parameter racket_length bound to: 10 - type: integer 
+	Parameter racket_height bound to: 60 - type: integer 
+	Parameter racket_left_space bound to: 20 - type: integer 
+	Parameter racket_right_space bound to: 610 - type: integer 
+	Parameter screen_height bound to: 480 - type: integer 
+INFO: [Synth 8-226] default block is never used [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/collision_detection/src/collision_detection.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'collision_detection' (5#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/collision_detection/src/collision_detection.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'ball_motion' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/ball_motion/src/ball_motion.vhd:70]
+	Parameter ball_length bound to: 6 - type: integer 
+	Parameter racket_length bound to: 10 - type: integer 
+	Parameter racket_height bound to: 60 - type: integer 
+	Parameter racket_left_space bound to: 20 - type: integer 
+	Parameter racket_right_space bound to: 610 - type: integer 
+	Parameter screen_height bound to: 480 - type: integer 
+	Parameter speedup_racket bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ball_motion' (6#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/ball_motion/src/ball_motion.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'vga_controller' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:66]
+	Parameter ball_length bound to: 6 - type: integer 
+	Parameter racket_length bound to: 10 - type: integer 
+	Parameter racket_height bound to: 60 - type: integer 
+	Parameter racket_left_space bound to: 20 - type: integer 
+	Parameter racket_right_space bound to: 610 - type: integer 
+	Parameter H_max bound to: 799 - type: integer 
+	Parameter V_max bound to: 524 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vga_controller' (7#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'sound_interface' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/sound_interface.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'audio_clk_gen' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd:27]
+	Parameter divider bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'frequenz_div' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:5' bound to instance 'pwm_clk_gen' of component 'frequenz_div' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'frequenz_div' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:15]
+	Parameter divider bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'frequenz_div' (8#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:15]
+	Parameter divider bound to: 3125000 - type: integer 
+INFO: [Synth 8-3491] module 'frequenz_div' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:5' bound to instance 'note_clk_gen' of component 'frequenz_div' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'frequenz_div__parameterized1' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:15]
+	Parameter divider bound to: 3125000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'frequenz_div__parameterized1' (8#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:15]
+WARNING: [Synth 8-3848] Net sample_en_o in module/entity audio_clk_gen does not have driver. [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'audio_clk_gen' (9#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'PWM_Modulator' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'DIG_Counter' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:18]
+	Parameter Bits bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DIG_Counter' (10#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'DIG_Register_BUS' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:49]
+	Parameter Bits bound to: 8 - type: integer 
+WARNING: [Synth 8-614] signal 'en' is read in the process but is not in the sensitivity list [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'DIG_Register_BUS' (11#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'COMP_GATE_UNSIGNED' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:76]
+	Parameter Bits bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'COMP_GATE_UNSIGNED' (12#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'PWM_Modulator' (13#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'melody_player' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+	Parameter song bound to: 2560'b1111110011101100001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'melody_player' (14#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'melody_player__parameterized0' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+	Parameter song bound to: 2560'b1111110011100100101100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'melody_player__parameterized0' (14#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'melody_player__parameterized1' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+	Parameter song bound to: 2560'b1111110011100000111100000011110000001111111111001100000000001111110011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'melody_player__parameterized1' (14#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'melody_player__parameterized2' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+	Parameter song bound to: 2560'b1111110011101011111110011010111001111011101001101110101101111010010111100111101110011010111001001111100100101110011110111010111111101001101110011110111001101011011111101110001110111001111011101001111110101111111001111111100100111110010011110011101010001111101001000110101010011111101100101111000011111011101011101100101110101111111010111011100111101110101111111010011011100111101110011011111001101011100111101110100111111010111111100111111110010011111001001111111111111110101111111001101011100111101110100110111010110111101001011110011110111001101011100100111110010010111001111011101011111110100110111001111011100110101101111110111000111011100111101110100111111010111111100111111110010011111001001111001110101000111110100100011010101001111110110010111100001111101110101110110010111010111111101011101110011110111010111111101001101110011110111001101111100110101110011110111010011111101011111110011111111001001111100100111111111111110111111110011111111001101111100110111110011101111001110111100110101110011010111001101111100110111110011000111001100011100101111110010111111001101011100110101110011111111001111111100110111110011011111001110111100111011110011010111001101011100110111110011111111010010011101001001110100011111010001111101000111110100011111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'melody_player__parameterized2' (14#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'melody_player__parameterized3' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+	Parameter song bound to: 2560'b1111110011011000101101000111110100011111111111101101000100110100111111010001111101000111110101011111010110111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'melody_player__parameterized3' (14#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/melody_player.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'sound_interface' (15#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/sound_interface.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'score_display' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_display.vhd:21]
+	Parameter score_max bound to: 15 - type: integer 
+	Parameter score_max bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'score_counter' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_counter.vhd:5' bound to instance 'score_counter_inst' of component 'score_counter' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_display.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'score_counter' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_counter.vhd:20]
+	Parameter score_max bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'score_counter' (16#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_counter.vhd:20]
+	Parameter score_max bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'bin_to_bcd_dec' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:5' bound to instance 'player1_bin_to_bcd_dec' of component 'bin_to_bcd_dec' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_display.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'bin_to_bcd_dec' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:19]
+	Parameter score_max bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'bin_to_bcd_dec' (17#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:19]
+	Parameter score_max bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'bin_to_bcd_dec' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:5' bound to instance 'player2_bin_to_bcd_dec' of component 'bin_to_bcd_dec' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_display.vhd:102]
+INFO: [Synth 8-3491] module 'seven_seg_dec' declared at '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/seven_seg_dec.vhd:5' bound to instance 'seven_seg_dec_inst' of component 'seven_seg_dec' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_display.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'seven_seg_dec' [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/seven_seg_dec.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'seven_seg_dec' (18#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/seven_seg_dec.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'score_display' (19#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_display.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'pong_top' (20#1) [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/pong_toplevel.vhd:84]
+WARNING: [Synth 8-3917] design pong_top has port ssd_data[0] driven by constant 1
+WARNING: [Synth 8-3917] design pong_top has port ssd_enable[7] driven by constant 1
+WARNING: [Synth 8-3917] design pong_top has port ssd_enable[0] driven by constant 1
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[3] driven by constant 0
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[2] driven by constant 0
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[1] driven by constant 0
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[0] driven by constant 0
+WARNING: [Synth 8-3331] design bin_to_bcd_dec has unconnected port binary_i[6]
+WARNING: [Synth 8-3331] design bin_to_bcd_dec has unconnected port binary_i[5]
+WARNING: [Synth 8-3331] design bin_to_bcd_dec has unconnected port binary_i[4]
+WARNING: [Synth 8-3331] design audio_clk_gen has unconnected port sample_en_o
+WARNING: [Synth 8-3331] design sound_interface has unconnected port dds_enable_i
+WARNING: [Synth 8-3331] design sound_interface has unconnected port note_enable_i
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1338.793 ; gain = 131.340 ; free physical = 7509 ; free virtual = 28728
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1338.793 ; gain = 131.340 ; free physical = 7509 ; free virtual = 28728
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/constrs_1/imports/pong_reference.src/Pynq_constraint_file.xdc]
+Finished Parsing XDC File [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/constrs_1/imports/pong_reference.src/Pynq_constraint_file.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/constrs_1/imports/pong_reference.src/Pynq_constraint_file.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pong_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pong_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1693.645 ; gain = 0.000 ; free physical = 7022 ; free virtual = 28332
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:01:04 . Memory (MB): peak = 1693.645 ; gain = 486.191 ; free physical = 7095 ; free virtual = 28402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:01:04 . Memory (MB): peak = 1693.645 ; gain = 486.191 ; free physical = 7095 ; free virtual = 28402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:01:04 . Memory (MB): peak = 1693.645 ; gain = 486.191 ; free physical = 7095 ; free virtual = 28401
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "led_enable_o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:81]
+WARNING: [Synth 8-6014] Unused sequential element count_vga_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element count_dds_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:117]
+WARNING: [Synth 8-6014] Unused sequential element count_note_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:136]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:65]
+INFO: [Synth 8-5546] ROM "x_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "x_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:66]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/collision_detection/src/collision_detection.vhd:119]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/collision_detection/src/collision_detection.vhd:119]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/collision_detection/src/collision_detection.vhd:119]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'collision_detection'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ball_motion'
+INFO: [Synth 8-5544] ROM "add_x" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "add_y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "restart" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clearflag_wall" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clearflag_left" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clearflag_right" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element count_hits_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/ball_motion/src/ball_motion.vhd:214]
+WARNING: [Synth 8-6014] Unused sequential element speed_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/ball_motion/src/ball_motion.vhd:172]
+INFO: [Synth 8-5544] ROM "add_x" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "add_y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "restart" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clearflag_wall" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clearflag_left" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clearflag_right" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:163]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:165]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:160]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:161]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:163]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:165]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:160]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:161]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:163]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:165]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:160]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:161]
+WARNING: [Synth 8-6014] Unused sequential element Hcnt_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element Vcnt_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:112]
+INFO: [Synth 8-5546] ROM "clk_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "new_clk_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "clk_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "new_clk_tmp" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:25]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/sound_interface.vhd:157]
+INFO: [Synth 8-5544] ROM "game_over_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "game_over_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "score_player1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "score_player2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element score_player1_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_counter.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element score_player2_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_counter.vhd:33]
+WARNING: [Synth 8-6014] Unused sequential element binary_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:35]
+WARNING: [Synth 8-6014] Unused sequential element bcd1_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:36]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    stop |                              000 |                              000
+                    move |                              001 |                              001
+             collision_l |                              010 |                              010
+             collision_r |                              011 |                              011
+                   out_l |                              100 |                              100
+                   out_r |                              101 |                              101
+                  wall_t |                              110 |                              110
+                  wall_b |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'collision_detection'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    stop |                              000 |                              000
+                    move |                              001 |                              001
+             collision_l |                              010 |                              010
+             collision_r |                              011 |                              011
+                  out_lr |                              100 |                              100
+                  wall_t |                              101 |                              101
+                  wall_b |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ball_motion'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:01:05 . Memory (MB): peak = 1693.645 ; gain = 486.191 ; free physical = 7086 ; free virtual = 28393
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
+	   5 Input     19 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 5     
+	   2 Input     10 Bit       Adders := 23    
+	   4 Input     10 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 9     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               10 Bit    Registers := 7     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 14    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 42    
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 14    
+	   7 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 6     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 9     
+	   4 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 8     
+	   4 Input      2 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 47    
+	   3 Input      1 Bit        Muxes := 13    
+	   7 Input      1 Bit        Muxes := 14    
+	   6 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pong_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+Module clock_enable 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 2     
+Module rot_enc_decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+Module controller_interface 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 3     
+Module collision_detection 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 9     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   8 Input      2 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+Module ball_motion 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 7     
+	   4 Input     10 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 10    
+	   7 Input     10 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 10    
+Module vga_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 6     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module frequenz_div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module frequenz_div__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module DIG_Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module DIG_Register_BUS 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module sound_interface 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input     19 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module score_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+Module bin_to_bcd_dec 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module score_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "pwm_clk_gen/clk_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "note_clk_gen/new_clk_tmp" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "note_clk_gen/clk_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led_enable_o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_vga_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:81]
+WARNING: [Synth 8-6014] Unused sequential element count_note_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:136]
+WARNING: [Synth 8-6014] Unused sequential element count_dds_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/clock_enable.vhd:117]
+INFO: [Synth 8-5546] ROM "deb_rot_enc0/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_rot_enc0/x_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_rot_enc1/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_rot_enc1/x_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_push_but/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_push_but/x_o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element deb_rot_enc0/count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element deb_rot_enc1/count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element deb_push_but/count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:66]
+INFO: [Synth 8-5546] ROM "deb_rot_enc0/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_rot_enc0/x_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_rot_enc1/x_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_rot_enc1/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_push_but/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_push_but/x_o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element deb_rot_enc0/count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element deb_rot_enc1/count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element deb_push_but/count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/rotary_encoder/src/debounce.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element count_hits_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/ball_motion/src/ball_motion.vhd:214]
+WARNING: [Synth 8-6014] Unused sequential element speed_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/ball_motion/src/ball_motion.vhd:172]
+WARNING: [Synth 8-6014] Unused sequential element Hcnt_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element Vcnt_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/vga_controller/src/vga_controller.vhd:112]
+WARNING: [Synth 8-6014] Unused sequential element acg_inst/pwm_clk_gen/new_clk_tmp_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:27]
+WARNING: [Synth 8-6014] Unused sequential element acg_inst/note_clk_gen/clk_enable_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd:29]
+INFO: [Synth 8-5546] ROM "acg_inst/note_clk_gen/new_clk_tmp" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element PWM_Modulation/gate0/count_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd:25]
+WARNING: [Synth 8-6014] Unused sequential element score_counter_inst/score_player2_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_counter.vhd:33]
+WARNING: [Synth 8-6014] Unused sequential element score_counter_inst/score_player1_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/score_counter.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element player1_bin_to_bcd_dec/binary_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:35]
+WARNING: [Synth 8-6014] Unused sequential element player1_bin_to_bcd_dec/bcd1_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element player2_bin_to_bcd_dec/binary_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:35]
+WARNING: [Synth 8-6014] Unused sequential element player2_bin_to_bcd_dec/bcd1_reg was removed.  [/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:36]
+WARNING: [Synth 8-3917] design pong_top has port ssd_data[0] driven by constant 1
+WARNING: [Synth 8-3917] design pong_top has port ssd_enable[7] driven by constant 1
+WARNING: [Synth 8-3917] design pong_top has port ssd_enable[0] driven by constant 1
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[3] driven by constant 0
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[2] driven by constant 0
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[1] driven by constant 0
+WARNING: [Synth 8-3917] design pong_top has port VGA_G[0] driven by constant 0
+WARNING: [Synth 8-3331] design sound_interface has unconnected port dds_enable_i
+WARNING: [Synth 8-3331] design sound_interface has unconnected port note_enable_i
+INFO: [Synth 8-3886] merging instance 'score_display_inst/seven_seg_sel_o_reg[2]' (FDCE) to 'score_display_inst/seven_seg_sel_o_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\score_display_inst/seven_seg_sel_o_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[0]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[1]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[2]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[3]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[4]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[5]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[6]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[7]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[8]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[9]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[10]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[11]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[12]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[13]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[14]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[15]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[16]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[17]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[18]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[19]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[20]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[21]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_note_reg[22]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/note_enable_reg) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_dds_reg[4]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_dds_reg[3]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_dds_reg[2]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_dds_reg[1]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/count_dds_reg[0]) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (clk_enable/dds_enable_reg) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (sound/play_hr_reg) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (sound/play_ho_reg) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (sound/play_bg_reg) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (sound/play_go_reg) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (sound/play_hw_reg) is unused and will be removed from module pong_top.
+WARNING: [Synth 8-3332] Sequential element (score_display_inst/seven_seg_sel_o_reg[3]) is unused and will be removed from module pong_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:11 . Memory (MB): peak = 1693.645 ; gain = 486.191 ; free physical = 6926 ; free virtual = 28346
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:28 . Memory (MB): peak = 1693.645 ; gain = 486.191 ; free physical = 6818 ; free virtual = 28238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:34 . Memory (MB): peak = 1736.254 ; gain = 528.801 ; free physical = 6799 ; free virtual = 28203
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'motion/count_hits_reg[3]' (FDCE) to 'motion/count_hits_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\motion/count_hits_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (motion/count_hits_reg[2]) is unused and will be removed from module pong_top.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:35 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop score_display_inst/seven_seg_sel_o_reg[0] is being inverted and renamed to score_display_inst/seven_seg_sel_o_reg[0]_inv.
+INFO: [Synth 8-5365] Flop score_display_inst/seven_seg_sel_o_reg[1] is being inverted and renamed to score_display_inst/seven_seg_sel_o_reg[1]_inv.
+INFO: [Synth 8-5365] Flop score_display_inst/seven_seg_sel_o_reg[4] is being inverted and renamed to score_display_inst/seven_seg_sel_o_reg[4]_inv.
+INFO: [Synth 8-5365] Flop score_display_inst/seven_seg_sel_o_reg[5] is being inverted and renamed to score_display_inst/seven_seg_sel_o_reg[5]_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:36 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:36 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28198
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |melody_player |         5|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |melody_player                 |     1|
+|2     |melody_player__parameterized0 |     1|
+|3     |melody_player__parameterized1 |     1|
+|4     |melody_player__parameterized2 |     1|
+|5     |melody_player__parameterized3 |     1|
+|6     |BUFG                          |     1|
+|7     |CARRY4                        |   122|
+|8     |LUT1                          |     8|
+|9     |LUT2                          |   229|
+|10    |LUT3                          |   135|
+|11    |LUT4                          |   237|
+|12    |LUT5                          |   227|
+|13    |LUT6                          |   262|
+|14    |FDCE                          |   227|
+|15    |FDPE                          |    33|
+|16    |FDRE                          |   137|
+|17    |LDC                           |     6|
+|18    |IBUF                          |    10|
+|19    |OBUF                          |    32|
++------+------------------------------+------+
+
+Report Instance Areas: 
++------+---------------------------+-----------------------------+------+
+|      |Instance                   |Module                       |Cells |
++------+---------------------------+-----------------------------+------+
+|1     |top                        |                             |  1751|
+|2     |  clk_enable               |clock_enable                 |   132|
+|3     |  collision                |collision_detection          |    58|
+|4     |  controller_interface1    |controller_interface         |   235|
+|5     |    deb_push_but           |debounce_4                   |    62|
+|6     |    deb_rot_enc0           |debounce_5                   |    60|
+|7     |    deb_rot_enc1           |debounce_6                   |    60|
+|8     |    rot_enc_decoder_inst   |rot_enc_decoder_7            |    15|
+|9     |  controller_interface2    |controller_interface_0       |   222|
+|10    |    deb_push_but           |debounce                     |    60|
+|11    |    deb_rot_enc0           |debounce_2                   |    60|
+|12    |    deb_rot_enc1           |debounce_3                   |    60|
+|13    |    rot_enc_decoder_inst   |rot_enc_decoder              |    15|
+|14    |  motion                   |ball_motion                  |   551|
+|15    |  score_display_inst       |score_display                |   106|
+|16    |    player1_bin_to_bcd_dec |bin_to_bcd_dec               |    28|
+|17    |    player2_bin_to_bcd_dec |bin_to_bcd_dec_1             |    28|
+|18    |    score_counter_inst     |score_counter                |    23|
+|19    |  sound                    |sound_interface              |   264|
+|20    |    PWM_Modulation         |PWM_Modulator                |    36|
+|21    |      gate0                |DIG_Counter                  |    22|
+|22    |      gate1                |DIG_Register_BUS             |    13|
+|23    |      gate2                |COMP_GATE_UNSIGNED           |     1|
+|24    |    acg_inst               |audio_clk_gen                |    69|
+|25    |      note_clk_gen         |frequenz_div__parameterized1 |    59|
+|26    |      pwm_clk_gen          |frequenz_div                 |    10|
+|27    |  visualization            |vga_controller               |   140|
++------+---------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 1752.270 ; gain = 544.816 ; free physical = 6794 ; free virtual = 28199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 83 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:57 . Memory (MB): peak = 1752.270 ; gain = 189.965 ; free physical = 6852 ; free virtual = 28257
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 1752.277 ; gain = 544.816 ; free physical = 6860 ; free virtual = 28265
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 138 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  LDC => LDCE: 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+146 Infos, 104 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:41 . Memory (MB): peak = 1752.277 ; gain = 570.840 ; free physical = 6873 ; free virtual = 28278
+INFO: [Common 17-1381] The checkpoint '/media/hardieck/hardieck-floyd/Work/repositorien/vhdlkurs/PYNQ-Projekte/PYNQ-Pong/pong_reference/ise/pong_reference/pong_reference.runs/synth_1/pong_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pong_top_utilization_synth.rpt -pb pong_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1776.281 ; gain = 0.000 ; free physical = 6872 ; free virtual = 28277
+INFO: [Common 17-206] Exiting Vivado at Thu May 23 14:30:41 2019...

@@ -1,0 +1,7 @@
+vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\score_display\src\seven_seg_dec.vhd"
+vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\score_display\src\score_counter.vhd"
+vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\score_display\src\bin_to_bcd_dec.vhd"
+vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\score_display\src\score_display.vhd"
+vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\score_display\src\reset_gen.vhd"
+vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\score_display\src\debounce.vhd"
+vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\score_display\src\score_display_top.vhd"

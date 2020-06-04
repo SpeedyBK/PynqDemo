@@ -1,0 +1,304 @@
+V3 166
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/ball_motion/src/ball_motion.vhd 2015/08/17.15:02:37 O.87xd
+EN work/ball_motion 1470207369 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/ball_motion/src/ball_motion.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/NUMERIC_STD 1364358223 PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/ball_motion/Behavioral 1470207370 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/ball_motion/src/ball_motion.vhd \
+      EN work/ball_motion 1470207369
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/clock_enable.vhd 2010/07/14.12:13:48 O.87xd
+EN work/clock_enable 1470207363 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/clock_enable.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/clock_enable/Behavioral 1470207364 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/clock_enable.vhd \
+      EN work/clock_enable 1470207363
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/collision_detection/src/collision_detection.vhd 2015/08/17.14:59:07 O.87xd
+EN work/collision_detection 1470207367 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/collision_detection/src/collision_detection.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/collision_detection/Behavioral 1470207368 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/collision_detection/src/collision_detection.vhd \
+      EN work/collision_detection 1470207367
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/pong_toplevel.vhd 2015/08/17.15:59:34 O.87xd
+EN work/pong_top 1470207377 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/pong_toplevel.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/STD_LOGIC_UNSIGNED 1364358221 \
+      PB ieee/std_logic_arith 1364358219
+AR work/pong_top/behavior 1470207378 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/pong_toplevel.vhd \
+      EN work/pong_top 1470207377 CP work/clock_enable \
+      CP work/controller_interface CP work/collision_detection CP work/ball_motion \
+      CP work/vga_controller CP work/sound_interface CP work/score_display
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/controller_interface.vhd 2015/08/17.14:58:14 O.87xd
+EN work/controller_interface 1470207365 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/controller_interface.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
+      PB work/debounce_pkg 1470207358
+AR work/controller_interface/controller_interface_arch 1470207366 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/controller_interface.vhd \
+      EN work/controller_interface 1470207365 CP debounce CP rot_enc_decoder
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/debounce.vhd 2009/09/09.14:16:18 O.87xd
+PH work/debounce_pkg 1470207357 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/debounce.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 CD debounce
+PB work/debounce_pkg 1470207358 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/debounce.vhd \
+      PH work/debounce_pkg 1470207357
+EN work/debounce 1470207359 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/debounce.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/debounce/debounce_arch 1470207360 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/debounce.vhd \
+      EN work/debounce 1470207359
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd 2010/06/09.12:37:42 O.87xd
+EN work/rot_enc_decoder 1470207361 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd \
+      PB ieee/std_logic_1164 1364358218
+AR work/rot_enc_decoder/rot_enc_decoder_arch 1470207362 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd \
+      EN work/rot_enc_decoder 1470207361
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd 2010/07/01.15:25:40 O.87xd
+EN work/bin_to_bcd_dec 1470207345 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
+AR work/bin_to_bcd_dec/bin_to_bcd_dec_arch 1470207346 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd \
+      EN work/bin_to_bcd_dec 1470207345
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_counter.vhd 2010/07/02.13:39:32 O.87xd
+EN work/score_counter 1470207343 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_counter.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
+AR work/score_counter/score_counter_arch 1470207344 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_counter.vhd \
+      EN work/score_counter 1470207343
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_display.vhd 2015/08/17.15:03:33 O.87xd
+EN work/score_display 1470207375 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_display.vhd \
+      PB ieee/std_logic_1164 1364358218
+AR work/score_display/score_display_arch 1470207376 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_display.vhd \
+      EN work/score_display 1470207375 CP score_counter CP bin_to_bcd_dec \
+      CP seven_seg_dec
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/seven_seg_dec.vhd 2010/06/30.16:00:46 O.87xd
+EN work/seven_seg_dec 1470207347 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/seven_seg_dec.vhd \
+      PB ieee/NUMERIC_STD 1364358223 PB ieee/std_logic_1164 1364358218
+AR work/seven_seg_dec/seven_seg_dec_arch 1470207348 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/seven_seg_dec.vhd \
+      EN work/seven_seg_dec 1470207347
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_counter.vhd 2014/08/21.22:32:04 O.87xd
+EN work/address_counter 1470207315 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_counter.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
+AR work/address_counter/address_counter_arch 1470207316 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_counter.vhd \
+      EN work/address_counter 1470207315
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_generator.vhd 2014/08/21.22:32:02 O.87xd
+EN work/address_generator 1470207323 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_generator.vhd \
+      PB ieee/std_logic_1164 1364358218
+AR work/address_generator/address_generator_arch 1470207324 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_generator.vhd \
+      EN work/address_generator 1470207323 CP work/note_duration_fsm \
+      CP work/address_counter
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds.vhd 2014/08/18.18:57:22 O.87xd
+EN work/dds 1470207331 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PB work/dds_synthesizer_pkg 1470207318 \
+      PB work/sine_lut_pkg 1470207310
+AR work/dds/dds_toplevel 1470207332 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds.vhd \
+      EN work/dds 1470207331 CP dds_synthesizer
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd 2014/08/18.18:57:22 O.87xd
+PH work/dds_synthesizer_pkg 1470207317 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PB work/sine_lut_pkg 1470207310 \
+      CD dds_synthesizer
+PB work/dds_synthesizer_pkg 1470207318 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd \
+      PH work/dds_synthesizer_pkg 1470207317
+EN work/dds_synthesizer 1470207319 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PB work/sine_lut_pkg 1470207310
+AR work/dds_synthesizer/dds_synthesizer_arch 1470207320 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd \
+      EN work/dds_synthesizer 1470207319
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/sine_lut_8_x_16.vhd 2014/08/18.18:57:22 O.87xd
+PH work/sine_lut_pkg 1470207309 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/sine_lut_8_x_16.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_SIGNED 1364358220
+PB work/sine_lut_pkg 1470207310 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/sine_lut_8_x_16.vhd \
+      PH work/sine_lut_pkg 1470207309
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pkg.vhd 2014/08/18.18:57:22 O.87xd
+PH work/melodie_constants_pkg 1470207311 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pkg.vhd \
+      PB ieee/std_logic_1164 1364358218
+PB work/melodie_constants_pkg 1470207312 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pkg.vhd \
+      PH work/melodie_constants_pkg 1470207311
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pong.vhd 2014/08/18.18:57:22 O.87xd
+PH work/melodie 1470207349 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pong.vhd \
+      PB ieee/std_logic_1164 1364358218 PB work/melodie_constants_pkg 1470207312
+PB work/melodie 1470207350 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pong.vhd \
+      PH work/melodie 1470207349
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_table.vhd 2014/08/18.18:57:22 O.87xd
+EN work/melody_table 1470207325 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_table.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PB work/melodie_constants_pkg 1470207312
+AR work/melody_table/Behavioral 1470207326 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_table.vhd \
+      EN work/melody_table 1470207325
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd 2014/08/18.18:57:22 O.87xd
+EN work/audio_clk_gen 1470207351 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd \
+      PB ieee/NUMERIC_STD 1364358223 PB ieee/std_logic_1164 1364358218
+AR work/audio_clk_gen/audio_clk_gen_Arch 1470207352 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd \
+      EN work/audio_clk_gen 1470207351 CP frequenz_div
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/cntrl_int_neu.vhd 2014/08/18.18:57:22 O.87xd
+EN work/contrl_int 1470207337 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/cntrl_int_neu.vhd \
+      PB ieee/NUMERIC_STD 1364358223 PB ieee/std_logic_1164 1364358218
+AR work/contrl_int/cntrl_Arch 1470207338 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/cntrl_int_neu.vhd \
+      EN work/contrl_int 1470207337
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd 2014/08/18.18:57:22 O.87xd
+EN work/frequenz_div 1470207341 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd \
+      PB ieee/NUMERIC_STD 1364358223 PB ieee/std_logic_1164 1364358218
+AR work/frequenz_div/frequenzdivArch 1470207342 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd \
+      EN work/frequenz_div 1470207341
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/MMcodec01.vhd 2014/08/18.18:57:22 O.87xd
+EN work/mmCodec01 1470207353 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/MMcodec01.vhd \
+      PB ieee/NUMERIC_STD 1364358223 PB ieee/std_logic_1164 1364358218
+AR work/mmCodec01/mmCodec01Arch 1470207354 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/MMcodec01.vhd \
+      EN work/mmCodec01 1470207353 CP mmCodec_init CP contrl_int CP dac_mmcodec01
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec01_dac_int.vhd 2014/08/18.18:57:22 O.87xd
+EN work/dac_mmcodec01 1470207339 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec01_dac_int.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
+AR work/dac_mmcodec01/dac_mmcodec01_arch 1470207340 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec01_dac_int.vhd \
+      EN work/dac_mmcodec01 1470207339
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec_initial.vhd 2014/08/18.18:57:22 O.87xd
+EN work/mmCodec_init 1470207335 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec_initial.vhd \
+      PB ieee/NUMERIC_STD 1364358223 PB ieee/std_logic_1164 1364358218
+AR work/mmCodec_init/mmCodec_init_Arch 1470207336 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec_initial.vhd \
+      EN work/mmCodec_init 1470207335
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/stimmung_lut_6_x_32.vhd 2014/08/18.18:57:22 O.87xd
+PH work/stimmung_lut_pkg 1470207321 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/stimmung_lut_6_x_32.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_SIGNED 1364358220
+PB work/stimmung_lut_pkg 1470207322 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/stimmung_lut_6_x_32.vhd \
+      PH work/stimmung_lut_pkg 1470207321
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/tuning_table.vhd 2014/08/18.18:57:22 O.87xd
+EN work/tuning_table 1470207329 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/tuning_table.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PB work/stimmung_lut_pkg 1470207322
+AR work/tuning_table/Behavioral 1470207330 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/tuning_table.vhd \
+      EN work/tuning_table 1470207329
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/volume_control/vol_ctrl.vhd 2014/08/18.18:57:22 O.87xd
+EN work/vol_ctrl 1470207333 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/volume_control/vol_ctrl.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PB ieee/NUMERIC_STD 1364358223 \
+      PB work/sine_lut_pkg 1470207310
+AR work/vol_ctrl/volume_control 1470207334 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/volume_control/vol_ctrl.vhd \
+      EN work/vol_ctrl 1470207333
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/melody_player.vhd 2014/08/21.22:32:00 O.87xd
+EN work/melody_player 1470207355 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/melody_player.vhd \
+      PB ieee/std_logic_1164 1364358218 PB work/melodie_constants_pkg 1470207312
+AR work/melody_player/melody_player_arch 1470207356 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/melody_player.vhd \
+      EN work/melody_player 1470207355 CP work/note_generator CP work/tuning_table \
+      CP work/dds CP work/vol_ctrl
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_duration_fsm.vhd 2014/08/21.22:31:54 O.87xd
+EN work/note_duration_fsm 1470207313 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_duration_fsm.vhd \
+      PB ieee/std_logic_1164 1364358218
+AR work/note_duration_fsm/note_duration_fsm_arch 1470207314 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_duration_fsm.vhd \
+      EN work/note_duration_fsm 1470207313
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_generator.vhd 2014/08/21.22:31:58 O.87xd
+EN work/note_generator 1470207327 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_generator.vhd \
+      PB ieee/std_logic_1164 1364358218 PB work/melodie_constants_pkg 1470207312
+AR work/note_generator/note_generator_arch 1470207328 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_generator.vhd \
+      EN work/note_generator 1470207327 CP work/address_generator \
+      CP work/melody_table
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/sound_interface.vhd 2014/08/21.22:32:08 O.87xd
+EN work/sound_interface 1470207373 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/sound_interface.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
+      PB work/melodie_constants_pkg 1470207312 PB work/melodie 1470207350
+AR work/sound_interface/sound_interface_arch 1470207374 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/sound_interface.vhd \
+      EN work/sound_interface 1470207373 CP work/audio_clk_gen CP work/mmCodec01 \
+      CP work/melody_player
+FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/vga_controller/src/vga_controller.vhd 2015/08/17.15:00:37 O.87xd
+EN work/vga_controller 1470207371 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/vga_controller/src/vga_controller.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/vga_controller/Behavioral 1470207372 \
+      FL //DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/vga_controller/src/vga_controller.vhd \
+      EN work/vga_controller 1470207371
+FL C:/Users/student/Desktop/pong_test/src/ball_motion/src/ball_motion.vhd 2015/08/17.15:02:37 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/clock_enable.vhd 2010/07/14.12:13:48 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/collision_detection/src/collision_detection.vhd 2015/08/17.14:59:07 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/pong_toplevel.vhd 2015/08/17.15:59:34 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/rotary_encoder/src/controller_interface.vhd 2015/08/17.14:58:14 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/rotary_encoder/src/debounce.vhd 2009/09/09.14:16:18 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/rotary_encoder/src/rot_enc_decoder.vhd 2010/06/09.12:37:42 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/score_display/src/bin_to_bcd_dec.vhd 2010/07/01.15:25:40 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/score_display/src/score_counter.vhd 2010/07/02.13:39:32 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/score_display/src/score_display.vhd 2015/08/17.15:03:33 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/score_display/src/seven_seg_dec.vhd 2010/06/30.16:00:46 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/address_counter.vhd 2014/08/21.22:32:04 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/address_generator.vhd 2014/08/21.22:32:02 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/dds_synthesizer/dds.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/dds_synthesizer/sine_lut_8_x_16.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/melodies/melody_pkg.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/melodies/melody_pong.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/melodies/melody_table.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/MMcodec01/cntrl_int_neu.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/MMcodec01/MMcodec01.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/MMcodec01/mmCodec01_dac_int.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/MMcodec01/mmCodec_initial.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/tuningtable/stimmung_lut_6_x_32.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/tuningtable/tuning_table.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/applied_components/volume_control/vol_ctrl.vhd 2014/08/18.18:57:22 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/melody_player.vhd 2014/08/21.22:32:00 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/note_duration_fsm.vhd 2014/08/21.22:31:54 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/note_generator.vhd 2014/08/21.22:31:58 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/sound_interface/sound_interface.vhd 2014/08/21.22:32:08 O.87xd
+FL C:/Users/student/Desktop/pong_test/src/vga_controller/src/vga_controller.vhd 2015/08/17.15:00:37 O.87xd

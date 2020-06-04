@@ -1,0 +1,16 @@
+AR rotary_encoder_top rotary_encoder_top_arch //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/rotary_encoder_top.vhd sub00/vhpl05 1277718985
+PH reset_gen_pkg NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/reset_gen.vhd sub00/vhpl06 1277894003
+AR reset_gen arch_reset_gen //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/reset_gen.vhd sub00/vhpl09 1277894006
+EN reset_gen NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/reset_gen.vhd sub00/vhpl08 1277894005
+PH debounce_pkg NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/ise/debounce.vhd sub00/vhpl00 1277893997
+AR debounce debounce_arch //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/ise/debounce.vhd sub00/vhpl03 1277894000
+EN debounce NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/ise/debounce.vhd sub00/vhpl02 1277893999
+EN rot_enc_decoder NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/rot_enc_decoder.vhd sub00/vhpl10 1277894001
+EN controller_interface_top NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface_top.vhd sub00/vhpl14 1277894009
+AR controller_interface controller_interface_arch //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface.vhd sub00/vhpl13 1277894008
+PB debounce_pkg debounce_pkg //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/ise/debounce.vhd sub00/vhpl01 1277893998
+EN rotary_encoder_top NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/rotary_encoder_top.vhd sub00/vhpl04 1277718984
+EN controller_interface NULL //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface.vhd sub00/vhpl12 1277894007
+PB reset_gen_pkg reset_gen_pkg //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/reset_gen.vhd sub00/vhpl07 1277894004
+AR controller_interface_top controller_interface_top_arch //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface_top.vhd sub00/vhpl15 1277894010
+AR rot_enc_decoder rot_enc_decoder_arch //dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/rot_enc_decoder.vhd sub00/vhpl11 1277894002

@@ -1,0 +1,5 @@
+vhdl work "../src/rot_enc_decoder.vhd"
+vhdl work "debounce.vhd"
+vhdl work "../src/reset_gen.vhd"
+vhdl work "../src/controller_interface.vhd"
+vhdl work "../src/controller_interface_top.vhd"

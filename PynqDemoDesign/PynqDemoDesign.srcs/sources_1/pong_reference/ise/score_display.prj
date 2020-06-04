@@ -1,0 +1,4 @@
+vhdl work "../src/score_display/display_select.vhd"
+vhdl work "../src/score_display/counter.vhd"
+vhdl work "../src/score_display/7_segment.vhd"
+vhdl work "../src/score_display/score_display.vhd"

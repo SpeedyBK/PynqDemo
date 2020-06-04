@@ -1,76 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1589728005">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1591170088">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="ControlMenu.vdi"/>
-  <File Type="BG-DRC" Name="ControlMenu.drc"/>
-  <File Type="BG-BGN" Name="ControlMenu.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="ControlMenu.sysdef"/>
+  <File Type="RDI-RDI" Name="PynqDemoTop.vdi"/>
+  <File Type="BG-DRC" Name="PynqDemoTop.drc"/>
+  <File Type="BG-BGN" Name="PynqDemoTop.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="PynqDemoTop.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ControlMenu.ltx"/>
-  <File Type="BITSTR-MMI" Name="ControlMenu.mmi"/>
-  <File Type="BITSTR-BMM" Name="ControlMenu_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="ControlMenu.nky"/>
-  <File Type="BITSTR-RBT" Name="ControlMenu.rbt"/>
-  <File Type="BITSTR-MSK" Name="ControlMenu.msk"/>
-  <File Type="BG-BIN" Name="ControlMenu.bin"/>
-  <File Type="BG-BIT" Name="ControlMenu.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ControlMenu_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ControlMenu_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ControlMenu_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ControlMenu_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ControlMenu_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ControlMenu_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ControlMenu_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ControlMenu_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ControlMenu_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="ControlMenu_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ControlMenu_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="ControlMenu_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="ControlMenu_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ControlMenu_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="ControlMenu_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ControlMenu_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="ControlMenu_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="ControlMenu_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="ControlMenu_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="ControlMenu_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="ControlMenu_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ControlMenu_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ControlMenu_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ControlMenu_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="ControlMenu_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="ControlMenu_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="ControlMenu_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ControlMenu_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="ControlMenu_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ControlMenu_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="ControlMenu_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="ControlMenu_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="ControlMenu_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="ControlMenu_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ControlMenu_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="ControlMenu_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ControlMenu_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="ControlMenu_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="ControlMenu_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ControlMenu_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="ControlMenu_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="ControlMenu_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="ControlMenu_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="ControlMenu_placed.dcp"/>
-  <File Type="PWROPT-DRC" Name="ControlMenu_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="ControlMenu_pwropt.dcp"/>
-  <File Type="OPT-HWDEF" Name="ControlMenu.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="ControlMenu_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="ControlMenu_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="ControlMenu_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="ControlMenu_timing_summary_init.rpt"/>
-  <File Type="PWROPT-TIMING" Name="ControlMenu_timing_summary_pwropted.rpt"/>
-  <File Type="REPORTS-TCL" Name="ControlMenu_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="ControlMenu_timing_summary_opted.rpt"/>
-  <File Type="PA-TCL" Name="ControlMenu.tcl"/>
+  <File Type="BITSTR-LTX" Name="PynqDemoTop.ltx"/>
+  <File Type="BITSTR-MMI" Name="PynqDemoTop.mmi"/>
+  <File Type="BITSTR-BMM" Name="PynqDemoTop_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="PynqDemoTop.nky"/>
+  <File Type="BITSTR-RBT" Name="PynqDemoTop.rbt"/>
+  <File Type="BITSTR-MSK" Name="PynqDemoTop.msk"/>
+  <File Type="BG-BIN" Name="PynqDemoTop.bin"/>
+  <File Type="BG-BIT" Name="PynqDemoTop.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="PynqDemoTop_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="PynqDemoTop_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="PynqDemoTop_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="PynqDemoTop_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="PynqDemoTop_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="PynqDemoTop_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="PynqDemoTop_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="PynqDemoTop_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="PynqDemoTop_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="PynqDemoTop_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="PynqDemoTop_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="PynqDemoTop_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="PynqDemoTop_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="PynqDemoTop_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="PynqDemoTop_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="PynqDemoTop_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="PynqDemoTop_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="PynqDemoTop_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="PynqDemoTop_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="PynqDemoTop_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="PynqDemoTop_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="PynqDemoTop_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="PynqDemoTop_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="PynqDemoTop_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="PynqDemoTop_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="PynqDemoTop_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="PynqDemoTop_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="PynqDemoTop_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="PynqDemoTop_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="PynqDemoTop_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="PynqDemoTop_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="PynqDemoTop_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="PynqDemoTop_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="PynqDemoTop_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="PynqDemoTop_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="PynqDemoTop_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="PynqDemoTop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="PynqDemoTop_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="PynqDemoTop_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="PynqDemoTop_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="PynqDemoTop_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="PynqDemoTop_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="PynqDemoTop_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="PynqDemoTop_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="PynqDemoTop_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="PynqDemoTop_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="PynqDemoTop.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="PynqDemoTop_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="PynqDemoTop_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="PynqDemoTop_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="PynqDemoTop_timing_summary_init.rpt"/>
+  <File Type="PWROPT-TIMING" Name="PynqDemoTop_timing_summary_pwropted.rpt"/>
+  <File Type="REPORTS-TCL" Name="PynqDemoTop_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="PynqDemoTop_timing_summary_opted.rpt"/>
+  <File Type="PA-TCL" Name="PynqDemoTop.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/impl_1/pong_top_routed.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ClkDivider.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -78,6 +84,30 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/ClockEnableManager.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ControlMenu.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/record_p.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Crane.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CraneController.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -101,13 +131,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/TextMover.vhd">
+    <File Path="$PSRCDIR/sources_1/new/InputTest.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ControlMenu.vhd">
+    <File Path="$PSRCDIR/sources_1/new/ModuleSelector.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MotorController.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -115,14 +151,487 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Pong.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TextMover.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/ball_motion/src/ball_motion.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/clock_enable.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/clock_enable/src/clock_enable.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/collision_detection/src/collision_detection.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/ise/debounce.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/src/debounce.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/debounce.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/vga_controller/src/vga_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/score_display.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/pong_toplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/score_counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/seven_seg_dec.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PynqDemoTop.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/vivado/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd">
+      <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/PWM_Modulator.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/address_counter.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/note_duration_fsm.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/address_generator.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/dds_synthesizer/sine_lut_8_x_16.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/dds_synthesizer/sine_lut_8_x_16.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/SourceFiles/sine_lut_8_x_8.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/vivado/pong_reference.srcs/sources_1/imports/SourceFiles/sine_lut_8_x_8.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/dds_synthesizer/dds_synthesizer.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/dds_synthesizer/dds.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/melodies/melody_pkg.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/melodies/melody_pkg.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/melodies/melody_table.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/melodies/melody_table.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/note_generator.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/tuningtable/stimmung_lut_6_x_32.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/tuningtable/stimmung_lut_6_x_32.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/tuningtable/tuning_table.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/tuningtable/tuning_table.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/volume_control/vol_ctrl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/melody_player.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.srcs/sources_1/imports/melodies/melody_pong.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/melodies/melody_pong.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/sound_interface.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/src/reset_gen.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/MMcodec01/cntrl_int_neu.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/clock_enable/src/tb_clock_enable.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_pa_ports.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/src/rotary_encoder_top.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/vivado/pong_reference.runs/synth_1/pong_top.dcp">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/ise/planAhead_run_1/rotary_encoder.data/netlists/netlist_1/controller_interface_top.edf">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/ise/controller_interface_top.ngc">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/src/seven_segment_dec.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/src/controller_interface_top.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec_initial.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/ise/score_display_top.ngc">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/MMcodec01/contrl_int_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/reset_gen.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/score_display_top_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/score_display/src/score_display_top.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/pong_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_top.ngc">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/impl_1/pong_top_opt.dcp">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/synth_1/pong_top.dcp">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/rotary_encoder/ise/rotary_encoder_top.ngc">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec01_dac_int.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/src/sound_interface/applied_components/MMcodec01/MMcodec01.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/impl_1/pong_top_placed.dcp">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ControlMenu"/>
+      <Option Name="TopModule" Val="PynqDemoTop"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

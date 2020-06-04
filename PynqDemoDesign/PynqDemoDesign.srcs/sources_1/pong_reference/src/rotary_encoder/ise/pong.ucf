@@ -1,0 +1,100 @@
+# EVBfpga MMfpga02 PROPOX www.propox.com
+
+#clock 50MHz
+NET "clk_i" LOC = "P38";
+#NET "rst_i" LOC = "P2"; 
+
+#VGA
+#NET "VSYNC"		 LOC = "P88";
+#NET "HSYNC"		 LOC = "P87";
+#NET "BLUE<2>"   LOC = "P86";
+#NET "BLUE<1>"   LOC = "P85";
+#NET "BLUE<0>"   LOC = "P81";
+#NET "GREEN<2>"  LOC = "P80";
+#NET "GREEN<1>"  LOC = "P79";
+#NET "GREEN<0>"  LOC = "P75";
+#NET "RED<2>"    LOC = "P74";
+#NET "RED<1>"    LOC = "P72";
+#NET "RED<0>"    LOC = "P71";
+
+#Dip-Switches - active low
+#NET "dip_sw_i<0>" LOC = "P89";
+#NET "dip_sw_i<1>" LOC = "P90";
+#NET "dip_sw_i<2>" LOC = "P91";
+#NET "dip_sw_i<3>" LOC = "P92";
+#NET "dip_sw_i<4>" LOC = "P96";
+#NET "dip_sw_i<5>" LOC = "P97";
+#NET "dip_sw_i<6>" LOC = "P1";
+
+#Switches - active low
+#NET "SW<1>" LOC	= "P4";
+#NET "SW<0>" LOC	= "P5"; 
+ 
+#Buzzer
+#NET "buzzer_o" LOC = "P62";			# active low
+
+#Taster
+#NET "nSW7_i" LOC = "P4"; # active low
+#NET "nSW6_i" LOC = "P5"; # active low
+#NET "nSW5_i" LOC = "P8"; # active low
+#NET "nSW4_i" LOC = "P9"; # active low
+
+#Seven-segment LED display - active low
+#NET "LED7_AN_O<5>"  LOC	= "P88";	# most left
+#NET "LED7_AN_O<4>"  LOC	= "P87";
+#NET "LED7_AN_O<3>"  LOC	= "P86";
+#NET "LED7_AN_O<2>"  LOC	= "P85";
+#NET "LED7_AN_O<1>"  LOC	= "P81";
+#NET "LED7_AN_O<0>"  LOC	= "P80";	# most right
+#     
+#		-a-
+#	 f|   |b	
+#		-g-
+#	 e|   |c
+#		-d-  .dp 
+#
+#NET "LED7_SEG_O<7>" LOC	= "P79";	  # a
+#NET "LED7_SEG_O<6>" LOC	= "P75";   # b
+#NET "LED7_SEG_O<5>" LOC	= "P74";   # c
+#NET "LED7_SEG_O<4>" LOC	= "P72";   # d
+#NET "LED7_SEG_O<3>" LOC	= "P71";   # e
+#NET "LED7_SEG_O<2>" LOC	= "P68";   # f
+#NET "LED7_SEG_O<1>" LOC	= "P67";   # g
+#NET "LED7_SEG_O<0>" LOC	= "P65";   # dp
+
+#NET "dac_o<0>" LOC	= "P48";	  # A1
+#NET "dac_o<1>" LOC	= "P44";	  # A2
+#NET "dac_o<2>" LOC	= "P47";	  # A3
+#NET "dac_o<0>" LOC	= "P50";	  # A8
+#NET "dac_o<1>" LOC	= "P54";	  # A7
+#NET "dac_o<2>" LOC	= "P59";	  # A6
+#NET "dac_o<3>" LOC	= "P61";	  # A5
+#NET "dac_o<4>" LOC	= "P49";	  # A4
+#NET "dac_o<5>" LOC	= "P43";	  # A3
+#NET "dac_o<6>" LOC	= "P53";	  # A2
+#NET "dac_o<7>" LOC	= "P39";	  # A1
+
+#NET "mmfpga_led1_o" LOC	= "P44";
+#NET "mmfpga_led2_o" LOC	= "P47";
+
+#rotary encoder connected to J11:
+NET push_button1_i LOC = "P89"; #J1_5
+NET rot_enc1_i<0> LOC = "P91"; #J1_7, Terminal A
+NET rot_enc1_i<1> LOC = "P90"; #J1_6, Terminal B
+
+NET push_button2_i LOC ="P92"; #J1_8
+NET rot_enc2_i<0> LOC = "P97"; #J1_10
+NET rot_enc2_i<1> LOC = "P2"; #J1_12
+
+NET test_o<1> LOC = "P63"; #J2_20
+NET test_o<0> LOC = "P65"; #J2_18
+
+NET led_o<0> LOC = "P23"; #J1_26
+NET led_o<1> LOC = "P21"; #J1_24
+NET led_o<2> LOC = "P17"; #J1_23
+NET led_o<3> LOC = "P16"; #J1_22
+NET led_o<4> LOC = "P14"; #J1_20
+NET led_o<5> LOC = "P13"; #J1_19
+NET led_o<6> LOC = "P12"; #J1_18
+NET led_o<7> LOC = "P11"; #J1_17
+

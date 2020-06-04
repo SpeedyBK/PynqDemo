@@ -1,0 +1,6 @@
+set -tmpdir "Z:/vhdlect1/pong/ise/xst/projnav.tmp"
+set -xsthdpdir "Z:/vhdlect1/pong/ise/xst"
+elaborate
+-lso Z:/vhdlect1/pong/ise/VGAController.lso
+-ifn VGAController.prj
+-ifmt mixed

@@ -1,0 +1,56 @@
+../src/bin_to_bcd_dec.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/score_display/src/bin_to_bcd_dec.vhd
+Model Technology ModelSim SE vcom 6.5c Compiler 2009.08 Aug 27 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity bin_to_bcd_dec
+-- Compiling architecture bin_to_bcd_dec_arch of bin_to_bcd_dec
+
+} {} {}} ../src/seven_seg_dec.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/score_display/src/seven_seg_dec.vhd
+Model Technology ModelSim SE vcom 6.5c Compiler 2009.08 Aug 27 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity seven_seg_dec
+-- Compiling architecture seven_seg_dec_arch of seven_seg_dec
+
+} {} {}} ../src/score_display_top_tb.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/score_display/src/score_display_top_tb.vhd
+Model Technology ModelSim SE vcom 6.5c Compiler 2009.08 Aug 27 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity score_display_top_tb
+-- Compiling architecture score_display_top_tb_arch of score_display_top_tb
+
+} {} {}} ../src/reset_gen.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/05_musterloesung/stepper_control/src/reset_gen.vhd
+Model Technology ModelSim SE vcom 6.5c Compiler 2009.08 Aug 27 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling package reset_gen_pkg
+-- Compiling package body reset_gen_pkg
+-- Loading package reset_gen_pkg
+-- Compiling entity reset_gen
+-- Compiling architecture arch_reset_gen of reset_gen
+
+} {} {}} ../src/score_display.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/score_display/src/score_display.vhd
+Model Technology ModelSim SE vcom 6.5c Compiler 2009.08 Aug 27 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity score_display
+-- Compiling architecture score_display_arch of score_display
+
+} {} {}} ../src/debounce.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/score_display/src/debounce.vhd
+Model Technology ModelSim SE vcom 6.5c Compiler 2009.08 Aug 27 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling package debounce_pkg
+-- Compiling package body debounce_pkg
+-- Loading package debounce_pkg
+-- Compiling entity debounce
+-- Compiling architecture debounce_arch of debounce
+
+} {} {}}

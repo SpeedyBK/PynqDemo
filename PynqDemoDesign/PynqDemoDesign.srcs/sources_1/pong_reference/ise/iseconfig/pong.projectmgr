@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="pong" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/audio_clk_gen - audio_clk_gen_Arch C:|Users|student|Desktop|pong_test|src|sound_interface|melody_player|applied_components|audio_clk_gen.vhd</ClosedNode>
+         <ClosedNode>/dds - dds_toplevel C:|Users|student|Desktop|pong_test|src|sound_interface|dds_synthesizer|dds.vhd</ClosedNode>
+         <ClosedNode>/dds - dds_toplevel C:|Users|student|Desktop|pong_test|src|sound_interface|melody_player|applied_components|dds.vhd</ClosedNode>
+         <ClosedNode>/melody_player - Behavioral C:|Users|student|Desktop|pong_test|src|sound_interface|melody_player|melody_player.vhd</ClosedNode>
+         <ClosedNode>/mmCodec01 - mmCodec01Arch C:|Users|student|Desktop|pong_test|src|sound_interface|melody_player|applied_components|MMcodec01|MMcodec01.vhd</ClosedNode>
+         <ClosedNode>/note_generation - Behavioral C:|Users|student|Desktop|pong_test|src|sound_interface|melody_player|note_generation.vhd</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/controller_interface1 - controller_interface - controller_interface_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/controller_interface2 - controller_interface - controller_interface_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/dds_synthesizer_pkg</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/melodie_constants_pkg</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/melodies</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/score_display_inst - score_display - score_display_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sine_lut_pkg</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - Behavioral/background - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - Behavioral/game_lost - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - Behavioral/out_lr - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - Behavioral/wall - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - sound_interface_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - sound_interface_arch/mp_bg_inst - melody_player - melody_player_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - sound_interface_arch/mp_go_inst - melody_player - melody_player_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - sound_interface_arch/mp_ho_inst - melody_player - melody_player_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - sound_interface_arch/mp_hr_inst - melody_player - melody_player_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - sound_interface_arch/mp_hw_inst - melody_player - melody_player_arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - verhalten/MP - melody_player - struktur/n_gen - note_generator - struktur</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/sound - sound_interface - verhalten/codec - mmCodec01 - mmCodec01Arch</ClosedNode>
+         <ClosedNode>/pong_top - behavior C:|Users|student|Desktop|pong_test|src|pong_toplevel.vhd/stimmung_lut_pkg</ClosedNode>
+         <ClosedNode>/sound_interface - Behavioral C:|Users|student|Desktop|pong_test|src|sound_interface|sound_interface.vhd/background - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/sound_interface - Behavioral C:|Users|student|Desktop|pong_test|src|sound_interface|sound_interface.vhd/game_lost - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/sound_interface - Behavioral C:|Users|student|Desktop|pong_test|src|sound_interface|sound_interface.vhd/hit - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/sound_interface - Behavioral C:|Users|student|Desktop|pong_test|src|sound_interface|sound_interface.vhd/out_lr - melody_player - Behavioral</ClosedNode>
+         <ClosedNode>/sound_interface - Behavioral C:|Users|student|Desktop|pong_test|src|sound_interface|sound_interface.vhd/wall - melody_player - Behavioral</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>pong_top - behavior (//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/pong_toplevel.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >23</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000264000000020000000000000000000000000200000064ffffffff000000810000000300000002000002640000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>pong_top - behavior (//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/pong_toplevel.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000000a800000001000000000000009d0000000100000000000000660000000100000000000001e70000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>address_counter.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f5000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f50000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+</Project>

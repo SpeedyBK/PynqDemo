@@ -1,0 +1,486 @@
+m255
+K3
+13
+cModel Technology
+dC:\Dokumente und Einstellungen\vhdlect\Desktop\ball_motion
+Eball_motion
+Z0 w1315482114
+Z1 DPx4 work 12 constantshit 0 22 _ZJ;T5<VUgeK2g>LoU^I01
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 dZ:\vhdlect1\pong\sim
+Z5 8Z:/vhdlect1/pong/src/ball_motion_juergen/BallMotion.vhdl
+Z6 FZ:/vhdlect1/pong/src/ball_motion_juergen/BallMotion.vhdl
+l0
+L11
+VoCBZ;VZhz_e@Wk;g<TS6M0
+!s100 ?2WeXLQ4dI>PZ<5>bY;6e3
+Z7 OE;C;6.5c;42
+32
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1
+Abehaviour
+R1
+R2
+R3
+Z10 DEx4 work 11 ball_motion 0 22 oCBZ;VZhz_e@Wk;g<TS6M0
+l138
+L35
+V79^]EnC[hHO_m0<D6kLgK3
+!s100 TokN4RDU5Pen8ThF1JUQT2
+R7
+32
+Z11 Mx3 4 ieee 14 std_logic_1164
+Z12 Mx2 4 ieee 11 numeric_std
+Z13 Mx1 4 work 12 constantshit
+R8
+R9
+Eballmotiontest
+Z14 w1310026478
+Z15 DPx4 work 12 constantshit 0 22 Q<CT9d^R@<=YPo:12fLQz0
+R2
+R3
+R4
+Z16 8Z:/vhdlect1/pong/src/ball_motion_jürgen/BallMotionTest.vhdl
+Z17 FZ:/vhdlect1/pong/src/ball_motion_jürgen/BallMotionTest.vhdl
+l0
+L11
+VTBE`QmA^jM]X4_FHW=n8;3
+R7
+32
+R8
+R9
+!s100 U1Sd9j=J2klzK0Pn;FMFP2
+Abench
+R15
+R2
+R3
+DEx4 work 14 ballmotiontest 0 22 TBE`QmA^jM]X4_FHW=n8;3
+l52
+L14
+V8NFk0;A``SnBl[WMlT@E^2
+R7
+32
+R11
+R12
+R13
+R8
+R9
+!s100 X<6QK2XDb;A_z3Z81NP2Q3
+Eclock_enable
+Z18 w1279102429
+Z19 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z20 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R2
+R3
+R4
+Z21 8Z:/vhdlect1/pong/src/clock_enable.vhd
+Z22 FZ:/vhdlect1/pong/src/clock_enable.vhd
+l0
+L44
+V9B8@dB57gG8FGlkfI3>WT1
+R7
+32
+R8
+R9
+!s100 bSTFXBGK@zfa^I>I5R@lF3
+Abehavioral
+R19
+R20
+R2
+R3
+DEx4 work 12 clock_enable 0 22 9B8@dB57gG8FGlkfI3>WT1
+l70
+L57
+V>9fddbLF]T9YFcM_HAhhT2
+R7
+32
+Z23 Mx4 4 ieee 14 std_logic_1164
+Z24 Mx3 4 ieee 11 numeric_std
+Z25 Mx2 4 ieee 18 std_logic_unsigned
+Z26 Mx1 4 ieee 15 std_logic_arith
+R8
+R9
+!s100 HH?M1JWb[a<Z4gfg[Zme;2
+Ecollision_detection
+Z27 w1314778753
+R2
+R3
+R4
+Z28 8Z:/vhdlect1/pong/src/CollisionDetection.vhd
+Z29 FZ:/vhdlect1/pong/src/CollisionDetection.vhd
+l0
+L5
+VFH>LPhm58J2_;ZW27RzYW2
+R7
+32
+R8
+R9
+!s100 >iFBc^;^2Q9RaW;_O9ZQa0
+Averhalten
+R2
+R3
+DEx4 work 19 collision_detection 0 22 FH>LPhm58J2_;ZW27RzYW2
+l62
+L27
+VliJEXUX0b6FDU@1AoMWOH3
+R7
+32
+Z30 Mx2 4 ieee 14 std_logic_1164
+Z31 Mx1 4 ieee 11 numeric_std
+R8
+R9
+!s100 MmNAS3AoBWk;alDmD6Vnj2
+Pconstantshit
+R3
+Z32 w1315482103
+R4
+Z33 8Z:/vhdlect1/pong/src/ball_motion_juergen/ConstantsHit.vhdl
+Z34 FZ:/vhdlect1/pong/src/ball_motion_juergen/ConstantsHit.vhdl
+l0
+L9
+V_ZJ;T5<VUgeK2g>LoU^I01
+R7
+32
+Z35 Mx1 4 ieee 14 std_logic_1164
+R8
+R9
+!s100 g?e]?^3O]Z0^B0F=<A2VK2
+Bbody
+DBx4 work 12 constantshit 0 22 _ZJ;T5<VUgeK2g>LoU^I01
+R3
+l0
+L52
+V_OGP4E><MT;d_Q^Tg^Pe81
+!s100 0]Ko>?Il3Y`SV=ze4ZafG3
+R7
+32
+R35
+R8
+R9
+nbody
+Econtroller_interface
+Z36 w1315310722
+R2
+R3
+R4
+Z37 8Z:/vhdlect1/pong/src/controllerinterface/controller_interface.vhd
+Z38 FZ:/vhdlect1/pong/src/controllerinterface/controller_interface.vhd
+l0
+L6
+V=>D`l1eMXG<n[KS<LA3FT0
+R7
+32
+R8
+R9
+!s100 ::Gf5CPA4SL132_gc2K[22
+Abehavioral
+R2
+R3
+DEx4 work 20 controller_interface 0 22 =>D`l1eMXG<n[KS<LA3FT0
+l56
+L19
+VCNzj87m8:3GgoM`5>oih@1
+R7
+32
+R30
+R31
+R8
+R9
+!s100 eADNBTjPFEMcljf?[iXGN1
+Ecounter
+Z39 w1314778404
+R2
+R3
+R4
+Z40 8Z:/vhdlect1/pong/src/score_display/counter.vhd
+Z41 FZ:/vhdlect1/pong/src/score_display/counter.vhd
+l0
+L5
+V;lVg8Lfgm_0eM<R^kgQ<I0
+R7
+32
+R8
+R9
+!s100 a30OB5;a:Vm6Zoi`J6F8z2
+Abehaviour
+R2
+R3
+DEx4 work 7 counter 0 22 ;lVg8Lfgm_0eM<R^kgQ<I0
+l22
+L17
+V1HmGKXY3TC9MCn[=k;h<o2
+R7
+32
+R30
+R31
+R8
+R9
+!s100 ZL><L>AKE>^U`G7InfgB51
+Edebouncer
+Z42 w1315309582
+R2
+R3
+R4
+Z43 8Z:/vhdlect1/pong/src/controllerinterface/debouncer.vhd
+Z44 FZ:/vhdlect1/pong/src/controllerinterface/debouncer.vhd
+l0
+L5
+Vg>QR=XVKh[C7;c>39]X010
+R7
+32
+R8
+R9
+!s100 dz?<dR=ij]7Fcn1R42oaC3
+Abehavioral
+R2
+R3
+DEx4 work 9 debouncer 0 22 g>QR=XVKh[C7;c>39]X010
+l21
+L17
+VFXV`S;b5N;Bja7`GATD`Q2
+R7
+32
+R30
+R31
+R8
+R9
+!s100 zg`k_FoQKD28jED^?DIWc2
+Edirection_detector
+Z45 w1315309700
+R2
+R3
+R4
+Z46 8Z:/vhdlect1/pong/src/controllerinterface/direction_detector.vhd
+Z47 FZ:/vhdlect1/pong/src/controllerinterface/direction_detector.vhd
+l0
+L6
+VQnA=@PA3i8f<k=EzcDeDz0
+R7
+32
+R8
+R9
+!s100 zI9C4`z2nge<jOaTd;kiA2
+Abehavioral
+R2
+R3
+DEx4 work 18 direction_detector 0 22 QnA=@PA3i8f<k=EzcDeDz0
+l28
+L15
+V=U2j237TB_bomF:g=Wn3k1
+R7
+32
+R30
+R31
+R8
+R9
+!s100 6[DDUP@NA:zYl@GOPC2YS1
+Edisplay_select
+Z48 w1314881554
+R19
+R20
+R2
+R3
+R4
+Z49 8Z:/vhdlect1/pong/src/score_display/display_select.vhd
+Z50 FZ:/vhdlect1/pong/src/score_display/display_select.vhd
+l0
+L6
+VAnTB=<45f;>mXQ^Xe60O02
+R7
+32
+R8
+R9
+!s100 mVg:lhLf5boD1D=g8S[Li2
+Abehaviour
+R19
+R20
+R2
+R3
+DEx4 work 14 display_select 0 22 AnTB=<45f;>mXQ^Xe60O02
+l25
+L16
+V?aCgXU9:DA<4gl[k@d;z_2
+R7
+32
+R23
+R24
+R25
+R26
+R8
+R9
+!s100 gOOQjK11z:^`zZEUILLLG2
+Epong_tb
+Z51 w1315479151
+R15
+R2
+R3
+R4
+Z52 8Z:/vhdlect1/pong/src/pong_tb.vhd
+Z53 FZ:/vhdlect1/pong/src/pong_tb.vhd
+l0
+L11
+Vna0PM6A;DcjW;S4N<Oj?B3
+R7
+32
+R8
+R9
+!s100 X6C^_`QN`H5Y_>Ek>A?CQ3
+Abench
+R15
+R2
+R3
+DEx4 work 7 pong_tb 0 22 na0PM6A;DcjW;S4N<Oj?B3
+l53
+L14
+Vg`Be^:jFC1fIO1Azb5UW>1
+R7
+32
+R11
+R12
+R13
+R8
+R9
+!s100 M4H1HhY_2H4HCdbRBhB_D2
+Epong_top
+Z54 w1315478276
+R19
+R20
+R3
+R4
+Z55 8Z:/vhdlect1/pong/src/pong_toplevel.vhd
+Z56 FZ:/vhdlect1/pong/src/pong_toplevel.vhd
+l0
+L36
+V@@?M8nT`EblCNTN8h>T7m3
+R7
+32
+R8
+R9
+!s100 Gz?Q`6LRBYF_X:c@;FL4`1
+Abehavior
+R19
+R20
+R3
+DEx4 work 8 pong_top 0 22 @@?M8nT`EblCNTN8h>T7m3
+l254
+L68
+V48PgMDlUJ;EYgH0h6e0XD1
+R7
+32
+R11
+R25
+R26
+R8
+R9
+!s100 4Ydl8L^N8FlfXo]dRc:l42
+Erotator
+Z57 w1315310660
+R2
+R3
+R4
+Z58 8Z:/vhdlect1/pong/src/controllerinterface/rotator.vhd
+Z59 FZ:/vhdlect1/pong/src/controllerinterface/rotator.vhd
+l0
+L7
+VLlOEd6JzPAD6e=`?5RJ7f0
+R7
+32
+R8
+R9
+!s100 D`F;gm4oI^k5UERzAQPJ21
+Abehavioral
+R2
+R3
+DEx4 work 7 rotator 0 22 LlOEd6JzPAD6e=`?5RJ7f0
+l19
+L15
+V8LD0:d<57P:L3hSNdc]JU0
+R7
+32
+R30
+R31
+R8
+R9
+!s100 hl86^NA>HELJPk[>D1H2:1
+Escore_display
+Z60 w1314882013
+R3
+R4
+Z61 8Z:/vhdlect1/pong/src/score_display/score_display.vhd
+Z62 FZ:/vhdlect1/pong/src/score_display/score_display.vhd
+l0
+L4
+V7gIkJ[KB;IE9XUFZkVDnm2
+R7
+32
+R8
+R9
+!s100 1dIk4`7=h]2^JLcMJ_94Z2
+Abehaviour
+R3
+DEx4 work 13 score_display 0 22 7gIkJ[KB;IE9XUFZkVDnm2
+l47
+L14
+VK8Z^>fYP:12^`179Kh8ne0
+R7
+32
+R35
+R8
+R9
+!s100 ko^l`]Jb`@KYj7>go2z=S2
+Eseven_segment
+Z63 w1314707358
+R3
+R4
+Z64 8Z:/vhdlect1/pong/src/score_display/7_segment.vhd
+Z65 FZ:/vhdlect1/pong/src/score_display/7_segment.vhd
+l0
+L4
+V@Tdg@XjA>4hD?YIZb@PM12
+R7
+32
+R8
+R9
+!s100 hG65fjXKieOCnze9Q3a=Q3
+Abehaviour
+R3
+DEx4 work 13 seven_segment 0 22 @Tdg@XjA>4hD?YIZb@PM12
+l15
+L11
+VZAk^c8Tl87EZ2@jGWG=YW1
+R7
+32
+R35
+R8
+R9
+!s100 RA4LdFn?;Aj@68W;TZB`l1
+Evga_controller
+Z66 w1314780569
+R2
+R3
+R4
+Z67 8Z:/vhdlect1/pong/src/VGAController.vhd
+Z68 FZ:/vhdlect1/pong/src/VGAController.vhd
+l0
+L5
+VDR`eiFgOD2lAnVd9ff9e71
+R7
+32
+R8
+R9
+!s100 PgA1[9TKg[E4TRMB^6nCO2
+Averhalten
+R2
+R3
+DEx4 work 14 vga_controller 0 22 DR`eiFgOD2lAnVd9ff9e71
+l34
+L29
+Vzo1e1WVj@k4=I>B6z:PbE3
+R7
+32
+R30
+R31
+R8
+R9
+!s100 @mP6Pzl]2o`fJYn9En7eo2

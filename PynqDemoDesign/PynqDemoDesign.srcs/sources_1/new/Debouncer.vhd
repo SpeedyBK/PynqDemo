@@ -67,6 +67,8 @@ begin
     elsif rising_edge(clk_i) then 
         if (delay < prescaler) then 
             delay <= delay + 1;
+            risingedge_o <= '0';
+            fallingedge_o <= '0';
         else
             delay <= 0; 
             s_reg <= s_reg (6 downto 0) & signal_i;

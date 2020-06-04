@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log ControlMenu.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ControlMenu.tcl -notrace" );
+         "-log PynqDemoTop.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source PynqDemoTop.tcl -notrace" );
 
 
 

@@ -1,0 +1,574 @@
+Release 11.4 - xst L.68 (nt)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.88 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.88 secs
+ 
+--> Reading design: controller_interface_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "controller_interface_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "controller_interface_top"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-vq100
+
+---- Source Options
+Top Module Name                    : controller_interface_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : controller_interface_top.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/ise/debounce.vhd" in Library work.
+Architecture debounce_pkg of Entity debounce_pkg is up to date.
+Architecture debounce_arch of Entity debounce is up to date.
+Compiling vhdl file "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/rot_enc_decoder.vhd" in Library work.
+Architecture rot_enc_decoder_arch of Entity rot_enc_decoder is up to date.
+Compiling vhdl file "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/reset_gen.vhd" in Library work.
+Architecture reset_gen_pkg of Entity reset_gen_pkg is up to date.
+Architecture arch_reset_gen of Entity reset_gen is up to date.
+Compiling vhdl file "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface.vhd" in Library work.
+Architecture controller_interface_arch of Entity controller_interface is up to date.
+Compiling vhdl file "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface_top.vhd" in Library work.
+Entity <controller_interface_top> compiled.
+Entity <controller_interface_top> (Architecture <controller_interface_top_arch>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <controller_interface_top> in library <work> (architecture <controller_interface_top_arch>) with generics.
+	debounce_clks = 100000
+
+Analyzing hierarchy for entity <reset_gen> in library <work> (architecture <arch_reset_gen>) with generics.
+	reset_clks = 10
+
+Analyzing hierarchy for entity <controller_interface> in library <work> (architecture <controller_interface_arch>) with generics.
+	clk_frequency_in_Hz = 50000000
+	debounce_time_in_us = 2000
+	racket_height = 30
+	racket_steps = 10
+	screen_height = 480
+
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <debounce_arch>) with generics.
+	debounce_clks = 100000
+
+Analyzing hierarchy for entity <rot_enc_decoder> in library <work> (architecture <rot_enc_decoder_arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <controller_interface_top> in library <work> (Architecture <controller_interface_top_arch>).
+	debounce_clks = 100000
+Entity <controller_interface_top> analyzed. Unit <controller_interface_top> generated.
+
+Analyzing generic Entity <reset_gen> in library <work> (Architecture <arch_reset_gen>).
+	reset_clks = 10
+Entity <reset_gen> analyzed. Unit <reset_gen> generated.
+
+Analyzing generic Entity <controller_interface> in library <work> (Architecture <controller_interface_arch>).
+	clk_frequency_in_Hz = 50000000
+	debounce_time_in_us = 2000
+	racket_height = 30
+	racket_steps = 10
+	screen_height = 480
+Entity <controller_interface> analyzed. Unit <controller_interface> generated.
+
+Analyzing generic Entity <debounce> in library <work> (Architecture <debounce_arch>).
+	debounce_clks = 100000
+Entity <debounce> analyzed. Unit <debounce> generated.
+
+Analyzing Entity <rot_enc_decoder> in library <work> (Architecture <rot_enc_decoder_arch>).
+Entity <rot_enc_decoder> analyzed. Unit <rot_enc_decoder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <reset_gen>.
+    Related source file is "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/reset_gen.vhd".
+    Found 1-bit register for signal <rst_o>.
+    Found 4-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <reset_gen> synthesized.
+
+
+Synthesizing Unit <debounce>.
+    Related source file is "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/ise/debounce.vhd".
+    Found 1-bit register for signal <x_o>.
+    Found 17-bit updown counter for signal <count>.
+    Found 1-bit register for signal <x_sync>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <rot_enc_decoder>.
+    Related source file is "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/rot_enc_decoder.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_i                     (rising_edge)        |
+    | Reset              | rst_i                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <cw_o>.
+    Found 1-bit register for signal <turning_o>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 D-type flip-flop(s).
+Unit <rot_enc_decoder> synthesized.
+
+
+Synthesizing Unit <controller_interface>.
+    Related source file is "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface.vhd".
+    Found 9-bit register for signal <cnt>.
+    Found 9-bit comparator greater for signal <cnt$cmp_gt0000> created at line 102.
+    Found 9-bit comparator less for signal <cnt$cmp_lt0000> created at line 96.
+    Found 9-bit addsub for signal <cnt$share0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <controller_interface> synthesized.
+
+
+Synthesizing Unit <controller_interface_top>.
+    Related source file is "//dr-teeth/pubdir/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/src/controller_interface_top.vhd".
+WARNING:Xst:646 - Signal <racket_y_pos2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <racket_y_pos1<9:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <controller_interface_top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 9-bit addsub                                          : 2
+# Counters                                             : 7
+ 17-bit updown counter                                 : 6
+ 4-bit up counter                                      : 1
+# Registers                                            : 19
+ 1-bit register                                        : 17
+ 9-bit register                                        : 2
+# Comparators                                          : 4
+ 9-bit comparator greater                              : 2
+ 9-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <controller_interface1/rot_enc_decoder_inst/state/FSM> on signal <state[1:2]> with user encoding.
+Optimizing FSM <controller_interface2/rot_enc_decoder_inst/state/FSM> on signal <state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 00
+ turning1 | 01
+ turning2 | 10
+ turning3 | 11
+----------------------
+WARNING:Xst:1290 - Hierarchical block <deb_rot_enc0> is unconnected in block <controller_interface2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <deb_rot_enc1> is unconnected in block <controller_interface2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <rot_enc_decoder_inst> is unconnected in block <controller_interface2>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 2
+ 9-bit addsub                                          : 2
+# Counters                                             : 7
+ 17-bit updown counter                                 : 6
+ 4-bit up counter                                      : 1
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Comparators                                          : 4
+ 9-bit comparator greater                              : 2
+ 9-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <controller_interface_top> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <rot_enc_decoder> ...
+
+Optimizing unit <controller_interface> ...
+WARNING:Xst:2677 - Node <controller_interface2/rot_enc_decoder_inst/cw_o> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/rot_enc_decoder_inst/turning_o> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/rot_enc_decoder_inst/state_FSM_FFd1> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/rot_enc_decoder_inst/state_FSM_FFd2> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/x_sync> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/x_o> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_0> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_1> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_2> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_3> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_4> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_5> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_6> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_7> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_8> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_9> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_10> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_11> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_12> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_13> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_14> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_15> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc0/count_16> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/x_sync> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/x_o> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_0> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_1> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_2> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_3> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_4> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_5> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_6> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_7> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_8> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_9> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_10> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_11> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_12> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_13> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_14> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_15> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/deb_rot_enc1/count_16> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_2> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_0> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_1> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_3> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_4> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_5> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_6> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_7> of sequential type is unconnected in block <controller_interface_top>.
+WARNING:Xst:2677 - Node <controller_interface2/cnt_8> of sequential type is unconnected in block <controller_interface_top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block controller_interface_top, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : controller_interface_top.ngr
+Top Level Output File Name         : controller_interface_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 317
+#      INV                         : 14
+#      LUT2                        : 80
+#      LUT2_D                      : 1
+#      LUT2_L                      : 3
+#      LUT3                        : 15
+#      LUT3_D                      : 1
+#      LUT4                        : 50
+#      LUT4_D                      : 5
+#      LUT4_L                      : 13
+#      MUXCY                       : 64
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 68
+# FlipFlops/Latches                : 94
+#      FDC                         : 4
+#      FDCE                        : 5
+#      FDCPE                       : 4
+#      FDE                         : 76
+#      FDPE                        : 4
+#      FDR                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 4
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200vq100-5 
+
+ Number of Slices:                       89  out of   1920     4%  
+ Number of Slice Flip Flops:             94  out of   3840     2%  
+ Number of 4 input LUTs:                182  out of   3840     4%  
+ Number of IOs:                          17
+ Number of bonded IOBs:                  15  out of     63    23%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_i                              | BUFGP                  | 94    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+Control Signal                                                                                     | Buffer(FF name)                             | Load  |
+---------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+rst_gen_inst/rst_o(rst_gen_inst/rst_o:Q)                                                           | NONE(controller_interface1/cnt_0)           | 13    |
+controller_interface1/deb_push_but/x_o__and0000(controller_interface1/deb_push_but/x_o__and00001:O)| NONE(controller_interface1/deb_push_but/x_o)| 1     |
+controller_interface1/deb_push_but/x_o__and0001(controller_interface1/deb_push_but/x_o__and00011:O)| NONE(controller_interface1/deb_push_but/x_o)| 1     |
+controller_interface1/deb_rot_enc0/x_o__and0000(controller_interface1/deb_rot_enc0/x_o__and00001:O)| NONE(controller_interface1/deb_rot_enc0/x_o)| 1     |
+controller_interface1/deb_rot_enc0/x_o__and0001(controller_interface1/deb_rot_enc0/x_o__and00011:O)| NONE(controller_interface1/deb_rot_enc0/x_o)| 1     |
+controller_interface1/deb_rot_enc1/x_o__and0000(controller_interface1/deb_rot_enc1/x_o__and00001:O)| NONE(controller_interface1/deb_rot_enc1/x_o)| 1     |
+controller_interface1/deb_rot_enc1/x_o__and0001(controller_interface1/deb_rot_enc1/x_o__and00011:O)| NONE(controller_interface1/deb_rot_enc1/x_o)| 1     |
+controller_interface2/deb_push_but/x_o__and0000(controller_interface2/deb_push_but/x_o__and00001:O)| NONE(controller_interface2/deb_push_but/x_o)| 1     |
+controller_interface2/deb_push_but/x_o__and0001(controller_interface2/deb_push_but/x_o__and00011:O)| NONE(controller_interface2/deb_push_but/x_o)| 1     |
+---------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.598ns (Maximum Frequency: 131.608MHz)
+   Minimum input arrival time before clock: 2.208ns
+   Maximum output required time after clock: 7.650ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_i'
+  Clock period: 7.598ns (frequency: 131.608MHz)
+  Total number of paths / destination ports: 4723 / 179
+-------------------------------------------------------------------------
+Delay:               7.598ns (Levels of Logic = 4)
+  Source:            controller_interface2/deb_push_but/count_1 (FF)
+  Destination:       controller_interface2/deb_push_but/count_0 (FF)
+  Source Clock:      clk_i rising
+  Destination Clock: clk_i rising
+
+  Data Path: controller_interface2/deb_push_but/count_1 to controller_interface2/deb_push_but/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   1.040  controller_interface2/deb_push_but/count_1 (controller_interface2/deb_push_but/count_1)
+     LUT3:I0->O            1   0.479   0.851  controller_interface2/deb_push_but/count_and000057 (controller_interface2/deb_push_but/count_and000057)
+     LUT3:I1->O            3   0.479   0.794  controller_interface2/deb_push_but/count_and0000520 (controller_interface2/deb_push_but/count_and0000_bdd5)
+     LUT4:I3->O            1   0.479   0.704  controller_interface2/deb_push_but/count_and00009 (controller_interface2/deb_push_but/count_and0000_bdd1)
+     LUT4:I3->O           17   0.479   1.143  controller_interface2/deb_push_but/count_and000021 (controller_interface2/deb_push_but/count_and0000)
+     FDE:CE                    0.524          controller_interface2/deb_push_but/count_0
+    ----------------------------------------
+    Total                      7.598ns (3.066ns logic, 4.532ns route)
+                                       (40.4% logic, 59.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.208ns (Levels of Logic = 2)
+  Source:            push_button2_i (PAD)
+  Destination:       controller_interface2/deb_push_but/x_o (FF)
+  Destination Clock: clk_i rising
+
+  Data Path: push_button2_i to controller_interface2/deb_push_but/x_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.715   0.838  push_button2_i_IBUF (push_button2_i_IBUF)
+     LUT3:I2->O            1   0.479   0.000  controller_interface2/deb_push_but/x_o_mux00001 (controller_interface2/deb_push_but/x_o_mux0000)
+     FDCPE:D                   0.176          controller_interface2/deb_push_but/x_o
+    ----------------------------------------
+    Total                      2.208ns (1.370ns logic, 0.838ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              7.650ns (Levels of Logic = 2)
+  Source:            controller_interface1/cnt_5 (FF)
+  Destination:       led_o<5> (PAD)
+  Source Clock:      clk_i rising
+
+  Data Path: controller_interface1/cnt_5 to led_o<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             9   0.626   0.955  controller_interface1/cnt_5 (controller_interface1/cnt_5)
+     INV:I->O              1   0.479   0.681  led_o<5>1_INV_0 (led_o_5_OBUF)
+     OBUF:I->O                 4.909          led_o_5_OBUF (led_o<5>)
+    ----------------------------------------
+    Total                      7.650ns (6.014ns logic, 1.636ns route)
+                                       (78.6% logic, 21.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.05 secs
+ 
+--> 
+
+Total memory usage is 136488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   56 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

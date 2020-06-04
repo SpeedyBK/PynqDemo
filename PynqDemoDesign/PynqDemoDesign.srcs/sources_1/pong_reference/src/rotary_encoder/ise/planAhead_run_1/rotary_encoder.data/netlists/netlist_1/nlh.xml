@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<NetlistInfo Version="1" Minor="6">
+	<NetlistHandle Name="netlist_1" TargetPart="xc3s200vq100-5" TopFile="controller_interface_top.edf">
+		<Search Path="Z:/Lehrveranstaltungen/VHDL-Kurs/ss_10/Uebungen/06_project/rotary_encoder/ise"/>
+	</NetlistHandle>
+</NetlistInfo>
+

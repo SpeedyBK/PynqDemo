@@ -1,0 +1,4 @@
+vhdl work "\\dr-teeth\pubdir\studis\vhdlect\vhdlect1\pong\src\score_display\display_select.vhd"
+vhdl work "\\dr-teeth\pubdir\studis\vhdlect\vhdlect1\pong\src\score_display\counter.vhd"
+vhdl work "\\dr-teeth\pubdir\studis\vhdlect\vhdlect1\pong\src\score_display\7_segment.vhd"
+vhdl work "\\dr-teeth\pubdir\studis\vhdlect\vhdlect1\pong\src\score_display\score_display.vhd"

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/ball_motion/src/ball_motion.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/clock_enable.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/collision_detection/src/collision_detection.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/pong_toplevel.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/controller_interface.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/debounce.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/score_display.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/score_display/src/seven_seg_dec.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/address_generator.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/MMcodec01.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/audio_clk_gen.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/cntrl_int_neu.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/frequenz_div.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec01_dac_int.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/MMcodec01/mmCodec_initial.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/dds_synthesizer.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/dds_synthesizer/sine_lut_8_x_16.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pkg.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_pong.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/melodies/melody_table.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/stimmung_lut_6_x_32.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/tuningtable/tuning_table.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/applied_components/volume_control/vol_ctrl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/melody_player.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_duration_fsm.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/note_generator.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/sound_interface/sound_interface.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;//DR-TEETH/pubdir/Lehrveranstaltungen/VHDL-Kurs/pong_reference/src/vga_controller/src/vga_controller.vhd&quot; into library work</arg>
+</msg>
+
+</messages>
+

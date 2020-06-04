@@ -1,1 +1,0 @@
--wto "839af8cf95c04b7684a57be431689ec7" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "PongTB_behav" "xil_defaultlib.PongTB" -log "elaborate.log" 
