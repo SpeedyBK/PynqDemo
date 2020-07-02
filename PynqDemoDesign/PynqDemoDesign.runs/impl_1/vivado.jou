@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Jun  3 09:42:14 2020
-# Process ID: 30224
+# Start of session at: Thu Jun 25 11:52:24 2020
+# Process ID: 19301
 # Current directory: /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/impl_1
 # Command line: vivado -log PynqDemoTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PynqDemoTop.tcl -notrace
 # Log file: /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/impl_1/PynqDemoTop.vdi

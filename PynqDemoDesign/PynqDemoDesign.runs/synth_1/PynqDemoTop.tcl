@@ -19,8 +19,6 @@ proc create_report { reportName command } {
 }
 set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 2
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,16 +34,19 @@ set_property ip_cache_permissions {read write} [current_project]
 add_files -quiet /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/impl_1/pong_top_routed.dcp
 set_property used_in_implementation false [get_files /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/impl_1/pong_top_routed.dcp]
 read_vhdl -library xil_defaultlib {
+  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/record_p.vhd
+  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd
+  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTestEnt.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd
-  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/record_p.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ascii_p.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd
-  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd
+  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd
+  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Licht.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/MotorController.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd

@@ -1,0 +1,1 @@
+-wto "839af8cf95c04b7684a57be431689ec7" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "CraneTB_behav" "xil_defaultlib.CraneTB" -log "elaborate.log" 

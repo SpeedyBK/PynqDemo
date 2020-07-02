@@ -20,14 +20,15 @@
 -- 21.06.2010  1.0      MK       Created
 -- 27.08.2013  1.1		MK		 MMCodec01 & Eliminating Component Declaration
 -- 20.05.2019  1.2      MH       Convert to PYNQ-Board useage
+-- 14.06.2020  1.3      BLK      Fixing the Audio-Port
 --------------------------------------------------------------------------------
 -- Description:
 --
--- Dieses Modul stellt die Toplevel-Dom�ne f�r das Pong-Spiel dar, welches
+-- Dieses Modul stellt die Toplevel-Domaene fuer das Pong-Spiel dar, welches
 -- von den Studierenden des VHDL-Kurses entwickelt werden soll. 
 --
 -- Es verbindet das Visualisierungsmodul mit dem Modul zur Ballbewegung und
--- Kollisionserkennung. Die fehlenden Eingaben der Module zur Schl�gerbewegung
+-- Kollisionserkennung. Die fehlenden Eingaben der Module zur Schläegerbewegung
 -- werden hier exemplarisch (testweise) gesetzt.
 
 LIBRARY ieee;
@@ -42,7 +43,7 @@ ENTITY pong_top IS
 		clock 									: in  std_logic;
 		reset 									: in  std_logic;
 		
-		-- Play Modus Selector
+		-- Play Modus Selector (Shield-Switches on the right)
 		slide_sw_i							: in std_logic_vector(1 downto 0);
 				
 		pmod_c  : in std_logic_vector(7 downto 0);
@@ -56,9 +57,10 @@ ENTITY pong_top IS
 		  
 		-- Sound Interface
 		
-		aud_pwm : out std_logic;
-		aud_sd  : out std_logic;
+		aud_pwm_o : out std_logic;
+		aud_sd_o  : out std_logic;
 		
+		-- Old Sound Interface
 		--lrcout_o 								: out std_logic;
 		--bclk_o 									: out std_logic;
 		--sclk_o 									: out std_logic;
@@ -151,7 +153,6 @@ VGA_VS <= v_sync_o;
 --blue_led <= not pmod_c;
 blue_led <= not audio_debug(7 downto 0);
 
-
 rot_enc1_i <= pmod_c(7 downto 6);
 push_button1_i <= not pmod_c(5);
 
@@ -205,10 +206,10 @@ led(3) <= '0';
 			racket_steps				 => 10,
 			screen_height			 => 480)
 		port map(
-			clock_i				 => clock,	
-			reset_i				 => reset,
-			rot_enc_i 		 => rot_enc2_i,
-			push_but_i 		 => push_button2_i,
+			clock_i		   => clock,	
+			reset_i	       => reset,
+			rot_enc_i 	   => rot_enc2_i,
+			push_but_i 	   => push_button2_i,
 			push_but_deb_o => push_but_deb2,
 			racket_y_pos_o => racket_y_pos2_player
 			);
@@ -291,7 +292,7 @@ led(3) <= '0';
 			blue_o 					=> VGA_B
 			);
 		  
-	--sound: entity work.sound_interface 
+--	sound: entity work.sound_interface 
 --		port map(
 --			clock_i 		 => clock,
 --			reset_i 		 => reset,
@@ -301,11 +302,12 @@ led(3) <= '0';
 --			hit_racket_l_i   => hit_racket_l,
 --			hit_racket_r_i   => hit_racket_r,
 --			game_over_i		 => game_over,
-			
+--			
 --			debug_output     => audio_debug,
-			
---			PWM_o            => aud_pwm,
---            aud_en_o         => aud_sd
+--			
+--			PWM_o            => aud_pwm_o,
+--           aud_en_o         => aud_sd_o
+--            );
 			
 --			lrcout_o 			 => lrcout_o,
 --			bclk_o 				 => bclk_o,

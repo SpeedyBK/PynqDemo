@@ -1,0 +1,7 @@
+Running: xsim.dir/CraneTB_behav/xsimk -simmode gui -wdb CraneTB_behav.wdb -simrunnum 0 -socket 41929
+Design successfully loaded
+Design Loading Memory Usage: 43916 KB (Peak: 44036 KB)
+Design Loading CPU Usage: 50 ms
+Simulation completed
+Simulation Memory Usage: 125652 KB (Peak: 183184 KB)
+Simulation CPU Usage: 60 ms

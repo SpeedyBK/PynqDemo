@@ -34,7 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity ClockEnableManager is
     Generic (SysClock : integer := 125000000;
-             MovEn : integer := 2;
+             MovEn : integer := 10;
              DigitEn : integer := 1000);
     Port ( clk_i : in STD_LOGIC;
            rst_i : in STD_LOGIC;

@@ -47,7 +47,7 @@ entity Pong is
            clk_i : in STD_LOGIC;
            
            -- Switches 
-           sw_i : in std_logic_vector(1 downto 0); -- (1,0)
+           --sw_i : in std_logic_vector(1 downto 0); -- (1,0)
 
            -- RGB LEDs
            ld4_o : out std_logic_vector(2 downto 0); -- (Red, Green, Blue)
@@ -128,8 +128,8 @@ entity Pong is
            n_sw_shield_i : in std_logic_vector(7 downto 0); --(left downto right)
 
             -- Seven Segmend Displays 
-           n_digit_en_o : out std_logic_vector(7 downto 0); --(left downto right)
-           n_segments_o : out std_logic_vector(7 downto 0); --(a,b,c,d,e,f,g,dp)
+           n_SSD_en_o : out std_logic_vector(7 downto 0); --(left downto right)
+           n_SSD_o : out std_logic_vector(7 downto 0); --(a,b,c,d,e,f,g,dp)
 
             -- PS2 Interface
            ps2_1_dir_o : out std_logic_vector(1 downto 0); --(data, clk)
@@ -176,7 +176,9 @@ architecture Behavioral of pong is
 --(A, C, E, F, G, H, I, J, L, O)
 --(P, S, U, a, b, c, d, h, n, o)
 --(q, r, t, u, y)         
-constant name_str : string := "        PonG";
+constant name : string := "PonG";
+constant fill_str : string := "        ";
+constant name_str : string := fill_str & name;
 
 -- Directions: (Set to 0 for Inputs, Set to 1 for Outputs)
 -- These constants can configure PMOD A, PMOD B, PMOD C, Jumper and the PS2 Ports as in- or output.
@@ -213,8 +215,8 @@ component pong_top IS
 		--push_button2_i 					    : in  std_logic;
 		  
 		-- Sound Interface
-		aud_pwm : out std_logic;
-		aud_sd  : out std_logic;
+		aud_pwm_o : out std_logic;
+		aud_sd_o  : out std_logic;
 		
 		--lrcout_o 								: out std_logic;
 		--bclk_o 									: out std_logic;
@@ -261,7 +263,7 @@ generic map ( game_enable_clocks => 2100000) -- Propox version 840000
 port map ( clock => clk_i,
 		   reset => btn_i(3),
 		   -- Play Mode Selector
-		   slide_sw_i => sw_i,
+		   slide_sw_i => n_sw_shield_i(1 downto 0),
 		   pmod_c => pmodC_i,
 		   blue_led => n_leds_shield_o,
 		
@@ -273,8 +275,8 @@ port map ( clock => clk_i,
 		--push_button2_i 					    : in  std_logic;
 		  
 		-- Sound Interface
-		   aud_pwm => aud_pwm_o,
-		   aud_sd => aud_sd_o,
+		   aud_pwm_o => aud_pwm_o,
+		   aud_sd_o => aud_sd_o,
 		
 		--lrcout_o 								: out std_logic;
 		--bclk_o 									: out std_logic;
@@ -287,8 +289,8 @@ port map ( clock => clk_i,
 		--mode_o 									: out std_logic;
 
 		-- Seven Segment Display
-		   ssd_data => n_segments_o,
-		   ssd_enable => n_digit_en_o,
+		   ssd_data => n_SSD_o,
+		   ssd_enable => n_SSD_en_o,
 
 		-- VGA Controller
 		   VGA_HS => open, 

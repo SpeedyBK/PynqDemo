@@ -46,7 +46,7 @@ entity Crane is
            clk_i : in STD_LOGIC;
            
            -- Switches 
-           sw_i : in std_logic_vector(1 downto 0); -- (1,0)
+           -- sw_i : in std_logic_vector(1 downto 0); -- (1,0)
 
            -- RGB LEDs
            ld4_o : out std_logic_vector(2 downto 0); -- (Red, Green, Blue)
@@ -175,14 +175,16 @@ architecture Behavioral of Crane is
 --(A, C, E, F, G, H, I, J, L, O)
 --(P, S, U, a, b, c, d, h, n, o)
 --(q, r, t, u, y)         
-constant name_str : string := "        CranE ControL";
+constant name : string := "CranE ControL";
+constant fill_str : string := "        ";
+constant name_str : string := fill_str & name; 
 
 -- Directions: (Set to 0 for Inputs, Set to 1 for Outputs)
 -- These constants can configure PMOD A, PMOD B, PMOD C, Jumper and the PS2 Ports as in- or output.
 -- This is done by a multiplexer in the top-level design, which either switches Tri-State-Buffer
 -- at the FPGA-Pins to high-impedance or routes the output signal through those buffers.
 -- Unused Ports should be set as inputs.  
-constant pmodA_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := "11101111";
+constant pmodA_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := "11111111";
 constant pmodB_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
 constant pmodC_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
 constant jumper_dir : std_logic_vector (JUMPER_WIDTH-1 downto 0) := (others => '0');
@@ -221,7 +223,7 @@ PS2_2_dir_o <= PS2_2_dir;
 Crane: CraneController
 port map ( clk_i => clk_i,
            rst_i => btn_i(3),
-           start_i => pmodA_i(4),
+           start_i => btn_i(0),
            motor_signals_o => int_pmod(3 downto 0),
            blue_leds_o => n_leds_shield_o(6 downto 0),
            magnet_o => open);

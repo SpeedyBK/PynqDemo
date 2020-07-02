@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Jun  3 09:41:30 2020
-# Process ID: 30027
+# Start of session at: Thu Jun 25 11:51:39 2020
+# Process ID: 19112
 # Current directory: /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/synth_1
 # Command line: vivado -log PynqDemoTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PynqDemoTop.tcl
 # Log file: /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/synth_1/PynqDemoTop.vds
@@ -16,23 +16,91 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 30046 
+INFO: Helper process launched with PID 19135 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1731.836 ; gain = 152.715 ; free physical = 379 ; free virtual = 3871
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1732.000 ; gain = 152.715 ; free physical = 422 ; free virtual = 3037
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2488] overwriting existing primary unit clock_enable [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/clock_enable/src/clock_enable.vhd:44]
 WARNING: [Synth 8-2488] overwriting existing primary unit debounce [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/debounce.vhd:40]
 WARNING: [Synth 8-2488] overwriting existing primary unit debounce [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:40]
-WARNING: [Synth 8-2488] overwriting existing primary unit pong_top [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:38]
+WARNING: [Synth 8-2488] overwriting existing primary unit pong_top [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:39]
 INFO: [Synth 8-638] synthesizing module 'PynqDemoTop' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:147]
-INFO: [Synth 8-638] synthesizing module 'Pong' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'ControlMenu' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:172]
+	Parameter SysClock bound to: 125000000 - type: integer 
+	Parameter MovEn bound to: 5 - type: integer 
+	Parameter DigitEn bound to: 1000 - type: integer 
+	Parameter CHAR_WIDTH bound to: 8 - type: integer 
+	Parameter num_of_modules bound to: 5 - type: integer 
+	Parameter prescaler bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:41' bound to instance 'UPDebounce' of component 'Debouncer' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'Debouncer' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:51]
+	Parameter prescaler bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Debouncer' (1#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:51]
+	Parameter prescaler bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:41' bound to instance 'DownDebounce' of component 'Debouncer' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:290]
+	Parameter SysClock bound to: 125000000 - type: integer 
+	Parameter MovEn bound to: 5 - type: integer 
+	Parameter DigitEn bound to: 1000 - type: integer 
+INFO: [Synth 8-3491] module 'ClockEnableManager' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:35' bound to instance 'EnableSignals' of component 'ClockEnableManager' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'ClockEnableManager' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:45]
+	Parameter SysClock bound to: 125000000 - type: integer 
+	Parameter MovEn bound to: 5 - type: integer 
+	Parameter DigitEn bound to: 1000 - type: integer 
+	Parameter F_in bound to: 125000000 - type: integer 
+	Parameter F_out bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'ClkDivider' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:37' bound to instance 'MovingText' of component 'ClkDivider' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'ClkDivider' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
+	Parameter F_in bound to: 125000000 - type: integer 
+	Parameter F_out bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ClkDivider' (2#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
+	Parameter F_in bound to: 125000000 - type: integer 
+	Parameter F_out bound to: 1000 - type: integer 
+INFO: [Synth 8-3491] module 'ClkDivider' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:37' bound to instance 'Digits' of component 'ClkDivider' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'ClkDivider__parameterized1' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
+	Parameter F_in bound to: 125000000 - type: integer 
+	Parameter F_out bound to: 1000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ClkDivider__parameterized1' (2#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'ClockEnableManager' (3#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:45]
+INFO: [Synth 8-3491] module 'DisplayController' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd:39' bound to instance 'Display' of component 'DisplayController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:308]
+INFO: [Synth 8-638] synthesizing module 'DisplayController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'DisplayController' (4#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd:49]
+INFO: [Synth 8-3491] module 'TextMover' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/TextMover.vhd:34' bound to instance 'MovingText' of component 'TextMover' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:317]
+INFO: [Synth 8-638] synthesizing module 'TextMover' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/TextMover.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'TextMover' (5#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/TextMover.vhd:43]
+	Parameter NUM_OF_MODULES bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'ModuleSelector' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:34' bound to instance 'Selector' of component 'ModuleSelector' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:325]
+INFO: [Synth 8-638] synthesizing module 'ModuleSelector' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:43]
+	Parameter NUM_OF_MODULES bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ModuleSelector' (6#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:43]
+WARNING: [Synth 8-3848] Net ld4_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:53]
+WARNING: [Synth 8-3848] Net ld5_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:54]
+WARNING: [Synth 8-3848] Net leds_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:57]
+WARNING: [Synth 8-3848] Net pmodA_dir_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:71]
+WARNING: [Synth 8-3848] Net pmodA_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:73]
+WARNING: [Synth 8-3848] Net pmodB_dir_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:75]
+WARNING: [Synth 8-3848] Net pmodB_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:77]
+WARNING: [Synth 8-3848] Net pmodC_dir_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:83]
+WARNING: [Synth 8-3848] Net pmodC_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:85]
+WARNING: [Synth 8-3848] Net aud_pwm_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:89]
+WARNING: [Synth 8-3848] Net aud_sd_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:90]
+WARNING: [Synth 8-3848] Net m_clk_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:93]
+WARNING: [Synth 8-3848] Net jumper_dir_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:120]
+WARNING: [Synth 8-3848] Net jumper_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:122]
+WARNING: [Synth 8-3848] Net ps2_1_dir_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:135]
+WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:137]
+WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:139]
+WARNING: [Synth 8-3848] Net ps2_2_dir_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:141]
+WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:143]
+WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity ControlMenu does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:145]
+INFO: [Synth 8-256] done synthesizing module 'ControlMenu' (7#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'Pong' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:171]
 	Parameter game_enable_clocks bound to: 2100000 - type: integer 
-INFO: [Synth 8-3491] module 'pong_top' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:38' bound to instance 'pong' of component 'pong_top' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:256]
-INFO: [Synth 8-638] synthesizing module 'pong_top' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:87]
+INFO: [Synth 8-3491] module 'pong_top' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:39' bound to instance 'pong' of component 'pong_top' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'pong_top' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:89]
 	Parameter game_enable_clocks bound to: 2100000 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'clock_enable' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/clock_enable/src/clock_enable.vhd:57]
 	Parameter game_enable_clocks bound to: 2100000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'clock_enable' (1#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/clock_enable/src/clock_enable.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'clock_enable' (8#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/clock_enable/src/clock_enable.vhd:57]
 INFO: [Synth 8-638] synthesizing module 'controller_interface' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd:24]
 	Parameter clk_frequency_in_Hz bound to: 125000000 - type: integer 
 	Parameter racket_steps bound to: 10 - type: integer 
@@ -43,15 +111,15 @@ INFO: [Synth 8-638] synthesizing module 'controller_interface' [/home/benjamin/R
 INFO: [Synth 8-3491] module 'debounce' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:40' bound to instance 'deb_rot_enc0' of component 'debounce' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd:47]
 INFO: [Synth 8-638] synthesizing module 'debounce' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:53]
 	Parameter debounce_clks bound to: 250000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debounce' (2#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (9#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:53]
 	Parameter debounce_clks bound to: 250000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:40' bound to instance 'deb_rot_enc1' of component 'debounce' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd:58]
 	Parameter debounce_clks bound to: 250000 - type: integer 
 INFO: [Synth 8-3491] module 'debounce' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:40' bound to instance 'deb_push_but' of component 'debounce' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd:69]
 INFO: [Synth 8-3491] module 'rot_enc_decoder' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd:4' bound to instance 'rot_enc_decoder_inst' of component 'rot_enc_decoder' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd:80]
 INFO: [Synth 8-638] synthesizing module 'rot_enc_decoder' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'rot_enc_decoder' (3#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'controller_interface' (4#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'rot_enc_decoder' (10#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/rot_enc_decoder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'controller_interface' (11#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/rotary_encoder/src/controller_interface.vhd:24]
 INFO: [Synth 8-638] synthesizing module 'collision_detection' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/collision_detection/src/collision_detection.vhd:62]
 	Parameter ball_length bound to: 6 - type: integer 
 	Parameter racket_length bound to: 10 - type: integer 
@@ -60,7 +128,7 @@ INFO: [Synth 8-638] synthesizing module 'collision_detection' [/home/benjamin/Re
 	Parameter racket_right_space bound to: 610 - type: integer 
 	Parameter screen_height bound to: 480 - type: integer 
 INFO: [Synth 8-226] default block is never used [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/collision_detection/src/collision_detection.vhd:89]
-INFO: [Synth 8-256] done synthesizing module 'collision_detection' (5#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/collision_detection/src/collision_detection.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'collision_detection' (12#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/collision_detection/src/collision_detection.vhd:62]
 INFO: [Synth 8-638] synthesizing module 'ball_motion' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/ball_motion/src/ball_motion.vhd:70]
 	Parameter ball_length bound to: 6 - type: integer 
 	Parameter racket_length bound to: 10 - type: integer 
@@ -69,7 +137,7 @@ INFO: [Synth 8-638] synthesizing module 'ball_motion' [/home/benjamin/Repositori
 	Parameter racket_right_space bound to: 610 - type: integer 
 	Parameter screen_height bound to: 480 - type: integer 
 	Parameter speedup_racket bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ball_motion' (6#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/ball_motion/src/ball_motion.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'ball_motion' (13#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/ball_motion/src/ball_motion.vhd:70]
 INFO: [Synth 8-638] synthesizing module 'vga_controller' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/vga_controller/src/vga_controller.vhd:66]
 	Parameter ball_length bound to: 6 - type: integer 
 	Parameter racket_length bound to: 10 - type: integer 
@@ -78,261 +146,238 @@ INFO: [Synth 8-638] synthesizing module 'vga_controller' [/home/benjamin/Reposit
 	Parameter racket_right_space bound to: 610 - type: integer 
 	Parameter H_max bound to: 799 - type: integer 
 	Parameter V_max bound to: 524 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'vga_controller' (7#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/vga_controller/src/vga_controller.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'vga_controller' (14#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/vga_controller/src/vga_controller.vhd:66]
 INFO: [Synth 8-638] synthesizing module 'score_display' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_display.vhd:21]
 	Parameter score_max bound to: 15 - type: integer 
 	Parameter score_max bound to: 15 - type: integer 
 INFO: [Synth 8-3491] module 'score_counter' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_counter.vhd:5' bound to instance 'score_counter_inst' of component 'score_counter' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_display.vhd:75]
 INFO: [Synth 8-638] synthesizing module 'score_counter' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_counter.vhd:20]
 	Parameter score_max bound to: 15 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'score_counter' (8#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_counter.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'score_counter' (15#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_counter.vhd:20]
 	Parameter score_max bound to: 15 - type: integer 
 INFO: [Synth 8-3491] module 'bin_to_bcd_dec' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:5' bound to instance 'player1_bin_to_bcd_dec' of component 'bin_to_bcd_dec' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_display.vhd:89]
 INFO: [Synth 8-638] synthesizing module 'bin_to_bcd_dec' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:19]
 	Parameter score_max bound to: 15 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'bin_to_bcd_dec' (9#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'bin_to_bcd_dec' (16#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:19]
 	Parameter score_max bound to: 15 - type: integer 
 INFO: [Synth 8-3491] module 'bin_to_bcd_dec' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/bin_to_bcd_dec.vhd:5' bound to instance 'player2_bin_to_bcd_dec' of component 'bin_to_bcd_dec' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_display.vhd:102]
 INFO: [Synth 8-3491] module 'seven_seg_dec' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/seven_seg_dec.vhd:5' bound to instance 'seven_seg_dec_inst' of component 'seven_seg_dec' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_display.vhd:146]
 INFO: [Synth 8-638] synthesizing module 'seven_seg_dec' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/seven_seg_dec.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'seven_seg_dec' (10#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/seven_seg_dec.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'score_display' (11#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_display.vhd:21]
-WARNING: [Synth 8-3848] Net audio_debug in module/entity pong_top does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:137]
-WARNING: [Synth 8-3848] Net aud_pwm in module/entity pong_top does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:59]
-WARNING: [Synth 8-3848] Net aud_sd in module/entity pong_top does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:60]
-INFO: [Synth 8-256] done synthesizing module 'pong_top' (12#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'seven_seg_dec' (17#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/seven_seg_dec.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'score_display' (18#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/score_display.vhd:21]
+WARNING: [Synth 8-3848] Net audio_debug in module/entity pong_top does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:139]
+WARNING: [Synth 8-3848] Net aud_pwm_o in module/entity pong_top does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:60]
+WARNING: [Synth 8-3848] Net aud_sd_o in module/entity pong_top does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'pong_top' (19#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/pong_toplevel.vhd:89]
 WARNING: [Synth 8-3848] Net ld4_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:53]
 WARNING: [Synth 8-3848] Net ld5_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:54]
-WARNING: [Synth 8-3848] Net pmodA_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:70]
-WARNING: [Synth 8-3848] Net pmodB_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:74]
-WARNING: [Synth 8-3848] Net pmodC_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:82]
-WARNING: [Synth 8-3848] Net m_clk_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:90]
-WARNING: [Synth 8-3848] Net jumper_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:119]
-WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:134]
-WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:136]
-WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:140]
-WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:142]
-INFO: [Synth 8-256] done synthesizing module 'Pong' (13#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'Crane' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:167]
-INFO: [Synth 8-3491] module 'CraneController' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd:34' bound to instance 'Crane' of component 'CraneController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:218]
+WARNING: [Synth 8-3848] Net pmodA_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:73]
+WARNING: [Synth 8-3848] Net pmodB_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:77]
+WARNING: [Synth 8-3848] Net pmodC_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:85]
+WARNING: [Synth 8-3848] Net m_clk_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:93]
+WARNING: [Synth 8-3848] Net jumper_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:122]
+WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:137]
+WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:139]
+WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:143]
+WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity Pong does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:145]
+INFO: [Synth 8-256] done synthesizing module 'Pong' (20#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'Crane' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:170]
+INFO: [Synth 8-3491] module 'CraneController' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd:34' bound to instance 'Crane' of component 'CraneController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:223]
 INFO: [Synth 8-638] synthesizing module 'CraneController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd:43]
 INFO: [Synth 8-3491] module 'MotorController' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/MotorController.vhd:34' bound to instance 'MController' of component 'MotorController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd:150]
 INFO: [Synth 8-638] synthesizing module 'MotorController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/MotorController.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'MotorController' (14#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/MotorController.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'MotorController' (21#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/MotorController.vhd:43]
 WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd:128]
-INFO: [Synth 8-256] done synthesizing module 'CraneController' (15#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'CraneController' (22#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/CraneController.vhd:43]
 WARNING: [Synth 8-3848] Net ld4_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:52]
 WARNING: [Synth 8-3848] Net ld5_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:53]
-WARNING: [Synth 8-3848] Net pmodB_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:73]
-WARNING: [Synth 8-3848] Net pmodC_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:81]
-WARNING: [Synth 8-3848] Net aud_pwm_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:85]
-WARNING: [Synth 8-3848] Net aud_sd_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:86]
-WARNING: [Synth 8-3848] Net m_clk_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:89]
-WARNING: [Synth 8-3848] Net jumper_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:118]
-WARNING: [Synth 8-3848] Net n_digit_en_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:127]
-WARNING: [Synth 8-3848] Net n_segments_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:128]
-WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:133]
-WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:135]
-WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:139]
-WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:141]
-INFO: [Synth 8-256] done synthesizing module 'Crane' (16#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'ControlMenu' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:56]
-	Parameter SysClock bound to: 125000000 - type: integer 
-	Parameter MovEn bound to: 2 - type: integer 
-	Parameter DigitEn bound to: 1000 - type: integer 
-	Parameter CHAR_WIDTH bound to: 8 - type: integer 
-	Parameter num_of_modules bound to: 4 - type: integer 
-	Parameter prescaler bound to: 10000 - type: integer 
-INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:41' bound to instance 'UPDebounce' of component 'Debouncer' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:213]
-INFO: [Synth 8-638] synthesizing module 'Debouncer' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:51]
-	Parameter prescaler bound to: 10000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Debouncer' (17#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:51]
-	Parameter prescaler bound to: 10000 - type: integer 
-INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Debouncer.vhd:41' bound to instance 'DownDebounce' of component 'Debouncer' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:222]
-	Parameter SysClock bound to: 125000000 - type: integer 
-	Parameter MovEn bound to: 2 - type: integer 
-	Parameter DigitEn bound to: 1000 - type: integer 
-INFO: [Synth 8-3491] module 'ClockEnableManager' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:35' bound to instance 'EnableSignals' of component 'ClockEnableManager' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:231]
-INFO: [Synth 8-638] synthesizing module 'ClockEnableManager' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:45]
-	Parameter SysClock bound to: 125000000 - type: integer 
-	Parameter MovEn bound to: 2 - type: integer 
-	Parameter DigitEn bound to: 1000 - type: integer 
-	Parameter F_in bound to: 125000000 - type: integer 
-	Parameter F_out bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'ClkDivider' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:37' bound to instance 'MovingText' of component 'ClkDivider' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'ClkDivider' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
-	Parameter F_in bound to: 125000000 - type: integer 
-	Parameter F_out bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ClkDivider' (18#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
-	Parameter F_in bound to: 125000000 - type: integer 
-	Parameter F_out bound to: 1000 - type: integer 
-INFO: [Synth 8-3491] module 'ClkDivider' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:37' bound to instance 'Digits' of component 'ClkDivider' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:63]
-INFO: [Synth 8-638] synthesizing module 'ClkDivider__parameterized1' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
-	Parameter F_in bound to: 125000000 - type: integer 
-	Parameter F_out bound to: 1000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ClkDivider__parameterized1' (18#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClkDivider.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'ClockEnableManager' (19#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ClockEnableManager.vhd:45]
-INFO: [Synth 8-3491] module 'DisplayController' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd:39' bound to instance 'Display' of component 'DisplayController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:240]
-INFO: [Synth 8-638] synthesizing module 'DisplayController' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'DisplayController' (20#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/DisplayController.vhd:49]
-INFO: [Synth 8-3491] module 'TextMover' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/TextMover.vhd:34' bound to instance 'MovingText' of component 'TextMover' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:249]
-INFO: [Synth 8-638] synthesizing module 'TextMover' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/TextMover.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'TextMover' (21#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/TextMover.vhd:43]
-	Parameter NUM_OF_MODULES bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'ModuleSelector' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:34' bound to instance 'Selector' of component 'ModuleSelector' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:257]
-INFO: [Synth 8-638] synthesizing module 'ModuleSelector' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:43]
-	Parameter NUM_OF_MODULES bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ModuleSelector' (22#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'ControlMenu' (23#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ControlMenu.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'InputTest' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:167]
-WARNING: [Synth 8-3848] Net ld4_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:52]
-WARNING: [Synth 8-3848] Net ld5_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:53]
-WARNING: [Synth 8-3848] Net pmodA_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:69]
-WARNING: [Synth 8-3848] Net pmodB_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:73]
-WARNING: [Synth 8-3848] Net pmodC_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:81]
-WARNING: [Synth 8-3848] Net aud_pwm_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:85]
-WARNING: [Synth 8-3848] Net aud_sd_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:86]
-WARNING: [Synth 8-3848] Net m_clk_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:89]
-WARNING: [Synth 8-3848] Net jumper_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:118]
-WARNING: [Synth 8-3848] Net n_leds_shield_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:121]
-WARNING: [Synth 8-3848] Net n_digit_en_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:127]
-WARNING: [Synth 8-3848] Net n_segments_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:128]
-WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:133]
-WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:135]
-WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:139]
-WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity InputTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:141]
-INFO: [Synth 8-256] done synthesizing module 'InputTest' (24#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/InputTest.vhd:167]
+WARNING: [Synth 8-3848] Net pmodB_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:76]
+WARNING: [Synth 8-3848] Net pmodC_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:84]
+WARNING: [Synth 8-3848] Net aud_pwm_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:88]
+WARNING: [Synth 8-3848] Net aud_sd_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:89]
+WARNING: [Synth 8-3848] Net m_clk_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:92]
+WARNING: [Synth 8-3848] Net jumper_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:121]
+WARNING: [Synth 8-3848] Net n_digit_en_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:130]
+WARNING: [Synth 8-3848] Net n_segments_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:131]
+WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:136]
+WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:138]
+WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:142]
+WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity Crane does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:144]
+INFO: [Synth 8-256] done synthesizing module 'Crane' (23#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Crane.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'Lauflicht' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:167]
+INFO: [Synth 8-3491] module 'Licht' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Licht.vhd:34' bound to instance 'MovingLight' of component 'Licht' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:215]
+INFO: [Synth 8-638] synthesizing module 'Licht' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Licht.vhd:41]
+WARNING: [Synth 8-614] signal 'rst_i' is read in the process but is not in the sensitivity list [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Licht.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'Licht' (24#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Licht.vhd:41]
+WARNING: [Synth 8-3848] Net ld4_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:52]
+WARNING: [Synth 8-3848] Net ld5_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:53]
+WARNING: [Synth 8-3848] Net pmodA_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:69]
+WARNING: [Synth 8-3848] Net pmodB_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:73]
+WARNING: [Synth 8-3848] Net pmodC_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:81]
+WARNING: [Synth 8-3848] Net aud_pwm_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:85]
+WARNING: [Synth 8-3848] Net aud_sd_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:86]
+WARNING: [Synth 8-3848] Net m_clk_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:89]
+WARNING: [Synth 8-3848] Net jumper_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:118]
+WARNING: [Synth 8-3848] Net n_digit_en_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:127]
+WARNING: [Synth 8-3848] Net n_segments_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:128]
+WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:133]
+WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:135]
+WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:139]
+WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity Lauflicht does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'Lauflicht' (25#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Lauflicht.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'BasicTest' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:170]
+INFO: [Synth 8-3491] module 'BasicTestEnt' declared at '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTestEnt.vhd:34' bound to instance 'Design' of component 'BasicTestEnt' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'BasicTestEnt' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTestEnt.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'BasicTestEnt' (26#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTestEnt.vhd:46]
+WARNING: [Synth 8-3848] Net name_len_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:39]
+WARNING: [Synth 8-3848] Net name_dat_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:40]
+WARNING: [Synth 8-3848] Net pmodA_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:72]
+WARNING: [Synth 8-3848] Net pmodB_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:76]
+WARNING: [Synth 8-3848] Net pmodC_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:84]
+WARNING: [Synth 8-3848] Net aud_pwm_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:88]
+WARNING: [Synth 8-3848] Net aud_sd_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:89]
+WARNING: [Synth 8-3848] Net m_clk_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:92]
+WARNING: [Synth 8-3848] Net jumper_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:121]
+WARNING: [Synth 8-3848] Net ps2_1_data_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:136]
+WARNING: [Synth 8-3848] Net ps2_1_clk_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:138]
+WARNING: [Synth 8-3848] Net ps2_2_data_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:142]
+WARNING: [Synth 8-3848] Net ps2_2_clk_o in module/entity BasicTest does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:144]
+INFO: [Synth 8-256] done synthesizing module 'BasicTest' (27#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTest.vhd:170]
+WARNING: [Synth 8-614] signal 'in_to_mux' is read in the process but is not in the sensitivity list [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:896]
+WARNING: [Synth 8-5858] RAM input_arr_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-5858] RAM name_arr_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5858] RAM pmod_arr_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5858] RAM ps2_arr_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-5858] RAM jumper_arr_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-3848] Net leds_arr[0][rgb_ld4] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:168]
-WARNING: [Synth 8-3848] Net leds_arr[0][rgb_ld5] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:168]
-WARNING: [Synth 8-3848] Net leds_arr[0][board_leds] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:168]
-WARNING: [Synth 8-3848] Net pmod_arr[0][pmodA_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
-WARNING: [Synth 8-3848] Net pmod_arr[0][pmodA_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
-WARNING: [Synth 8-3848] Net pmod_arr[0][pmodB_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
-WARNING: [Synth 8-3848] Net pmod_arr[0][pmodB_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
-WARNING: [Synth 8-3848] Net pmod_arr[0][pmodC_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
-WARNING: [Synth 8-3848] Net pmod_arr[0][pmodC_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
-WARNING: [Synth 8-3848] Net audio_arr[0][aud_pwm] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:174]
-WARNING: [Synth 8-3848] Net audio_arr[0][aud_sd] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:174]
-WARNING: [Synth 8-3848] Net jumper_arr[0][jumper_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:183]
-WARNING: [Synth 8-3848] Net jumper_arr[0][jumper_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:183]
-WARNING: [Synth 8-3848] Net leds_arr[0][blue_leds] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:168]
-WARNING: [Synth 8-3848] Net ps2_arr[0][ps2_1_data_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:180]
-WARNING: [Synth 8-3848] Net ps2_arr[0][ps2_1_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:180]
-WARNING: [Synth 8-3848] Net ps2_arr[0][ps2_1_clk_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:180]
-WARNING: [Synth 8-3848] Net ps2_arr[0][ps2_2_data_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:180]
-WARNING: [Synth 8-3848] Net ps2_arr[0][ps2_2_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:180]
-WARNING: [Synth 8-3848] Net ps2_arr[0][ps2_2_clk_o] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:180]
-INFO: [Synth 8-256] done synthesizing module 'PynqDemoTop' (25#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:147]
+WARNING: [Synth 8-3848] Net tbd_to_mux[rgb_ld4] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][rgb_ld4] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][rgb_ld4] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net tbd_to_mux[rgb_ld5] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][rgb_ld5] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][rgb_ld5] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net tbd_to_mux[leds] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][leds] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][leds] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net tbd_to_mux[pmodA] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][pmodA] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][pmodA] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net tbd_to_mux[pmodA_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][pmodA_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][pmodA_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net tbd_to_mux[pmodB] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][pmodB] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][pmodB] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net tbd_to_mux[pmodB_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][pmodB_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][pmodB_dir] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net tbd_to_mux[jumper] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:169]
+WARNING: [Synth 8-3848] Net output_arr[0][jumper] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+WARNING: [Synth 8-3848] Net output_arr[3][jumper] in module/entity PynqDemoTop does not have driver. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:177]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'PynqDemoTop' (28#1) [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:147]
 WARNING: [Synth 8-3917] design PynqDemoTop has port pmodC[10] driven by constant 0
 WARNING: [Synth 8-3917] design PynqDemoTop has port pmodC[9] driven by constant 0
 WARNING: [Synth 8-3917] design PynqDemoTop has port pmodC[8] driven by constant 0
-WARNING: [Synth 8-3331] design InputTest has unconnected port ld4_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port ld4_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port ld4_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port ld5_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port ld5_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port ld5_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port aud_pwm_o
-WARNING: [Synth 8-3331] design InputTest has unconnected port aud_sd_o
-WARNING: [Synth 8-3331] design InputTest has unconnected port m_clk_o
-WARNING: [Synth 8-3331] design InputTest has unconnected port jumper_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port jumper_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_leds_shield_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_digit_en_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_segments_o[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port ps2_1_data_o
-WARNING: [Synth 8-3331] design InputTest has unconnected port ps2_1_clk_o
-WARNING: [Synth 8-3331] design InputTest has unconnected port ps2_2_data_o
-WARNING: [Synth 8-3331] design InputTest has unconnected port ps2_2_clk_o
-WARNING: [Synth 8-3331] design InputTest has unconnected port name_ptr_i[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port name_ptr_i[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port name_ptr_i[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port clk_i
-WARNING: [Synth 8-3331] design InputTest has unconnected port sw_i[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port sw_i[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port btn_i[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port btn_i[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port btn_i[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port btn_i[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_i[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_i[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_i[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodA_i[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodB_i[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[4]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[3]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[2]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port pmodC_i[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port m_data_i
-WARNING: [Synth 8-3331] design InputTest has unconnected port jumper_i[1]
-WARNING: [Synth 8-3331] design InputTest has unconnected port jumper_i[0]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_sw_shield_i[7]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_sw_shield_i[6]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_sw_shield_i[5]
-WARNING: [Synth 8-3331] design InputTest has unconnected port n_sw_shield_i[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_len_o[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_dat_o[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_o[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_o[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_o[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port aud_pwm_o
+WARNING: [Synth 8-3331] design BasicTest has unconnected port aud_sd_o
+WARNING: [Synth 8-3331] design BasicTest has unconnected port m_clk_o
+WARNING: [Synth 8-3331] design BasicTest has unconnected port jumper_o[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port jumper_o[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_1_data_o
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_1_clk_o
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_2_data_o
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_2_clk_o
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port name_ptr_i[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodA_i[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodB_i[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[7]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[6]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[5]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[4]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[3]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[2]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port pmodC_i[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port m_data_i
+WARNING: [Synth 8-3331] design BasicTest has unconnected port jumper_i[1]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port jumper_i[0]
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_1_data_i
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_1_clk_i
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_2_data_i
+WARNING: [Synth 8-3331] design BasicTest has unconnected port ps2_2_clk_i
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port ld4_o[2]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port ld4_o[1]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port ld4_o[0]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port ld5_o[2]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port ld5_o[1]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port ld5_o[0]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port pmodA_o[7]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port pmodA_o[6]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port pmodA_o[5]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port pmodA_o[4]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port pmodA_o[3]
+WARNING: [Synth 8-3331] design Lauflicht has unconnected port pmodA_o[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1784.586 ; gain = 205.465 ; free physical = 385 ; free virtual = 3879
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1784.750 ; gain = 205.465 ; free physical = 428 ; free virtual = 3046
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -345,10 +390,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1802.398 ; gain = 223.277 ; free physical = 388 ; free virtual = 3882
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1799.594 ; gain = 220.309 ; free physical = 429 ; free virtual = 3047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1802.398 ; gain = 223.277 ; free physical = 388 ; free virtual = 3882
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1799.594 ; gain = 220.309 ; free physical = 429 ; free virtual = 3047
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -360,35 +405,35 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/PynqDemoTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1985.055 ; gain = 0.000 ; free physical = 271 ; free virtual = 3778
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.250 ; gain = 0.000 ; free physical = 323 ; free virtual = 2943
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1985.055 ; gain = 0.000 ; free physical = 271 ; free virtual = 3778
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1983.250 ; gain = 0.000 ; free physical = 323 ; free virtual = 2943
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 355 ; free virtual = 3863
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 405 ; free virtual = 3025
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 355 ; free virtual = 3863
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 405 ; free virtual = 3025
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 355 ; free virtual = 3863
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 407 ; free virtual = 3027
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:54]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/debounce.vhd:65]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rot_enc_decoder'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'collision_detection'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ball_motion'
 INFO: [Synth 8-802] inferred FSM for state register 'kstate_reg' in module 'CraneController'
 INFO: [Synth 8-5544] ROM "blue_leds_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd:54]
-WARNING: [Synth 8-3936] Found unconnected internal register 'btn_arr_reg[0]' and it is trimmed from '4' to '3' bits. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+INFO: [Synth 8-4471] merging register 'dig_count_reg[2:0]' into 'counter_reg[2:0]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/BasicTestEnt.vhd:107]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -433,106 +478,78 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 *
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'kstate_reg' using encoding 'sequential' in module 'CraneController'
-WARNING: [Synth 8-327] inferring latch for variable 'btn_arr_reg[0]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
-WARNING: [Synth 8-327] inferring latch for variable 'name_arr[0][name_len]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:552]
-WARNING: [Synth 8-327] inferring latch for variable 'name_arr[0][name_dat]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:553]
-WARNING: [Synth 8-327] inferring latch for variable 'name_arr_reg[3][name_ptr]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:194]
-WARNING: [Synth 8-327] inferring latch for variable 'A[0].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[1].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[2].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[3].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[4].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[5].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[6].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[7].pmod_arr_reg[3][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'B[0].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[1].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[2].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[3].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[4].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[5].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[6].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[7].pmod_arr_reg[3][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'C[0].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[1].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[2].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[3].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[4].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[5].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[6].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[7].pmod_arr_reg[3][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'JP[0].jumper_arr_reg[3][jumper_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:637]
-WARNING: [Synth 8-327] inferring latch for variable 'JP[1].jumper_arr_reg[3][jumper_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:637]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[3][ps2_1_data_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:619]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[3][ps2_1_clk_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:615]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[3][ps2_2_data_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:629]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[3][ps2_2_clk_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:625]
-WARNING: [Synth 8-327] inferring latch for variable 'name_arr_reg[2][name_ptr]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:194]
-WARNING: [Synth 8-327] inferring latch for variable 'btn_arr_reg[2]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
-WARNING: [Synth 8-327] inferring latch for variable 'A[0].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[1].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[2].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[3].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[4].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[5].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[6].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[7].pmod_arr_reg[2][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'B[0].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[1].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[2].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[3].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[4].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[5].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[6].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[7].pmod_arr_reg[2][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'C[0].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[1].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[2].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[3].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[4].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[5].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[6].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[7].pmod_arr_reg[2][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'JP[0].jumper_arr_reg[2][jumper_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:637]
-WARNING: [Synth 8-327] inferring latch for variable 'JP[1].jumper_arr_reg[2][jumper_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:637]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[2][ps2_1_data_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:619]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[2][ps2_1_clk_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:615]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[2][ps2_2_data_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:629]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[2][ps2_2_clk_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:625]
 WARNING: [Synth 8-327] inferring latch for variable 'name_arr_reg[1][name_ptr]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:194]
-WARNING: [Synth 8-327] inferring latch for variable 'btn_arr_reg[1]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
-WARNING: [Synth 8-327] inferring latch for variable 'A[0].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[1].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[2].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[3].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[4].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[5].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[6].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'A[7].pmod_arr_reg[1][pmodA_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:585]
-WARNING: [Synth 8-327] inferring latch for variable 'B[0].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[1].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[2].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[3].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[4].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[5].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[6].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'B[7].pmod_arr_reg[1][pmodB_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:595]
-WARNING: [Synth 8-327] inferring latch for variable 'C[0].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[1].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[2].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[3].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[4].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[5].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[6].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'C[7].pmod_arr_reg[1][pmodC_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:605]
-WARNING: [Synth 8-327] inferring latch for variable 'JP[0].jumper_arr_reg[1][jumper_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:637]
-WARNING: [Synth 8-327] inferring latch for variable 'JP[1].jumper_arr_reg[1][jumper_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:637]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[1][ps2_1_data_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:619]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[1][ps2_1_clk_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:615]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[1][ps2_2_data_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:629]
-WARNING: [Synth 8-327] inferring latch for variable 'ps2_arr_reg[1][ps2_2_clk_i]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:625]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][btn]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][pmodA]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][pmodB]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][pmodC]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][m_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][jumper]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][n_sw_shield]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][ps2_1_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][ps2_1_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][ps2_2_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[1][ps2_2_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'name_arr_reg[2][name_ptr]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:194]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][btn]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][pmodA]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][pmodB]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][pmodC]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][m_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][jumper]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][n_sw_shield]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][ps2_1_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][ps2_1_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][ps2_2_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[2][ps2_2_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'name_arr_reg[4][name_ptr]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:194]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][btn]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][pmodA]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][pmodB]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][pmodC]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][m_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][jumper]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][n_sw_shield]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][ps2_1_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][ps2_1_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][ps2_2_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'input_arr_reg[4][ps2_2_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'name_arr[0][name_len]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:875]
+WARNING: [Synth 8-327] inferring latch for variable 'name_arr[0][name_dat]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:876]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[btn]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[pmodA]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[pmodB]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[pmodC]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[m_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[jumper]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[n_sw_shield]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[ps2_1_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[ps2_1_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[ps2_2_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_menu_reg[ps2_2_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[pmodA]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[pmodB]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[pmodC]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[m_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[jumper]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[n_sw_shield]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[ps2_1_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[ps2_1_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[ps2_2_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_to_base_reg[ps2_2_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:767]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[btn]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[pmodA]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[pmodB]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[pmodC]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[m_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[jumper]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[n_sw_shield]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[ps2_1_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[ps2_1_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[ps2_2_data]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
+WARNING: [Synth 8-327] inferring latch for variable 'inter_mux_i_reg[ps2_2_clk]' [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd:905]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 346 ; free virtual = 3856
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 396 ; free virtual = 3016
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -555,7 +572,7 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit       Adders := 4     
 	   2 Input      8 Bit       Adders := 6     
 	   2 Input      4 Bit       Adders := 9     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 4     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               28 Bit    Registers := 1     
@@ -563,13 +580,13 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 7     
 	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 8     
+	                8 Bit    Registers := 9     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 15    
-	                3 Bit    Registers := 4     
-	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 46    
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 48    
 +---Muxes : 
 	   2 Input     28 Bit        Muxes := 2     
 	   4 Input     28 Bit        Muxes := 1     
@@ -579,35 +596,34 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit        Muxes := 14    
 	   7 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 6     
-	   2 Input      8 Bit        Muxes := 7     
-	   4 Input      8 Bit        Muxes := 13    
-	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 11    
 	  12 Input      7 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 7     
-	   4 Input      6 Bit        Muxes := 7     
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   3 Input      6 Bit        Muxes := 1     
-	   4 Input      5 Bit        Muxes := 6     
 	   2 Input      4 Bit        Muxes := 8     
-	   4 Input      4 Bit        Muxes := 8     
+	   4 Input      4 Bit        Muxes := 2     
 	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 9     
 	   6 Input      3 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 1     
 	  14 Input      3 Bit        Muxes := 1     
 	  12 Input      3 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 10    
-	   2 Input      3 Bit        Muxes := 7     
-	   4 Input      2 Bit        Muxes := 17    
+	   4 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 9     
+	   4 Input      2 Bit        Muxes := 11    
 	   3 Input      2 Bit        Muxes := 4     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 9     
 	   8 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 39    
 	   3 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 34    
+	   2 Input      1 Bit        Muxes := 48    
+	   4 Input      1 Bit        Muxes := 24    
 	   6 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 10    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -619,15 +635,63 @@ Hierarchical RTL Component report
 Module PynqDemoTop 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   4 Input      8 Bit        Muxes := 11    
-	   4 Input      7 Bit        Muxes := 6     
-	   4 Input      6 Bit        Muxes := 6     
-	   4 Input      5 Bit        Muxes := 6     
-	   4 Input      4 Bit        Muxes := 7     
-	   4 Input      3 Bit        Muxes := 8     
-	   4 Input      2 Bit        Muxes := 10    
-	   4 Input      1 Bit        Muxes := 17    
-	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      8 Bit        Muxes := 9     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 14    
+	   5 Input      1 Bit        Muxes := 1     
+Module Debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module ClkDivider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ClkDivider__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module DisplayController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module TextMover 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module ModuleSelector 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module ControlMenu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
 Module clock_enable 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -791,58 +855,24 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 6     
-Module Debouncer 
+Module Licht 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-Module ClkDivider 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-Module ClkDivider__parameterized1 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-Module DisplayController 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-+---Muxes : 
-	   8 Input      8 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-Module TextMover 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 2     
-+---Registers : 
-	                8 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-Module ModuleSelector 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 1     
-Module ControlMenu 
-Detailed RTL Component Info : 
-+---Registers : 
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+Module BasicTestEnt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -862,6 +892,8 @@ Warning: Parallel synthesis criteria is not met
 WARNING: [Synth 8-3917] design PynqDemoTop has port pmodC[10] driven by constant 0
 WARNING: [Synth 8-3917] design PynqDemoTop has port pmodC[9] driven by constant 0
 WARNING: [Synth 8-3917] design PynqDemoTop has port pmodC[8] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'name_arr[0][name_len][-1111111111]' (LD) to 'name_arr[0][name_len][-1111111107]'
+INFO: [Synth 8-3886] merging instance 'name_arr[0][name_len][-1111111110]' (LD) to 'name_arr[0][name_len][-1111111104]'
 INFO: [Synth 8-3886] merging instance 'name_arr[0][name_len][-1111111106]' (LD) to 'name_arr[0][name_len][-1111111104]'
 INFO: [Synth 8-3886] merging instance 'name_arr[0][name_len][-1111111105]' (LD) to 'name_arr[0][name_len][-1111111104]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\name_arr[0][name_len][-1111111104] )
@@ -870,107 +902,111 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Pong/pon
 INFO: [Synth 8-3886] merging instance 'Kran/Crane/blue_leds_o_reg[4]' (FDE) to 'Kran/Crane/blue_leds_o_reg[5]'
 INFO: [Synth 8-3886] merging instance 'Kran/Crane/blue_leds_o_reg[5]' (FDE) to 'Kran/Crane/blue_leds_o_reg[6]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (Kran/\Crane/blue_leds_o_reg[6] )
-WARNING: [Synth 8-3332] Sequential element (name_arr[0][name_len][-1111111104]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (name_arr[0][name_dat][-1111111104]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (name_arr_reg[3][name_ptr][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (name_arr_reg[3][name_ptr][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (name_arr_reg[3][name_ptr][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[4].pmod_arr_reg[3][pmodA_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[5].pmod_arr_reg[3][pmodA_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[6].pmod_arr_reg[3][pmodA_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[7].pmod_arr_reg[3][pmodA_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[0].pmod_arr_reg[3][pmodB_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[1].pmod_arr_reg[3][pmodB_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[2].pmod_arr_reg[3][pmodB_i][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[3].pmod_arr_reg[3][pmodB_i][3]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[4].pmod_arr_reg[3][pmodB_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[5].pmod_arr_reg[3][pmodB_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[6].pmod_arr_reg[3][pmodB_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[7].pmod_arr_reg[3][pmodB_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[0].pmod_arr_reg[3][pmodC_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[1].pmod_arr_reg[3][pmodC_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[2].pmod_arr_reg[3][pmodC_i][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[3].pmod_arr_reg[3][pmodC_i][3]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[4].pmod_arr_reg[3][pmodC_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[5].pmod_arr_reg[3][pmodC_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[6].pmod_arr_reg[3][pmodC_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[7].pmod_arr_reg[3][pmodC_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (JP[0].jumper_arr_reg[3][jumper_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (JP[1].jumper_arr_reg[3][jumper_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[3][ps2_1_data_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[3][ps2_1_clk_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[3][ps2_2_data_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[3][ps2_2_clk_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (name_arr_reg[2][name_ptr][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (name_arr_reg[2][name_ptr][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (name_arr_reg[2][name_ptr][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (btn_arr_reg[2][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (btn_arr_reg[2][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (btn_arr_reg[2][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[0].pmod_arr_reg[2][pmodA_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[1].pmod_arr_reg[2][pmodA_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[2].pmod_arr_reg[2][pmodA_i][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[3].pmod_arr_reg[2][pmodA_i][3]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[5].pmod_arr_reg[2][pmodA_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[6].pmod_arr_reg[2][pmodA_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[7].pmod_arr_reg[2][pmodA_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[0].pmod_arr_reg[2][pmodB_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[1].pmod_arr_reg[2][pmodB_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[2].pmod_arr_reg[2][pmodB_i][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[3].pmod_arr_reg[2][pmodB_i][3]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[4].pmod_arr_reg[2][pmodB_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[5].pmod_arr_reg[2][pmodB_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[6].pmod_arr_reg[2][pmodB_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[7].pmod_arr_reg[2][pmodB_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[0].pmod_arr_reg[2][pmodC_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[1].pmod_arr_reg[2][pmodC_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[2].pmod_arr_reg[2][pmodC_i][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[3].pmod_arr_reg[2][pmodC_i][3]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[4].pmod_arr_reg[2][pmodC_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[5].pmod_arr_reg[2][pmodC_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[6].pmod_arr_reg[2][pmodC_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[7].pmod_arr_reg[2][pmodC_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (JP[0].jumper_arr_reg[2][jumper_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (JP[1].jumper_arr_reg[2][jumper_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[2][ps2_1_data_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[2][ps2_1_clk_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[2][ps2_2_data_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[2][ps2_2_clk_i]) is unused and will be removed from module PynqDemoTop.
 WARNING: [Synth 8-3332] Sequential element (name_arr_reg[1][name_ptr][7]) is unused and will be removed from module PynqDemoTop.
 WARNING: [Synth 8-3332] Sequential element (name_arr_reg[1][name_ptr][6]) is unused and will be removed from module PynqDemoTop.
 WARNING: [Synth 8-3332] Sequential element (name_arr_reg[1][name_ptr][5]) is unused and will be removed from module PynqDemoTop.
 WARNING: [Synth 8-3332] Sequential element (name_arr_reg[1][name_ptr][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (btn_arr_reg[1][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (btn_arr_reg[1][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (btn_arr_reg[1][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[0].pmod_arr_reg[1][pmodA_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[1].pmod_arr_reg[1][pmodA_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[2].pmod_arr_reg[1][pmodA_i][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[3].pmod_arr_reg[1][pmodA_i][3]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[4].pmod_arr_reg[1][pmodA_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[5].pmod_arr_reg[1][pmodA_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[6].pmod_arr_reg[1][pmodA_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (A[7].pmod_arr_reg[1][pmodA_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[0].pmod_arr_reg[1][pmodB_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[1].pmod_arr_reg[1][pmodB_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[2].pmod_arr_reg[1][pmodB_i][2]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[3].pmod_arr_reg[1][pmodB_i][3]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[4].pmod_arr_reg[1][pmodB_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[5].pmod_arr_reg[1][pmodB_i][5]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[6].pmod_arr_reg[1][pmodB_i][6]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (B[7].pmod_arr_reg[1][pmodB_i][7]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[0].pmod_arr_reg[1][pmodC_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (C[4].pmod_arr_reg[1][pmodC_i][4]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (JP[0].jumper_arr_reg[1][jumper_i][0]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (JP[1].jumper_arr_reg[1][jumper_i][1]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[1][ps2_1_data_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[1][ps2_1_clk_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[1][ps2_2_data_i]) is unused and will be removed from module PynqDemoTop.
-WARNING: [Synth 8-3332] Sequential element (ps2_arr_reg[1][ps2_2_clk_i]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][btn][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][btn][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][btn][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodA][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodB][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodC][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][pmodC][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][m_data]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][jumper][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][jumper][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][n_sw_shield][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][n_sw_shield][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][n_sw_shield][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][n_sw_shield][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][n_sw_shield][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][n_sw_shield][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][ps2_1_data]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][ps2_1_clk]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][ps2_2_data]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[1][ps2_2_clk]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (name_arr_reg[2][name_ptr][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (name_arr_reg[2][name_ptr][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (name_arr_reg[2][name_ptr][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][btn][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][btn][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodA][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodA][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodA][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodA][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodA][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodA][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodA][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodB][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][pmodC][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][m_data]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][jumper][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][jumper][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][n_sw_shield][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][ps2_1_data]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][ps2_1_clk]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][ps2_2_data]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[2][ps2_2_clk]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (name_arr_reg[4][name_ptr][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (name_arr_reg[4][name_ptr][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (name_arr_reg[4][name_ptr][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodA][0]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][7]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][6]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][5]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][4]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][3]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][2]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][1]) is unused and will be removed from module PynqDemoTop.
+WARNING: [Synth 8-3332] Sequential element (input_arr_reg[4][pmodB][0]) is unused and will be removed from module PynqDemoTop.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'Pong/pong/i_28/motion/count_hits_reg[3]' (FDCE) to 'Pong/pong/i_28/motion/count_hits_reg[2]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Pong/pong /i_28/\motion/count_hits_reg[2] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 322 ; free virtual = 3832
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 372 ; free virtual = 2988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -980,16 +1016,14 @@ ROM:
 +------------------+--------------------+---------------+----------------+
 |Module Name       | RTL Object         | Depth x Width | Implemented As | 
 +------------------+--------------------+---------------+----------------+
-|Crane             | name_str[1]        | 32x7          | LUT            | 
 |DisplayController | ascii_c[0]         | 128x7         | LUT            | 
 |ControlMenu       | name_str[1]        | 128x7         | LUT            | 
-|ControlMenu       | teststr[1]         | 64x7          | LUT            | 
-|InputTest         | name_str[1]        | 32x7          | LUT            | 
 |Crane             | name_str[1]        | 32x7          | LUT            | 
+|Lauflicht         | name_str[1]        | 32x7          | LUT            | 
 |ControlMenu       | name_str[1]        | 128x7         | LUT            | 
-|ControlMenu       | teststr[1]         | 64x7          | LUT            | 
 |ControlMenu       | Display/ascii_c[0] | 128x7         | LUT            | 
-|PynqDemoTop       | InputT/name_str[1] | 32x7          | LUT            | 
+|Crane             | name_str[1]        | 32x7          | LUT            | 
+|Lauflicht         | name_str[1]        | 32x7          | LUT            | 
 +------------------+--------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
@@ -1005,13 +1039,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 170 ; free virtual = 3688
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 245 ; free virtual = 2867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 190 ; free virtual = 3708
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 243 ; free virtual = 2866
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1023,7 +1057,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 181 ; free virtual = 3699
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1047,7 +1081,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 184 ; free virtual = 3702
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1060,7 +1094,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 183 ; free virtual = 3701
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1072,25 +1106,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 180 ; free virtual = 3698
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 180 ; free virtual = 3698
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 180 ; free virtual = 3697
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 179 ; free virtual = 3697
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1107,88 +1141,90 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   138|
+|2     |CARRY4 |   156|
 |3     |LUT1   |   126|
-|4     |LUT2   |   401|
-|5     |LUT3   |   156|
-|6     |LUT4   |   166|
-|7     |LUT5   |   214|
-|8     |LUT6   |   226|
-|9     |MUXF7  |    14|
-|10    |FDCE   |   357|
-|11    |FDPE   |    28|
-|12    |FDRE   |   165|
-|13    |LD     |    42|
-|14    |LDC    |     6|
-|15    |IBUF   |    14|
-|16    |IOBUF  |     4|
-|17    |OBUF   |    40|
-|18    |OBUFT  |     3|
+|4     |LUT2   |   450|
+|5     |LUT3   |   161|
+|6     |LUT4   |   162|
+|7     |LUT5   |   228|
+|8     |LUT6   |   279|
+|9     |FDCE   |   384|
+|10    |FDPE   |    35|
+|11    |FDRE   |   221|
+|12    |LD     |    64|
+|13    |LDC    |     6|
+|14    |IBUF   |    21|
+|15    |IOBUF  |     1|
+|16    |OBUF   |    40|
+|17    |OBUFT  |     7|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-------------------------------+---------------------------+------+
 |      |Instance                       |Module                     |Cells |
 +------+-------------------------------+---------------------------+------+
-|1     |top                            |                           |  2101|
-|2     |  Kran                         |Crane                      |   207|
-|3     |    Crane                      |CraneController            |   207|
-|4     |      MController              |MotorController            |    14|
-|5     |  Menu                         |ControlMenu                |   490|
-|6     |    Display                    |DisplayController          |    37|
-|7     |    DownDebounce               |Debouncer                  |    55|
-|8     |    EnableSignals              |ClockEnableManager         |   169|
-|9     |      Digits                   |ClkDivider__parameterized1 |    83|
-|10    |      MovingText               |ClkDivider                 |    86|
-|11    |    MovingText                 |TextMover                  |    75|
-|12    |    Selector                   |ModuleSelector             |    81|
-|13    |    UPDebounce                 |Debouncer_8                |    56|
-|14    |  Pong                         |Pong                       |  1286|
-|15    |    pong                       |pong_top                   |  1272|
-|16    |      clk_enable               |clock_enable               |   101|
-|17    |      collision                |collision_detection        |    56|
-|18    |      controller_interface1    |controller_interface       |   284|
-|19    |        deb_push_but           |debounce_4                 |    75|
-|20    |        deb_rot_enc0           |debounce_5                 |    72|
-|21    |        deb_rot_enc1           |debounce_6                 |    73|
-|22    |        rot_enc_decoder_inst   |rot_enc_decoder_7          |    19|
-|23    |      controller_interface2    |controller_interface_0     |   262|
-|24    |        deb_push_but           |debounce                   |    75|
-|25    |        deb_rot_enc0           |debounce_2                 |    72|
-|26    |        deb_rot_enc1           |debounce_3                 |    73|
-|27    |        rot_enc_decoder_inst   |rot_enc_decoder            |    19|
-|28    |      motion                   |ball_motion                |   465|
-|29    |      score_display_inst       |score_display              |   104|
-|30    |        player1_bin_to_bcd_dec |bin_to_bcd_dec             |    27|
-|31    |        player2_bin_to_bcd_dec |bin_to_bcd_dec_1           |    27|
-|32    |        score_counter_inst     |score_counter              |    23|
-|33    |        seven_seg_dec_inst     |seven_seg_dec              |     7|
+|1     |top                            |                           |  2342|
+|2     |  MovingLight                  |Lauflicht                  |    83|
+|3     |    MovingLight                |Licht                      |    83|
+|4     |  Basic                        |BasicTest                  |   147|
+|5     |    Design                     |BasicTestEnt               |   147|
+|6     |  Kran                         |Crane                      |   207|
+|7     |    Crane                      |CraneController            |   207|
+|8     |      MController              |MotorController            |    14|
+|9     |  Menu                         |ControlMenu                |   466|
+|10    |    Display                    |DisplayController          |    37|
+|11    |    DownDebounce               |Debouncer                  |    55|
+|12    |    EnableSignals              |ClockEnableManager         |   169|
+|13    |      Digits                   |ClkDivider__parameterized1 |    83|
+|14    |      MovingText               |ClkDivider                 |    86|
+|15    |    MovingText                 |TextMover                  |    62|
+|16    |    Selector                   |ModuleSelector             |    81|
+|17    |    UPDebounce                 |Debouncer_8                |    55|
+|18    |  Pong                         |Pong                       |  1286|
+|19    |    pong                       |pong_top                   |  1272|
+|20    |      clk_enable               |clock_enable               |   101|
+|21    |      collision                |collision_detection        |    56|
+|22    |      controller_interface1    |controller_interface       |   284|
+|23    |        deb_push_but           |debounce_4                 |    75|
+|24    |        deb_rot_enc0           |debounce_5                 |    72|
+|25    |        deb_rot_enc1           |debounce_6                 |    73|
+|26    |        rot_enc_decoder_inst   |rot_enc_decoder_7          |    19|
+|27    |      controller_interface2    |controller_interface_0     |   262|
+|28    |        deb_push_but           |debounce                   |    75|
+|29    |        deb_rot_enc0           |debounce_2                 |    72|
+|30    |        deb_rot_enc1           |debounce_3                 |    73|
+|31    |        rot_enc_decoder_inst   |rot_enc_decoder            |    19|
+|32    |      motion                   |ball_motion                |   465|
+|33    |      score_display_inst       |score_display              |   104|
+|34    |        player1_bin_to_bcd_dec |bin_to_bcd_dec             |    27|
+|35    |        player2_bin_to_bcd_dec |bin_to_bcd_dec_1           |    27|
+|36    |        score_counter_inst     |score_counter              |    23|
 +------+-------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 179 ; free virtual = 3697
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 241 ; free virtual = 2864
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 305 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1985.055 ; gain = 223.277 ; free physical = 232 ; free virtual = 3750
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1985.055 ; gain = 405.934 ; free physical = 232 ; free virtual = 3750
+Synthesis finished with 0 errors, 0 critical warnings and 692 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1983.250 ; gain = 220.309 ; free physical = 295 ; free virtual = 2918
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1983.250 ; gain = 403.965 ; free physical = 295 ; free virtual = 2917
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 204 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 227 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1985.055 ; gain = 0.000 ; free physical = 182 ; free virtual = 3700
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.250 ; gain = 0.000 ; free physical = 244 ; free virtual = 2867
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 52 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
-  LD => LDCE: 42 instances
+  A total of 71 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  LD => LDCE: 64 instances
   LDC => LDCE: 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-106 Infos, 375 Warnings, 0 Critical Warnings and 0 Errors encountered.
+119 Infos, 385 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1985.055 ; gain = 583.289 ; free physical = 276 ; free virtual = 3794
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1985.055 ; gain = 0.000 ; free physical = 276 ; free virtual = 3794
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1983.250 ; gain = 541.602 ; free physical = 341 ; free virtual = 2964
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.250 ; gain = 0.000 ; free physical = 341 ; free virtual = 2964
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/synth_1/PynqDemoTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file PynqDemoTop_utilization_synth.rpt -pb PynqDemoTop_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 09:42:13 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 25 11:52:22 2020...

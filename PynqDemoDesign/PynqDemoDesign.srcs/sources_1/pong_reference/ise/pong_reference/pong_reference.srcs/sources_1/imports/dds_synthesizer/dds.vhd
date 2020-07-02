@@ -32,7 +32,7 @@ use work.sine_lut_pkg.all;
 entity dds is
     Port ( clock : in  STD_LOGIC;
            reset_i : in  STD_LOGIC;
-			  dds_enable_i : in std_logic;
+		   dds_enable_i : in std_logic;
            ftw_i : in  STD_LOGIC_VECTOR (31 downto 0);
            ampl_o : out  STD_LOGIC_VECTOR (AMPL_WIDTH-1 downto 0));
 end dds;

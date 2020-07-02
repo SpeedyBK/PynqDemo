@@ -1,0 +1,12 @@
+
+{ 
+    crc :  13249875959694205774  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 839af8cf95c04b7684a57be431689ec7 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Licht_behav xil_defaultlib.Licht" , 
+    buildDate : "May 24 2019" , 
+    buildTime : "14:51:52" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/Licht_behav/xsimk\"   \"xsim.dir/Licht_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/Licht_behav/obj/xsim_1.lnx64.o\" -L\"/tools/Xilinx/Vivado/2019.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
