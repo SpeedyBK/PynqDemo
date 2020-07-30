@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Jun 25 11:52:50 2020
+| Date         : Fri Jul 24 16:06:05 2020
 | Host         : Laptop running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_drc -file PynqDemoTop_drc_opted.rpt -pb PynqDemoTop_drc_opted.pb -rpx PynqDemoTop_drc_opted.rpx
 | Design       : PynqDemoTop
@@ -24,12 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 17
+             Violations found: 16
 +--------+----------+---------------------------------+------------+
 | Rule   | Severity | Description                     | Violations |
 +--------+----------+---------------------------------+------------+
 | RPBF-3 | Warning  | IO port buffering is incomplete | 16         |
-| ZPS7-1 | Warning  | PS7 block required              | 1          |
 +--------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
@@ -112,11 +111,6 @@ Related violations: <none>
 RPBF-3#16 Warning
 IO port buffering is incomplete  
 Device port pmodC[9] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-ZPS7-1#1 Warning
-PS7 block required  
-The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
 Related violations: <none>
 
 

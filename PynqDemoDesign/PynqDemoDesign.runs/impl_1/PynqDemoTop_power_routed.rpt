@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Thu Jun 25 11:53:24 2020
+| Date             : Fri Jul 24 16:06:41 2020
 | Host             : Laptop running 64-bit Ubuntu 18.04.4 LTS
 | Command          : report_power -file PynqDemoTop_power_routed.rpt -pb PynqDemoTop_power_summary_routed.pb -rpx PynqDemoTop_power_routed.rpx
 | Design           : PynqDemoTop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.150        |
+| Total On-Chip Power (W)  | 1.439        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.044        |
-| Device Static (W)        | 0.106        |
+| Dynamic (W)              | 1.300        |
+| Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 83.3         |
-| Junction Temperature (C) | 26.7         |
+| Max Ambient (C)          | 68.4         |
+| Junction Temperature (C) | 41.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.006 |        3 |       --- |             --- |
-| Slice Logic    |     0.005 |     2324 |       --- |             --- |
-|   LUT as Logic |     0.004 |     1071 |     53200 |            2.01 |
-|   CARRY4       |    <0.001 |      156 |     13300 |            1.17 |
-|   Register     |    <0.001 |      710 |    106400 |            0.67 |
-|   Others       |     0.000 |       54 |       --- |             --- |
-| Signals        |     0.004 |     1485 |       --- |             --- |
-| I/O            |     0.029 |       69 |       125 |           55.20 |
-| Static Power   |     0.106 |          |           |                 |
-| Total          |     0.150 |          |           |                 |
+| Clocks         |     0.006 |        4 |       --- |             --- |
+| Slice Logic    |     0.005 |     2450 |       --- |             --- |
+|   LUT as Logic |     0.004 |     1064 |     53200 |            2.00 |
+|   CARRY4       |    <0.001 |      157 |     13300 |            1.18 |
+|   Register     |    <0.001 |      705 |    106400 |            0.66 |
+|   Others       |     0.000 |      188 |       --- |             --- |
+| Signals        |     0.004 |     1467 |       --- |             --- |
+| I/O            |     0.030 |       69 |       125 |           55.20 |
+| PS7            |     1.256 |        1 |       --- |             --- |
+| Static Power   |     0.138 |          |           |                 |
+| Total          |     1.439 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,8 +72,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.022 |       0.015 |      0.008 |
-| Vccaux    |       1.800 |     0.011 |       0.001 |      0.010 |
+| Vccint    |       1.000 |     0.028 |       0.015 |      0.013 |
+| Vccaux    |       1.800 |     0.015 |       0.001 |      0.014 |
 | Vcco33    |       3.300 |     0.009 |       0.008 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -80,16 +81,16 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
-| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
-| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
-| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
-| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.674 |       0.647 |      0.027 |
+| Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |
+| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.354 |       0.352 |      0.002 |
+| Vcco_mio0 |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco_mio1 |       1.800 |     0.003 |       0.002 |      0.001 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
 +-----------+-------------+-----------+-------------+------------+
 
@@ -131,11 +132,12 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------+--------+-----------------+
-| Clock       | Domain | Constraint (ns) |
-+-------------+--------+-----------------+
-| sys_clk_pin | clk_i  |             8.0 |
-+-------------+--------+-----------------+
++-------------+------------------------------------------------------------------------+-----------------+
+| Clock       | Domain                                                                 | Constraint (ns) |
++-------------+------------------------------------------------------------------------+-----------------+
+| clk_fpga_0  | ProcessingSystem/PS_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| sys_clk_pin | clk_i                                                                  |             8.0 |
++-------------+------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -147,19 +149,21 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| PynqDemoTop                 |     0.044 |
+| PynqDemoTop                 |     1.300 |
 |   Basic                     |     0.001 |
 |     Design                  |     0.001 |
 |   Kran                      |     0.001 |
 |     Crane                   |     0.001 |
 |   Menu                      |     0.003 |
-|     EnableSignals           |     0.001 |
 |   Pong                      |     0.008 |
 |     pong                    |     0.008 |
 |       clk_enable            |     0.001 |
 |       controller_interface1 |     0.002 |
 |       controller_interface2 |     0.002 |
 |       motion                |     0.002 |
+|   ProcessingSystem          |     1.256 |
+|     PS_i                    |     1.256 |
+|       processing_system7_0  |     1.256 |
 +-----------------------------+-----------+
 
 

@@ -175,19 +175,17 @@ architecture Behavioral of Crane is
 --(A, C, E, F, G, H, I, J, L, O)
 --(P, S, U, a, b, c, d, h, n, o)
 --(q, r, t, u, y)         
-constant name : string := "CranE ControL";
-constant fill_str : string := "        ";
-constant name_str : string := fill_str & name; 
+constant name_str : string := "CranE ControL";
 
 -- Directions: (Set to 0 for Inputs, Set to 1 for Outputs)
 -- These constants can configure PMOD A, PMOD B, PMOD C, Jumper and the PS2 Ports as in- or output.
--- This is done by a multiplexer in the top-level design, which either switches Tri-State-Buffer
--- at the FPGA-Pins to high-impedance or routes the output signal through those buffers.
+-- This is done by a Tri-State-Buffer in the top-level design, which either switches 
+-- the FPGA-Pins to high-impedance or routes the output signal through those buffers.
 -- Unused Ports should be set as inputs.  
 constant pmodA_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := "11111111";
 constant pmodB_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
 constant pmodC_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
-constant jumper_dir : std_logic_vector (JUMPER_WIDTH-1 downto 0) := (others => '0');
+constant jumper_dir: std_logic_vector (JUMPER_WIDTH-1 downto 0) := (others => '0');
 constant PS2_1_dir : std_logic_vector (1 downto 0) := (others => '0'); -- (Data, CLK)
 constant PS2_2_dir : std_logic_vector (1 downto 0) := (others => '0'); -- (Data, CLK)
 

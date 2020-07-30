@@ -24,6 +24,7 @@ create_project -in_memory -part xc7z020clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.cache/wt [current_project]
 set_property parent.project_path /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
@@ -49,6 +50,7 @@ read_vhdl -library xil_defaultlib {
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Licht.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/ModuleSelector.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/MotorController.vhd
+  /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/hdl/PS_wrapper.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/Pong.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/TextMover.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/ball_motion/src/ball_motion.vhd
@@ -68,6 +70,10 @@ read_vhdl -library xil_defaultlib {
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/score_display/src/seven_seg_dec.vhd
   /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/new/PynqDemoTop.vhd
 }
+add_files /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/PS.bd
+set_property used_in_implementation false [get_files -all /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/PS_ooc.xdc]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -79,6 +85,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/constrs_1/imports/Downloads/Pynq_constraint_file.xdc
 set_property used_in_implementation false [get_files /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/constrs_1/imports/Downloads/Pynq_constraint_file.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

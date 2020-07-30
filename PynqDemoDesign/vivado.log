@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Jul 27 00:17:54 2020
+# Process ID: 30714
+# Current directory: /home/benjamin/Repositories/PynqDemo/PynqDemoDesign
+# Command line: vivado
+# Log file: /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/vivado.log
+# Journal file: /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/src/sound_interface/sound_interface.vhd'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 27 01:45:05 2020...

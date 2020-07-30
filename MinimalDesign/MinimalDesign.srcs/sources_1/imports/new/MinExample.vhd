@@ -3,29 +3,30 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY bidir IS
     PORT(
-        bidir   : INOUT STD_LOGIC; -- Bidirectional Pin (Pmod A Pin 0)
-        ps, clk : IN STD_LOGIC;    -- PinMode Select (SW 0) and Clock 
-        inp     : IN STD_LOGIC;    -- Inputswitch (SW 1)
-        outp    : OUT STD_LOGIC);  -- Feedback LED (LD0)
+        bidir   : INOUT STD_LOGIC;    -- Bidirectional Pin (Pmod A Pin 0)
+        ps, clk, A_in : IN STD_LOGIC; -- PinMode Select (SW 0), Clock and Inputswitch (SW1)
+        outp    : OUT STD_LOGIC);     -- Feedback LED (LD0)
 END bidir;
 
 ARCHITECTURE test OF bidir IS
 
-                       -- If the following process is not commented out:
-signal a : STD_LOGIC;  -- D-FlipFlop that stores value from input.
-signal b : STD_LOGIC;  -- D-FlipFlop that stores feedback value. 
-                       -- else just wires.
-begin
-
---------------------------------------------------------------------------
--- Uncomment to generate Flip Flops at in- and outputs.                                       
---    process(clk)     -- Creates the flipflops
---    begin
---    if rising_edge(clk) then 
-        a <= inp;                    
+signal a : STD_LOGIC;  
+signal b : STD_LOGIC;  
+                      
+begin                                 
+    process(clk)    
+    begin
+    if rising_edge(clk) then 
+        a <= A_in;                    
         outp <= b;                  
---        END IF;
---    end process;
+        END IF;
+    end process;
+    
+    with ps select
+    bidir <= 'Z' when '0',
+              a when '1'; 
+    b <= bidir;              
+end test;
 
 --------------------------------------------------------------------------
 -- Example with sequential code.        

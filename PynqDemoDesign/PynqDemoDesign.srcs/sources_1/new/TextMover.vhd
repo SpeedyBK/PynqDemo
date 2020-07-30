@@ -43,24 +43,29 @@ end TextMover;
 architecture Behavioral of TextMover is
 
 signal i : integer range 0 to 255;
+signal j : integer range 0 to 255;
 
 begin
 
 Mover: process(clk_i, rst_i, enable_i)
 begin
     if (rst_i <= '0') then 
-        i <= 0;
+        i <= 8;
     elsif rising_edge(clk_i) then 
-        if (enable_i = '1') then 
-            if (i <= to_integer(unsigned(name_len_i))) then 
-                i <= i + 1;
+        if (enable_i = '1')  then
+            if (unsigned(name_len_i) > 8) then  
+                if (i <= to_integer(unsigned(name_len_i) + 8)) then 
+                    i <= i + 1;
+                else 
+                    i <= 0;
+                end if;
             else 
-                i <= 0;
+                i <= 8;
             end if;
         end if;
     end if;
 end process; 
 
-name_ptr_o <= std_logic_vector (to_unsigned(i + to_integer(unsigned(pointer_i)), name_ptr_o'length));
+name_ptr_o <= std_logic_vector (to_unsigned(i - 8 + to_integer(unsigned(pointer_i)), name_ptr_o'length));
 
 end Behavioral;

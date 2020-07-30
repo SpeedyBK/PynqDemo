@@ -9,25 +9,232 @@
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source PynqDemoTop.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
 Command: link_design -top PynqDemoTop -part xc7z020clg400-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Netlist 29-17] Analyzing 157 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.dcp' for cell 'ProcessingSystem/PS_i/processing_system7_0'
+INFO: [Netlist 29-17] Analyzing 158 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc] for cell 'ProcessingSystem/PS_i/processing_system7_0/inst'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:30]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:31]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:32]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:33]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:34]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:35]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:37]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:38]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:39]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:40]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:41]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:42]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:44]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:45]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:46]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:47]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:48]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:49]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:51]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:52]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:53]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:54]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:55]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:56]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:58]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:59]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:60]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:61]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:62]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:63]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:65]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:66]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:67]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:68]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:69]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:70]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:72]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:73]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:74]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:75]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:76]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:77]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:79]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:80]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:81]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:82]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:83]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:84]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:86]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:87]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:88]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:89]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:90]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:91]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:93]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:94]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:95]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:96]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:97]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:98]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:100]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:101]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:102]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:103]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:104]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:105]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:107]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:108]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:109]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:110]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:111]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:112]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:114]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:115]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:116]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:117]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:118]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:119]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:121]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:122]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:123]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:124]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:125]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:126]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:128]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:129]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:130]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:131]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:132]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:133]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:135]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:136]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:137]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:138]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'pullup', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:139]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PIO_DIRECTION', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:140]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:142]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:143]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'slew', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:144]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'drive', because the property does not exist for objects of type 'pin'. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:145]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+INFO: [Common 17-14] Message 'Netlist 29-160' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc:145]
+Finished Parsing XDC File [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/ip/PS_processing_system7_0_0/PS_processing_system7_0_0.xdc] for cell 'ProcessingSystem/PS_i/processing_system7_0/inst'
 Parsing XDC File [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/constrs_1/imports/Downloads/Pynq_constraint_file.xdc]
 Finished Parsing XDC File [/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/constrs_1/imports/Downloads/Pynq_constraint_file.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1739.039 ; gain = 0.000 ; free physical = 479 ; free virtual = 3097
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1841.176 ; gain = 0.000 ; free physical = 1032 ; free virtual = 3717
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
-7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+12 Infos, 0 Warnings, 100 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1739.039 ; gain = 315.004 ; free physical = 478 ; free virtual = 3096
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1841.176 ; gain = 446.004 ; free physical = 1032 ; free virtual = 3717
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -54,54 +261,54 @@ WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port pmodC[9] expe
 INFO: [Project 1-461] DRC finished with 0 Errors, 16 Warnings
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1856.602 ; gain = 117.562 ; free physical = 473 ; free virtual = 3091
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1862.824 ; gain = 21.648 ; free physical = 1029 ; free virtual = 3714
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 164f34360
+Ending Cache Timing Information Task | Checksum: 1ea701c02
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2279.430 ; gain = 422.828 ; free physical = 137 ; free virtual = 2685
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2293.684 ; gain = 430.859 ; free physical = 654 ; free virtual = 3340
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: af78ef71
+Phase 1 Retarget | Checksum: 18b31957a
 
-Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 133 ; free virtual = 2562
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 2 cells
+Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 26 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 158d3c4a0
+Phase 2 Constant propagation | Checksum: 167a1c3f0
 
-Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 133 ; free virtual = 2562
+Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1231e2bab
+Phase 3 Sweep | Checksum: 1ccbc788b
 
-Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 133 ; free virtual = 2562
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 88 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1231e2bab
+Phase 4 BUFG optimization | Checksum: 1ccbc788b
 
-Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 133 ; free virtual = 2562
+Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.33 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1231e2bab
+Phase 5 Shift Register Optimization | Checksum: 1ccbc788b
 
-Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 133 ; free virtual = 2562
+Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.35 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1231e2bab
+Phase 6 Post Processing Netlist | Checksum: 1ccbc788b
 
-Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 133 ; free virtual = 2562
+Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.36 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -110,9 +317,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               2  |                                              0  |
+|  Retarget                     |               0  |              26  |                                              0  |
 |  Constant propagation         |               0  |               0  |                                              0  |
-|  Sweep                        |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |              88  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
@@ -122,44 +329,42 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 133 ; free virtual = 2562
-Ending Logic Optimization Task | Checksum: e2da6b14
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
+Ending Logic Optimization Task | Checksum: 1b49d38b3
 
-Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 131 ; free virtual = 2561
+Time (s): cpu = 00:00:00.76 ; elapsed = 00:00:00.46 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3223
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: e2da6b14
+Ending Power Optimization Task | Checksum: 1b49d38b3
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 130 ; free virtual = 2562
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3222
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: e2da6b14
+Ending Final Cleanup Task | Checksum: 1b49d38b3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 130 ; free virtual = 2562
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3222
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 130 ; free virtual = 2562
-Ending Netlist Obfuscation Task | Checksum: e2da6b14
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3222
+Ending Netlist Obfuscation Task | Checksum: 1b49d38b3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 130 ; free virtual = 2562
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3222
 INFO: [Common 17-83] Releasing license: Implementation
-24 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+29 Infos, 16 Warnings, 100 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2393.398 ; gain = 654.359 ; free physical = 130 ; free virtual = 2562
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2393.398 ; gain = 0.000 ; free physical = 130 ; free virtual = 2562
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2409.652 ; gain = 568.477 ; free physical = 537 ; free virtual = 3222
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.652 ; gain = 0.000 ; free physical = 537 ; free virtual = 3222
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2425.414 ; gain = 0.000 ; free physical = 126 ; free virtual = 2560
+Write XDEF Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2441.668 ; gain = 0.000 ; free physical = 531 ; free virtual = 3218
 INFO: [Common 17-1381] The checkpoint '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/impl_1/PynqDemoTop_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file PynqDemoTop_drc_opted.rpt -pb PynqDemoTop_drc_opted.pb -rpx PynqDemoTop_drc_opted.rpx
 Command: report_drc -file PynqDemoTop_drc_opted.rpt -pb PynqDemoTop_drc_opted.pb -rpx PynqDemoTop_drc_opted.rpx
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/impl_1/PynqDemoTop_drc_opted.rpt.
 report_drc completed successfully
@@ -196,37 +401,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 143 ; free virtual = 2548
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a62cf8cb
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 522 ; free virtual = 3210
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 10f13fe08
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 143 ; free virtual = 2548
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 143 ; free virtual = 2549
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 522 ; free virtual = 3210
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 522 ; free virtual = 3210
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e14331c1
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b2429aef
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.42 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 122 ; free virtual = 2532
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.92 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 499 ; free virtual = 3189
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1a7dcbec5
+Phase 1.3 Build Placer Netlist Model | Checksum: b9999a2a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.74 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 142 ; free virtual = 2541
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 509 ; free virtual = 3199
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1a7dcbec5
+Phase 1.4 Constrain Clocks/Macros | Checksum: b9999a2a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.75 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 142 ; free virtual = 2542
-Phase 1 Placer Initialization | Checksum: 1a7dcbec5
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 509 ; free virtual = 3199
+Phase 1 Placer Initialization | Checksum: b9999a2a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.75 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 142 ; free virtual = 2542
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 509 ; free virtual = 3199
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 128411b29
+Phase 2.1 Floorplanning | Checksum: 15942f0c0
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 137 ; free virtual = 2538
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 505 ; free virtual = 3194
 
 Phase 2.2 Global Placement Core
 
@@ -242,7 +447,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 120 ; free virtual = 2523
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 488 ; free virtual = 3177
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -260,65 +465,65 @@ Summary of Physical Synthesis Optimizations
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 13ef8db83
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 13c015510
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 120 ; free virtual = 2524
-Phase 2.2 Global Placement Core | Checksum: 14463a894
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 489 ; free virtual = 3178
+Phase 2.2 Global Placement Core | Checksum: 17342888c
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 120 ; free virtual = 2523
-Phase 2 Global Placement | Checksum: 14463a894
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 488 ; free virtual = 3178
+Phase 2 Global Placement | Checksum: 17342888c
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 120 ; free virtual = 2523
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 488 ; free virtual = 3178
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 12c0ea527
+Phase 3.1 Commit Multi Column Macros | Checksum: fa3c2cdd
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 120 ; free virtual = 2523
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 488 ; free virtual = 3178
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 203923a0e
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: f1fe741a
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 119 ; free virtual = 2508
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 487 ; free virtual = 3177
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1de8ad1ce
+Phase 3.3 Area Swap Optimization | Checksum: 159b309fb
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 140 ; free virtual = 2497
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 487 ; free virtual = 3177
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 169a31884
+Phase 3.4 Pipeline Register Optimization | Checksum: 12d761339
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 140 ; free virtual = 2497
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 487 ; free virtual = 3177
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 15288babc
+Phase 3.5 Fast Optimization | Checksum: 1c1cae99e
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 137 ; free virtual = 2518
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 487 ; free virtual = 3177
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: f92f5b14
+Phase 3.6 Small Shape Detail Placement | Checksum: d8b67de1
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 136 ; free virtual = 2518
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 481 ; free virtual = 3175
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 12b40c137
+Phase 3.7 Re-assign LUT pins | Checksum: 110d52766
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 136 ; free virtual = 2518
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 481 ; free virtual = 3175
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 21e290ac5
+Phase 3.8 Pipeline Register Optimization | Checksum: 1252c2e1c
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 136 ; free virtual = 2518
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 481 ; free virtual = 3175
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 19ca3ce83
+Phase 3.9 Fast Optimization | Checksum: c9afb004
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2518
-Phase 3 Detail Placement | Checksum: 19ca3ce83
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 481 ; free virtual = 3174
+Phase 3 Detail Placement | Checksum: c9afb004
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2518
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 481 ; free virtual = 3174
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -326,59 +531,59 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 21a621b21
+Post Placement Optimization Initialization | Checksum: 127b3c517
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 21a621b21
+Phase 4.1.1.1 BUFG Insertion | Checksum: 127b3c517
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2519
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.537. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 228942ba0
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 479 ; free virtual = 3172
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.541. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1d8fc4645
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2518
-Phase 4.1 Post Commit Optimization | Checksum: 228942ba0
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 479 ; free virtual = 3172
+Phase 4.1 Post Commit Optimization | Checksum: 1d8fc4645
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2518
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 479 ; free virtual = 3172
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 228942ba0
+Phase 4.2 Post Placement Cleanup | Checksum: 1d8fc4645
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2519
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 480 ; free virtual = 3173
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 228942ba0
+Phase 4.3 Placer Reporting | Checksum: 1d8fc4645
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2519
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 480 ; free virtual = 3173
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2519
-Phase 4.4 Final Placement Cleanup | Checksum: 2561e50ab
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 480 ; free virtual = 3173
+Phase 4.4 Final Placement Cleanup | Checksum: 1460766e3
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2519
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2561e50ab
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 480 ; free virtual = 3173
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1460766e3
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2519
-Ending Placer Task | Checksum: 15cc8da66
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 480 ; free virtual = 3173
+Ending Placer Task | Checksum: 74ca89fa
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 135 ; free virtual = 2519
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 480 ; free virtual = 3173
 INFO: [Common 17-83] Releasing license: Implementation
-56 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+59 Infos, 32 Warnings, 100 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 150 ; free virtual = 2533
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 150 ; free virtual = 2533
+place_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 495 ; free virtual = 3189
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 495 ; free virtual = 3189
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 145 ; free virtual = 2532
+Write XDEF Complete: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 485 ; free virtual = 3182
 INFO: [Common 17-1381] The checkpoint '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/impl_1/PynqDemoTop_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file PynqDemoTop_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 139 ; free virtual = 2523
+report_io: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 483 ; free virtual = 3178
 INFO: [runtcl-4] Executing : report_utilization -file PynqDemoTop_utilization_placed.rpt -pb PynqDemoTop_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file PynqDemoTop_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2534.270 ; gain = 0.000 ; free physical = 145 ; free virtual = 2530
+report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2558.461 ; gain = 0.000 ; free physical = 491 ; free virtual = 3186
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -390,124 +595,127 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: 90ffaca1 ConstDB: 0 ShapeSum: cbc92dc5 RouteDB: 0
+Checksum: PlaceDB: 466b28b8 ConstDB: 0 ShapeSum: 2e5f6142 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 4ef9246c
+Phase 1 Build RT Design | Checksum: 15be7dd84
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.586 ; gain = 0.000 ; free physical = 138 ; free virtual = 2389
-Post Restoration Checksum: NetGraph: 306d32c3 NumContArr: 1e8bf1a9 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2587.840 ; gain = 0.000 ; free physical = 351 ; free virtual = 3046
+Post Restoration Checksum: NetGraph: 718e28a4 NumContArr: ea59b4e0 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 4ef9246c
+Phase 2.1 Create Timer | Checksum: 15be7dd84
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2579.570 ; gain = 10.984 ; free physical = 109 ; free virtual = 2348
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2589.824 ; gain = 1.984 ; free physical = 321 ; free virtual = 3016
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 4ef9246c
+Phase 2.2 Fix Topology Constraints | Checksum: 15be7dd84
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2611.570 ; gain = 42.984 ; free physical = 119 ; free virtual = 2328
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2622.824 ; gain = 34.984 ; free physical = 286 ; free virtual = 2982
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 4ef9246c
+Phase 2.3 Pre Route Cleanup | Checksum: 15be7dd84
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2611.570 ; gain = 42.984 ; free physical = 118 ; free virtual = 2327
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2622.824 ; gain = 34.984 ; free physical = 286 ; free virtual = 2982
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1ebed18f3
+Phase 2.4 Update Timing | Checksum: 120c173ec
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 157 ; free virtual = 2318
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.619  | TNS=0.000  | WHS=-0.127 | THS=-10.613|
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 277 ; free virtual = 2972
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.611  | TNS=0.000  | WHS=-0.144 | THS=-8.871 |
 
-Phase 2 Router Initialization | Checksum: 20cbade69
+Phase 2 Router Initialization | Checksum: 5e294dc6
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 156 ; free virtual = 2317
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 276 ; free virtual = 2971
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0135653 %
-  Global Horizontal Routing Utilization  = 0.00769101 %
+  Global Vertical Routing Utilization    = 0.0216941 %
+  Global Horizontal Routing Utilization  = 0.00591616 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 1477
+  Number of Failed Nets               = 1588
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 1461
+  Number of Unrouted Nets             = 1572
   Number of Partially Routed Nets     = 16
-  Number of Node Overlaps             = 31
+  Number of Node Overlaps             = 24
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 81765cbf
+Phase 3 Initial Routing | Checksum: 203c13021
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 152 ; free virtual = 2314
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 277 ; free virtual = 2973
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 365
- Number of Nodes with overlaps = 144
- Number of Nodes with overlaps = 72
- Number of Nodes with overlaps = 28
- Number of Nodes with overlaps = 10
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 327
+ Number of Nodes with overlaps = 91
+ Number of Nodes with overlaps = 36
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.191  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.460  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 10e7d24f3
+Phase 4.1 Global Iteration 0 | Checksum: 19b32e2fd
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2310
-Phase 4 Rip-up And Reroute | Checksum: 10e7d24f3
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
+Phase 4 Rip-up And Reroute | Checksum: 19b32e2fd
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2310
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 14e24544a
+Phase 5.1.1 Update Timing | Checksum: 119208351
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2310
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.306  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.578  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 14e24544a
+Phase 5.1 Delay CleanUp | Checksum: 119208351
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2310
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 14e24544a
+Phase 5.2 Clock Skew Optimization | Checksum: 119208351
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2310
-Phase 5 Delay and Skew Optimization | Checksum: 14e24544a
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
+Phase 5 Delay and Skew Optimization | Checksum: 119208351
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2310
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 10759c4f6
+Phase 6.1.1 Update Timing | Checksum: 1929dcdd1
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2309
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.306  | TNS=0.000  | WHS=0.033  | THS=0.000  |
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.578  | TNS=0.000  | WHS=0.103  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 133ebdd22
+Phase 6.1 Hold Fix Iter | Checksum: 1cf8eca7c
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2309
-Phase 6 Post Hold Fix | Checksum: 133ebdd22
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
+Phase 6 Post Hold Fix | Checksum: 1cf8eca7c
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2309
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.32448 %
-  Global Horizontal Routing Utilization  = 0.364182 %
+  Global Vertical Routing Utilization    = 0.332608 %
+  Global Horizontal Routing Utilization  = 0.328178 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -517,45 +725,45 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 15c8b6b5b
+Phase 7 Route finalize | Checksum: 1ca7b8413
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 146 ; free virtual = 2309
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 15c8b6b5b
+Phase 8 Verifying routed nets | Checksum: 1ca7b8413
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 145 ; free virtual = 2308
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 271 ; free virtual = 2967
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 14c8960b2
+Phase 9 Depositing Routes | Checksum: 18282db8e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 145 ; free virtual = 2308
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.306  | TNS=0.000  | WHS=0.033  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.578  | TNS=0.000  | WHS=0.103  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 14c8960b2
+Phase 10 Post Router Timing | Checksum: 18282db8e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 145 ; free virtual = 2308
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 272 ; free virtual = 2968
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 2636.625 ; gain = 68.039 ; free physical = 180 ; free virtual = 2344
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 2640.879 ; gain = 53.039 ; free physical = 311 ; free virtual = 3007
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-74 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+77 Infos, 32 Warnings, 100 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 2636.625 ; gain = 102.355 ; free physical = 180 ; free virtual = 2345
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2636.625 ; gain = 0.000 ; free physical = 180 ; free virtual = 2345
+route_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.879 ; gain = 82.418 ; free physical = 311 ; free virtual = 3007
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.879 ; gain = 0.000 ; free physical = 311 ; free virtual = 3007
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2636.625 ; gain = 0.000 ; free physical = 171 ; free virtual = 2340
+Write XDEF Complete: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2640.879 ; gain = 0.000 ; free physical = 298 ; free virtual = 2998
 INFO: [Common 17-1381] The checkpoint '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/impl_1/PynqDemoTop_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file PynqDemoTop_drc_routed.rpt -pb PynqDemoTop_drc_routed.pb -rpx PynqDemoTop_drc_routed.rpx
 Command: report_drc -file PynqDemoTop_drc_routed.rpt -pb PynqDemoTop_drc_routed.pb -rpx PynqDemoTop_drc_routed.rpx
@@ -575,7 +783,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-86 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+89 Infos, 32 Warnings, 100 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file PynqDemoTop_route_status.rpt -pb PynqDemoTop_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file PynqDemoTop_timing_summary_routed.rpt -pb PynqDemoTop_timing_summary_routed.pb -rpx PynqDemoTop_timing_summary_routed.rpx -warn_on_violation 
@@ -593,10 +801,10 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/E[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[4][name_ptr][4]_i_1/O, cell Menu/Selector/name_arr_reg[4][name_ptr][4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/count_reg[0]_0[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr[0][name_len][-1111111107]_i_2/O, cell Menu/Selector/name_arr[0][name_len][-1111111107]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/count_reg[0]_1[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[1][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[1][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/count_reg[2]_0[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[2][name_ptr][4]_i_1/O, cell Menu/Selector/name_arr_reg[2][name_ptr][4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/E[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[1][name_ptr][2]_i_1/O, cell Menu/Selector/name_arr_reg[1][name_ptr][2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/count_reg[0]_0[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr[0][name_len][-1111111108]_i_2/O, cell Menu/Selector/name_arr[0][name_len][-1111111108]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/count_reg[1]_2[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[4][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[4][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net Menu/Selector/count_reg[2]_0[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[2][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[2][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__1/O, cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1/O, cell Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0/O, cell Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
@@ -606,8 +814,7 @@ WARNING: [DRC PDRC-153] Gated clock check: Net Pong/pong/controller_interface2/d
 WARNING: [DRC PDRC-153] Gated clock check: Net inter_mux_i_reg[btn][3]_i_1_n_0 is a gated clock net sourced by a combinational pin inter_mux_i_reg[btn][3]_i_1/O, cell inter_mux_i_reg[btn][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net mux_to_base[jumper] is a gated clock net sourced by a combinational pin mux_to_base_reg[n_sw_shield][7]_i_1/O, cell mux_to_base_reg[n_sw_shield][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net mux_to_menu[jumper] is a gated clock net sourced by a combinational pin mux_to_menu_reg[btn][3]_i_1/O, cell mux_to_menu_reg[btn][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 14 Warnings
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 13 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
@@ -621,8 +828,9 @@ INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 CRITICAL WARNING: [Common 17-570] Unable to write the webtalk settings file.  Please check that the appropriate environment variable (APPDATA or HOME) is properly set.
 CRITICAL WARNING: [Common 17-570] Unable to write the webtalk settings file.  Please check that the appropriate environment variable (APPDATA or HOME) is properly set.
+INFO: [Common 17-186] '/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Jul 24 16:07:00 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-105 Infos, 46 Warnings, 2 Critical Warnings and 0 Errors encountered.
+109 Infos, 45 Warnings, 102 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2985.055 ; gain = 183.043 ; free physical = 374 ; free virtual = 2319
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 25 11:53:37 2020...
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2997.184 ; gain = 188.949 ; free physical = 458 ; free virtual = 2980
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 24 16:07:00 2020...

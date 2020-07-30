@@ -176,9 +176,7 @@ architecture Behavioral of pong is
 --(A, C, E, F, G, H, I, J, L, O)
 --(P, S, U, a, b, c, d, h, n, o)
 --(q, r, t, u, y)         
-constant name : string := "PonG";
-constant fill_str : string := "        ";
-constant name_str : string := fill_str & name;
+constant name_str : string := "PonG";
 
 -- Directions: (Set to 0 for Inputs, Set to 1 for Outputs)
 -- These constants can configure PMOD A, PMOD B, PMOD C, Jumper and the PS2 Ports as in- or output.

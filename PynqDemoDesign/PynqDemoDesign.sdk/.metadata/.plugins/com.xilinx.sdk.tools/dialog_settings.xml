@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Local" key="PynqDemoTop_hw_platform_0-target"/>
+	<item value="PynqDemoTop_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="qspi-x4-single" key="PynqDemoTop_hw_platform_0-flashType"/>
+	<item value="true" key="PynqDemoTop_hw_platform_0-blankCheck"/>
+	<item value="true" key="PynqDemoTop_hw_platform_0-verifyFlash"/>
+	<item value="Auto Detect" key="PynqDemoTop_hw_platform_0-device"/>
+	<item value="" key="PynqDemoTop_hw_platform_0-offSet"/>
+	<item value="/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/BOOT.bin" key="PynqDemoTop_hw_platform_0-imgFile"/>
+	<item value="/home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/FSBL/Debug/FSBL.elf" key="PynqDemoTop_hw_platform_0-fsblFile"/>
+</section>

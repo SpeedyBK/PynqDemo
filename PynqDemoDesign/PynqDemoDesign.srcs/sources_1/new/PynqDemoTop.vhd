@@ -156,7 +156,6 @@ constant Crane_ID : integer := 2;
 constant Input_ID : integer := 3;
 constant Light_ID : integer := 4;
 
-
 -- Connections at Mux 2;
 signal inter_mux_o : output_t;
 signal inter_mux_i : input_t;
@@ -184,9 +183,36 @@ signal name_arr : name_arr_t;
 
 begin
 
+-- The Processing System (PS) is needed to create a boot image. The reason for that is 
+-- that only the PS can read the QSPI-Memory and programm the FPGA. So an instance of
+-- the processing system is necessary, but doesn't need to be connected to anything.  
+ProcessingSystem: entity work.PS_wrapper
+port map (
+    DDR_addr => open,
+    DDR_ba => open,
+    DDR_cas_n => open,
+    DDR_ck_n => open,
+    DDR_ck_p => open,
+    DDR_cke => open,
+    DDR_cs_n => open,
+    DDR_dm => open,
+    DDR_dq => open,
+    DDR_dqs_n => open,
+    DDR_dqs_p => open,
+    DDR_odt => open,
+    DDR_ras_n => open,
+    DDR_reset_n => open,
+    DDR_we_n => open,
+    FIXED_IO_ddr_vrn => open,
+    FIXED_IO_ddr_vrp => open,
+    FIXED_IO_mio => open,
+    FIXED_IO_ps_clk => open,
+    FIXED_IO_ps_porb => open,
+    FIXED_IO_ps_srstb => open );
+
 Menu: entity work.ControlMenu
 generic map (SysClock => 125000000,
-             MovEn => 5,
+             MovEn => 4,
              DigitEn => 1000,
              CHAR_WIDTH => CHAR_WIDTH,
              num_of_modules => NUM_OF_MODULES)

@@ -173,7 +173,7 @@ architecture Behavioral of ControlMenu is
 
 component ClockEnableManager is
     Generic (SysClock : integer := 125000000;
-             MovEn : integer := 2;
+             MovEn : integer := 1;
              DigitEn : integer := 1000);
     Port ( clk_i : in STD_LOGIC;
            rst_i : in STD_LOGIC;
@@ -238,6 +238,7 @@ signal mux_en : std_logic := '0';
 signal name_ptr : std_logic_vector (7 downto 0);
 signal name_len : std_logic_vector (7 downto 0);
 signal name_dat : std_logic_vector (7 downto 0);
+signal name_datA : std_logic_vector (7 downto 0);
 signal name_len_temp : std_logic_vector (7 downto 0);
 signal name_dat_temp : std_logic_vector (7 downto 0);
 
@@ -262,7 +263,7 @@ signal dig : std_logic_vector(7 downto 0);
 --(A, C, E, F, G, H, I, J, L, O)
 --(P, S, U, a, b, c, d, h, n, o)
 --(q, r, t, u, y)         
-constant name_str : string := "        Pynq boArd  USE btn1 And btn0 to SELECt your APPLICAtIOn";
+constant name_str : string := "Pynq boArd  USE btn1 And btn0 to SELECt your APPLICAtIOn";
 
 begin
 
@@ -275,8 +276,17 @@ with mux_sel select
                 name_len_i when others;
 
 with mux_sel select     
-    name_dat <= std_logic_vector(to_unsigned(character'pos(name_str(to_integer(unsigned(name_ptr)))), 8)) when "00000000",
+    name_datA <= std_logic_vector(to_unsigned(character'pos(name_str(to_integer(unsigned(name_ptr)))), 8)) when "00000000",
                 name_dat_i when others;
+
+process (name_ptr)                
+begin 
+    if (signed(name_ptr) < 1 or (signed(name_ptr) > signed(name_len))) then 
+        name_dat <= "11111111";
+    else 
+        name_dat <= name_datA;
+    end if;
+end process; 
                 
 UPDebounce:Debouncer
 generic map (prescaler => 10000)

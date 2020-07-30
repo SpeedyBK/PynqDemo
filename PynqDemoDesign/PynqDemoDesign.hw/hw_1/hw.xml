@@ -5,11 +5,25 @@
 
 <hwsession version="1" minor="2">
   <device name="xc7z020_1" gui_info=""/>
+  <ObjectList object_type="hw_cfgmem" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="PROGRAM.ADDRESS_RANGE" value="use_file"/>
+      <Properties Property="PROGRAM.BIN_OFFSET" value="0"/>
+      <Properties Property="PROGRAM.BLANK_CHECK" value="0"/>
+      <Properties Property="PROGRAM.CFG_PROGRAM" value="1"/>
+      <Properties Property="PROGRAM.CHECKSUM" value="0"/>
+      <Properties Property="PROGRAM.ERASE" value="1"/>
+      <Properties Property="PROGRAM.FILES" value="/home/benjamin/boot.mcs"/>
+      <Properties Property="PROGRAM.VERIFY" value="1"/>
+      <Properties Property="PROGRAM.ZYNQ_FSBL" value="/home/benjamin/Repositories/PynqNet/Hardware/Pynq_Echo_Server/Pynq_Echo_Server.sdk/FSBL/Debug/FSBL.elf"/>
+    </Object>
+  </ObjectList>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/PynqDemoTop.bit"/>
+      <Properties Property="PROGRAM.HW_CFGMEM_PART" value="s25fl128s-3.3v-qspi-x4-single"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>

@@ -76,9 +76,16 @@ set rc [catch {
   set_property ip_output_repo /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.runs/synth_1/PynqDemoTop.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/PS.bd
+  set_param project.isImplRun false
   add_files -quiet /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/impl_1/pong_top_routed.dcp
   read_xdc /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/constrs_1/imports/Downloads/Pynq_constraint_file.xdc
+  set_param project.isImplRun true
   link_design -top PynqDemoTop -part xc7z020clg400-1
+  set_param project.isImplRun false
+  write_hwdef -force -file PynqDemoTop.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -159,6 +166,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   catch { write_mem_info -force PynqDemoTop.mmi }
   write_bitstream -force PynqDemoTop.bit 
+  catch { write_sysdef -hwdef PynqDemoTop.hwdef -bitfile PynqDemoTop.bit -meminfo PynqDemoTop.mmi -file PynqDemoTop.sysdef }
   catch {write_debug_probes -quiet -force PynqDemoTop}
   catch {file copy -force PynqDemoTop.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
