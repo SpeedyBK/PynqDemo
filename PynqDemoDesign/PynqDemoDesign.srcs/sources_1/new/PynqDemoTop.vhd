@@ -147,14 +147,16 @@ end PynqDemoTop;
 architecture Behavioral of PynqDemoTop is
 
 -- Number of Modules
-constant NUM_OF_MODULES : integer := 5;
+constant NUM_OF_MODULES : integer := 7;
 
 -- Module IDs:
 constant Menu_ID : integer := 0;
-constant Pong_ID : integer := 1;
-constant Crane_ID : integer := 2;
-constant Input_ID : integer := 3;
-constant Light_ID : integer := 4;
+constant CounterID : integer := 1;
+constant Light_ID : integer := 2;
+constant Stepper_ID : integer := 3;
+constant Pong_ID : integer := 4;
+constant Crane_ID : integer := 5;
+constant Input_ID : integer := 6;
 
 -- Connections at Mux 2;
 signal inter_mux_o : output_t;
@@ -325,6 +327,340 @@ port map (  -- Ports to transmit the Modulename
             -- Crypto SDA 
             --crypto_sda : out std_logic;
             mux_sel_o => mux_sel
+           );
+
+UpnDownCounter: entity work.OneDigitCounter
+port map    ( -- Ports to transmit the Modulename
+           name_ptr_i => name_arr(CounterID).name_ptr,
+           name_len_o => name_arr(CounterID).name_len,
+           name_dat_o => name_arr(CounterID).name_dat,
+           -- Clock
+           clk_i => clk_i,
+           -- Switches 
+           -- sw_i => sw_i,
+           -- RGB LEDs
+           ld4_o => output_arr(CounterID).rgb_ld4,
+           ld5_o => output_Arr(CounterID).rgb_ld5,
+           -- Board LEDs
+           leds_o => output_arr(CounterID).leds,
+           -- Board Buttons
+           btn_i => input_arr(CounterID).btn,
+           -- PMODs:
+           pmodA_dir_o => output_arr(CounterID).pmodA_dir,
+           pmodA_i => input_arr(CounterID).pmodA,
+           pmodA_o => output_arr(CounterID).pmodA,
+           
+           pmodB_dir_o => output_arr(CounterID).pmodB_dir,
+           pmodB_i => input_arr(CounterID).pmodB,
+           pmodB_o => output_arr(CounterID).pmodB,
+           
+           pmodC_dir_o => output_arr(CounterID).pmodC_dir,
+           pmodC_i => input_arr(CounterID).pmodC, -- Bei 8 Signalen lassen
+           pmodC_o => output_arr(CounterID).pmodC,
+           -- Zusätzliches Audio_Ext Signal mit 8 - 10;
+           -- Audio Out:
+           aud_pwm_o => output_arr(CounterID).aud_pwm,
+           aud_sd_o => output_arr(CounterID).aud_sd,
+
+           -- Mic Input
+           m_clk_o => output_arr(CounterID).mic_clk,
+           m_data_i => input_arr(CounterID).m_data,
+
+           
+--           -- HDMI Rx
+--           hdmi_rx_cec : inout std_logic;
+--           hdmi_rx_clk_n : in std_logic;
+--           hdmi_rx_clk_p : in std_logic;
+--           hdmi_rx_d_n : in std_logic_vector(2 downto 0);
+--           hdmi_rx_d_p : in std_logic_vector(2 downto 0);
+--           hdmi_rx_hpd : out std_logic;
+--           hdmi_rx_scl : inout std_logic;
+--           hdmi_rx_sda : inout std_logic;
+
+--           -- HDMI Tx
+--           hdmi_tx_cec : inout std_logic;
+--           hdmi_tx_clk_n : out std_logic;
+--           hdmi_tx_clk_p : out std_logic;
+--           hdmi_tx_d_n : out std_logic_vector(2 downto 0);
+--           hdmi_tx_d_p : out std_logic_vector(2 downto 0);
+--           hdmi_tx_hpd : in std_logic;
+--           hdmi_tx_scl : inout std_logic;
+--           hdmi_tx_sda : inout std_logic;
+
+           -- Pynq-Shield
+           
+           -- Jumper J15
+           jumper_dir_o => output_arr(CounterID).jumper_dir,
+           jumper_i => input_arr(CounterID).jumper,
+           jumper_o => output_arr(CounterID).jumper,
+
+           -- Blue LEDS
+           n_leds_shield_o => output_arr(CounterID).n_shield_leds,
+
+            -- Switches on the shield
+           n_sw_shield_i => input_arr(CounterID).n_sw_shield,
+
+            -- Seven Segmend Displays 
+           n_SSD_en_o => output_arr(CounterID).n_SSD_en,
+           n_SSD_o => output_arr(CounterID).n_SSD,
+
+            -- PS2 Interface
+           ps2_1_dir_o => output_arr(CounterID).ps2_1_dir,
+           ps2_1_data_i => input_arr(CounterID).ps2_1_data,
+           ps2_1_data_o => output_arr(CounterID).ps2_1_data,
+           ps2_1_clk_i => input_arr(CounterID).ps2_1_clk,
+           ps2_1_clk_o => output_arr(CounterID).ps2_1_clk,
+           
+           ps2_2_dir_o => output_arr(CounterID).ps2_2_dir,
+           ps2_2_data_i => input_arr(CounterID).ps2_2_data,
+           ps2_2_data_o => output_arr(CounterID).ps2_2_data,
+           ps2_2_clk_i => input_arr(CounterID).ps2_2_clk,
+           ps2_2_clk_o => output_arr(CounterID).ps2_2_clk
+
+            -- Chip-Kit Ports: 
+            -- (Use only when the shield is not connected. Note, that you have 
+            -- to change connections in the TopLevel design, and you have to comment out the 
+            -- corresponding ports above. Make sure, you know what you are doing when using these
+            -- connections. 
+           --ck_an_n : inout std_logic_vector (5 downto 0);
+           --ck_an_p : inout std_logic_vector (5 downto 0);
+           --ck_io : inout std_logic_vector (42 downto 0);
+
+            -- ChipKit SPI
+            --ck_miso_i : in std_logic;
+            --ck_mosi_o : out std_logic;
+            --ck_sck_o : out std_logic;
+            --ck_ss : out std_logic;
+            
+            -- ChipKit I2C
+            --ck_scl : out std_logic;
+            --ck_sda : inout std_logic;
+            
+            -- Crypto SDA 
+            --crypto_sda : out std_logic;
+           );
+
+
+MovingLight: entity work.Lauflicht
+port map    ( -- Ports to transmit the Modulename
+           name_ptr_i => name_arr(Light_ID).name_ptr,
+           name_len_o => name_arr(Light_ID).name_len,
+           name_dat_o => name_arr(Light_ID).name_dat,
+           -- Clock
+           clk_i => clk_i,
+           -- Switches 
+           -- sw_i => sw_i,
+           -- RGB LEDs
+           ld4_o => output_arr(Light_ID).rgb_ld4,
+           ld5_o => output_Arr(Light_ID).rgb_ld5,
+           -- Board LEDs
+           leds_o => output_arr(Light_ID).leds,
+           -- Board Buttons
+           btn_i => input_arr(Light_ID).btn,
+           -- PMODs:
+           pmodA_dir_o => output_arr(Light_ID).pmodA_dir,
+           pmodA_i => input_arr(Light_ID).pmodA,
+           pmodA_o => output_arr(Light_ID).pmodA,
+           
+           pmodB_dir_o => output_arr(Light_ID).pmodB_dir,
+           pmodB_i => input_arr(Light_ID).pmodB,
+           pmodB_o => output_arr(Light_ID).pmodB,
+           
+           pmodC_dir_o => output_arr(Light_ID).pmodC_dir,
+           pmodC_i => input_arr(Light_ID).pmodC, -- Bei 8 Signalen lassen
+           pmodC_o => output_arr(Light_ID).pmodC,
+           -- Zusätzliches Audio_Ext Signal mit 8 - 10;
+           -- Audio Out:
+           aud_pwm_o => output_arr(Light_ID).aud_pwm,
+           aud_sd_o => output_arr(Light_ID).aud_sd,
+
+           -- Mic Input
+           m_clk_o => output_arr(Light_ID).mic_clk,
+           m_data_i => input_arr(Light_ID).m_data,
+
+           
+--           -- HDMI Rx
+--           hdmi_rx_cec : inout std_logic;
+--           hdmi_rx_clk_n : in std_logic;
+--           hdmi_rx_clk_p : in std_logic;
+--           hdmi_rx_d_n : in std_logic_vector(2 downto 0);
+--           hdmi_rx_d_p : in std_logic_vector(2 downto 0);
+--           hdmi_rx_hpd : out std_logic;
+--           hdmi_rx_scl : inout std_logic;
+--           hdmi_rx_sda : inout std_logic;
+
+--           -- HDMI Tx
+--           hdmi_tx_cec : inout std_logic;
+--           hdmi_tx_clk_n : out std_logic;
+--           hdmi_tx_clk_p : out std_logic;
+--           hdmi_tx_d_n : out std_logic_vector(2 downto 0);
+--           hdmi_tx_d_p : out std_logic_vector(2 downto 0);
+--           hdmi_tx_hpd : in std_logic;
+--           hdmi_tx_scl : inout std_logic;
+--           hdmi_tx_sda : inout std_logic;
+
+           -- Pynq-Shield
+           
+           -- Jumper J15
+           jumper_dir_o => output_arr(Light_ID).jumper_dir,
+           jumper_i => input_arr(Light_ID).jumper,
+           jumper_o => output_arr(Light_ID).jumper,
+
+           -- Blue LEDS
+           n_leds_shield_o => output_arr(Light_ID).n_shield_leds,
+
+            -- Switches on the shield
+           n_sw_shield_i => input_arr(Light_ID).n_sw_shield,
+
+            -- Seven Segmend Displays 
+           n_SSD_en_o => output_arr(Light_ID).n_SSD_en,
+           n_SSD_o => output_arr(Light_ID).n_SSD,
+
+            -- PS2 Interface
+           ps2_1_dir_o => output_arr(Light_ID).ps2_1_dir,
+           ps2_1_data_i => input_arr(Light_ID).ps2_1_data,
+           ps2_1_data_o => output_arr(Light_ID).ps2_1_data,
+           ps2_1_clk_i => input_arr(Light_ID).ps2_1_clk,
+           ps2_1_clk_o => output_arr(Light_ID).ps2_1_clk,
+           
+           ps2_2_dir_o => output_arr(Light_ID).ps2_2_dir,
+           ps2_2_data_i => input_arr(Light_ID).ps2_2_data,
+           ps2_2_data_o => output_arr(Light_ID).ps2_2_data,
+           ps2_2_clk_i => input_arr(Light_ID).ps2_2_clk,
+           ps2_2_clk_o => output_arr(Light_ID).ps2_2_clk
+
+            -- Chip-Kit Ports: 
+            -- (Use only when the shield is not connected. Note, that you have 
+            -- to change connections in the TopLevel design, and you have to comment out the 
+            -- corresponding ports above. Make sure, you know what you are doing when using these
+            -- connections. 
+           --ck_an_n : inout std_logic_vector (5 downto 0);
+           --ck_an_p : inout std_logic_vector (5 downto 0);
+           --ck_io : inout std_logic_vector (42 downto 0);
+
+            -- ChipKit SPI
+            --ck_miso_i : in std_logic;
+            --ck_mosi_o : out std_logic;
+            --ck_sck_o : out std_logic;
+            --ck_ss : out std_logic;
+            
+            -- ChipKit I2C
+            --ck_scl : out std_logic;
+            --ck_sda : inout std_logic;
+            
+            -- Crypto SDA 
+            --crypto_sda : out std_logic;
+           );
+
+Stepper: entity work.Stepper
+port map    ( -- Ports to transmit the Modulename
+           name_ptr_i => name_arr(Stepper_ID).name_ptr,
+           name_len_o => name_arr(Stepper_ID).name_len,
+           name_dat_o => name_arr(Stepper_ID).name_dat,
+           -- Clock
+           clk_i => clk_i,
+           -- Switches 
+           -- sw_i => sw_i,
+           -- RGB LEDs
+           ld4_o => output_arr(Stepper_ID).rgb_ld4,
+           ld5_o => output_Arr(Stepper_ID).rgb_ld5,
+           -- Board LEDs
+           leds_o => output_arr(Stepper_ID).leds,
+           -- Board Buttons
+           btn_i => input_arr(Stepper_ID).btn,
+           -- PMODs:
+           pmodA_dir_o => output_arr(Stepper_ID).pmodA_dir,
+           pmodA_i => input_arr(Stepper_ID).pmodA,
+           pmodA_o => output_arr(Stepper_ID).pmodA,
+           
+           pmodB_dir_o => output_arr(Stepper_ID).pmodB_dir,
+           pmodB_i => input_arr(Stepper_ID).pmodB,
+           pmodB_o => output_arr(Stepper_ID).pmodB,
+           
+           pmodC_dir_o => output_arr(Stepper_ID).pmodC_dir,
+           pmodC_i => input_arr(Stepper_ID).pmodC, -- Bei 8 Signalen lassen
+           pmodC_o => output_arr(Stepper_ID).pmodC,
+           -- Zusätzliches Audio_Ext Signal mit 8 - 10;
+           -- Audio Out:
+           aud_pwm_o => output_arr(Stepper_ID).aud_pwm,
+           aud_sd_o => output_arr(Stepper_ID).aud_sd,
+
+           -- Mic Input
+           m_clk_o => output_arr(Stepper_ID).mic_clk,
+           m_data_i => input_arr(Stepper_ID).m_data,
+
+           
+--           -- HDMI Rx
+--           hdmi_rx_cec : inout std_logic;
+--           hdmi_rx_clk_n : in std_logic;
+--           hdmi_rx_clk_p : in std_logic;
+--           hdmi_rx_d_n : in std_logic_vector(2 downto 0);
+--           hdmi_rx_d_p : in std_logic_vector(2 downto 0);
+--           hdmi_rx_hpd : out std_logic;
+--           hdmi_rx_scl : inout std_logic;
+--           hdmi_rx_sda : inout std_logic;
+
+--           -- HDMI Tx
+--           hdmi_tx_cec : inout std_logic;
+--           hdmi_tx_clk_n : out std_logic;
+--           hdmi_tx_clk_p : out std_logic;
+--           hdmi_tx_d_n : out std_logic_vector(2 downto 0);
+--           hdmi_tx_d_p : out std_logic_vector(2 downto 0);
+--           hdmi_tx_hpd : in std_logic;
+--           hdmi_tx_scl : inout std_logic;
+--           hdmi_tx_sda : inout std_logic;
+
+           -- Pynq-Shield
+           
+           -- Jumper J15
+           jumper_dir_o => output_arr(Stepper_ID).jumper_dir,
+           jumper_i => input_arr(Stepper_ID).jumper,
+           jumper_o => output_arr(Stepper_ID).jumper,
+
+           -- Blue LEDS
+           n_leds_shield_o => output_arr(Stepper_ID).n_shield_leds,
+
+            -- Switches on the shield
+           n_sw_shield_i => input_arr(Stepper_ID).n_sw_shield,
+
+            -- Seven Segmend Displays 
+           n_SSD_en_o => output_arr(Stepper_ID).n_SSD_en,
+           n_SSD_o => output_arr(Stepper_ID).n_SSD,
+
+            -- PS2 Interface
+           ps2_1_dir_o => output_arr(Stepper_ID).ps2_1_dir,
+           ps2_1_data_i => input_arr(Stepper_ID).ps2_1_data,
+           ps2_1_data_o => output_arr(Stepper_ID).ps2_1_data,
+           ps2_1_clk_i => input_arr(Stepper_ID).ps2_1_clk,
+           ps2_1_clk_o => output_arr(Stepper_ID).ps2_1_clk,
+           
+           ps2_2_dir_o => output_arr(Stepper_ID).ps2_2_dir,
+           ps2_2_data_i => input_arr(Stepper_ID).ps2_2_data,
+           ps2_2_data_o => output_arr(Stepper_ID).ps2_2_data,
+           ps2_2_clk_i => input_arr(Stepper_ID).ps2_2_clk,
+           ps2_2_clk_o => output_arr(Stepper_ID).ps2_2_clk
+
+            -- Chip-Kit Ports: 
+            -- (Use only when the shield is not connected. Note, that you have 
+            -- to change connections in the TopLevel design, and you have to comment out the 
+            -- corresponding ports above. Make sure, you know what you are doing when using these
+            -- connections. 
+           --ck_an_n : inout std_logic_vector (5 downto 0);
+           --ck_an_p : inout std_logic_vector (5 downto 0);
+           --ck_io : inout std_logic_vector (42 downto 0);
+
+            -- ChipKit SPI
+            --ck_miso_i : in std_logic;
+            --ck_mosi_o : out std_logic;
+            --ck_sck_o : out std_logic;
+            --ck_ss : out std_logic;
+            
+            -- ChipKit I2C
+            --ck_scl : out std_logic;
+            --ck_sda : inout std_logic;
+            
+            -- Crypto SDA 
+            --crypto_sda : out std_logic;
            );
 
 
@@ -511,8 +847,8 @@ port map    ( -- Ports to transmit the Modulename
            n_sw_shield_i => input_arr(Crane_ID).n_sw_shield,
 
             -- Seven Segmend Displays 
-           n_digit_en_o => output_arr(Crane_ID).n_SSD_en,
-           n_segments_o => output_arr(Crane_ID).n_SSD,
+           n_SSD_en_o => output_arr(Crane_ID).n_SSD_en,
+           n_SSD_o => output_arr(Crane_ID).n_SSD,
 
             -- PS2 Interface
            ps2_1_dir_o => output_arr(Crane_ID).ps2_1_dir,
@@ -526,117 +862,6 @@ port map    ( -- Ports to transmit the Modulename
            ps2_2_data_o => output_arr(Crane_ID).ps2_2_data,
            ps2_2_clk_i => input_arr(Crane_ID).ps2_2_clk,
            ps2_2_clk_o => output_arr(Crane_ID).ps2_2_clk
-
-            -- Chip-Kit Ports: 
-            -- (Use only when the shield is not connected. Note, that you have 
-            -- to change connections in the TopLevel design, and you have to comment out the 
-            -- corresponding ports above. Make sure, you know what you are doing when using these
-            -- connections. 
-           --ck_an_n : inout std_logic_vector (5 downto 0);
-           --ck_an_p : inout std_logic_vector (5 downto 0);
-           --ck_io : inout std_logic_vector (42 downto 0);
-
-            -- ChipKit SPI
-            --ck_miso_i : in std_logic;
-            --ck_mosi_o : out std_logic;
-            --ck_sck_o : out std_logic;
-            --ck_ss : out std_logic;
-            
-            -- ChipKit I2C
-            --ck_scl : out std_logic;
-            --ck_sda : inout std_logic;
-            
-            -- Crypto SDA 
-            --crypto_sda : out std_logic;
-           );
-           
-MovingLight: entity work.Lauflicht
-port map    ( -- Ports to transmit the Modulename
-           name_ptr_i => name_arr(Light_ID).name_ptr,
-           name_len_o => name_arr(Light_ID).name_len,
-           name_dat_o => name_arr(Light_ID).name_dat,
-           -- Clock
-           clk_i => clk_i,
-           -- Switches 
-           -- sw_i => sw_i,
-           -- RGB LEDs
-           ld4_o => output_arr(Light_ID).rgb_ld4,
-           ld5_o => output_Arr(Light_ID).rgb_ld5,
-           -- Board LEDs
-           leds_o => output_arr(Light_ID).leds,
-           -- Board Buttons
-           btn_i => input_arr(Light_ID).btn,
-           -- PMODs:
-           pmodA_dir_o => output_arr(Light_ID).pmodA_dir,
-           pmodA_i => input_arr(Light_ID).pmodA,
-           pmodA_o => output_arr(Light_ID).pmodA,
-           
-           pmodB_dir_o => output_arr(Light_ID).pmodB_dir,
-           pmodB_i => input_arr(Light_ID).pmodB,
-           pmodB_o => output_arr(Light_ID).pmodB,
-           
-           pmodC_dir_o => output_arr(Light_ID).pmodC_dir,
-           pmodC_i => input_arr(Light_ID).pmodC, -- Bei 8 Signalen lassen
-           pmodC_o => output_arr(Light_ID).pmodC,
-           -- Zusätzliches Audio_Ext Signal mit 8 - 10;
-           -- Audio Out:
-           aud_pwm_o => output_arr(Light_ID).aud_pwm,
-           aud_sd_o => output_arr(Light_ID).aud_sd,
-
-           -- Mic Input
-           m_clk_o => output_arr(Light_ID).mic_clk,
-           m_data_i => input_arr(Light_ID).m_data,
-
-           
---           -- HDMI Rx
---           hdmi_rx_cec : inout std_logic;
---           hdmi_rx_clk_n : in std_logic;
---           hdmi_rx_clk_p : in std_logic;
---           hdmi_rx_d_n : in std_logic_vector(2 downto 0);
---           hdmi_rx_d_p : in std_logic_vector(2 downto 0);
---           hdmi_rx_hpd : out std_logic;
---           hdmi_rx_scl : inout std_logic;
---           hdmi_rx_sda : inout std_logic;
-
---           -- HDMI Tx
---           hdmi_tx_cec : inout std_logic;
---           hdmi_tx_clk_n : out std_logic;
---           hdmi_tx_clk_p : out std_logic;
---           hdmi_tx_d_n : out std_logic_vector(2 downto 0);
---           hdmi_tx_d_p : out std_logic_vector(2 downto 0);
---           hdmi_tx_hpd : in std_logic;
---           hdmi_tx_scl : inout std_logic;
---           hdmi_tx_sda : inout std_logic;
-
-           -- Pynq-Shield
-           
-           -- Jumper J15
-           jumper_dir_o => output_arr(Light_ID).jumper_dir,
-           jumper_i => input_arr(Light_ID).jumper,
-           jumper_o => output_arr(Light_ID).jumper,
-
-           -- Blue LEDS
-           n_leds_shield_o => output_arr(Light_ID).n_shield_leds,
-
-            -- Switches on the shield
-           n_sw_shield_i => input_arr(Light_ID).n_sw_shield,
-
-            -- Seven Segmend Displays 
-           n_digit_en_o => output_arr(Light_ID).n_SSD_en,
-           n_segments_o => output_arr(Light_ID).n_SSD,
-
-            -- PS2 Interface
-           ps2_1_dir_o => output_arr(Light_ID).ps2_1_dir,
-           ps2_1_data_i => input_arr(Light_ID).ps2_1_data,
-           ps2_1_data_o => output_arr(Light_ID).ps2_1_data,
-           ps2_1_clk_i => input_arr(Light_ID).ps2_1_clk,
-           ps2_1_clk_o => output_arr(Light_ID).ps2_1_clk,
-           
-           ps2_2_dir_o => output_arr(Light_ID).ps2_2_dir,
-           ps2_2_data_i => input_arr(Light_ID).ps2_2_data,
-           ps2_2_data_o => output_arr(Light_ID).ps2_2_data,
-           ps2_2_clk_i => input_arr(Light_ID).ps2_2_clk,
-           ps2_2_clk_o => output_arr(Light_ID).ps2_2_clk
 
             -- Chip-Kit Ports: 
             -- (Use only when the shield is not connected. Note, that you have 

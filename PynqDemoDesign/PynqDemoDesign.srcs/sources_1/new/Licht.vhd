@@ -32,6 +32,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Licht is
+  generic (f_in, f_out :integer);
   Port ( clk_i : in std_logic;
          rst_i : in std_logic;
          enable_i : in std_logic; 
@@ -50,13 +51,13 @@ begin
 
 
 process (clk_i, rst_i)
-variable count : integer range 0 to 125000100;
+variable count : integer range 0 to f_in + f_out;
 begin
     if (rst_i = '1') then 
         count := 0;
     elsif rising_edge(clk_i) then 
-        if (count < 125000000) then 
-            count := count + 10;
+        if (count < f_in) then 
+            count := count + f_out;
             clk_ena <= '0';
         else 
             count := 0;

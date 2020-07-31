@@ -33,7 +33,7 @@ use work.records_p.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Lauflicht is
+entity Stepper is
     Port ( -- Ports to transmit the Modulename
            name_ptr_i : in std_logic_vector(CHAR_WIDTH-1 downto 0);
            name_len_o : out std_logic_vector(CHAR_WIDTH-1 downto 0);
@@ -162,9 +162,9 @@ entity Lauflicht is
             -- Crypto SDA 
             --crypto_sda : out std_logic;
            );
-end Lauflicht;
+end stepper;
 
-architecture Behavioral of Lauflicht is
+architecture Behavioral of stepper is
 
 -- Name:
 -- Usable Characters:
@@ -172,14 +172,14 @@ architecture Behavioral of Lauflicht is
 --(A, C, E, F, G, H, I, J, L, O)
 --(P, S, U, a, b, c, d, h, n, o)
 --(q, r, t, u, y)         
-constant name_str : string := "LAuFLICHt";
+constant name_str : string := "StEPPEr";
 
 -- Directions: (Set to 0 for Inputs, Set to 1 for Outputs)
 -- These constants can configure PMOD A, PMOD B, PMOD C, Jumper and the PS2 Ports as in- or output.
 -- This is done by a multiplexer in the top-level design, which either switches Tri-State-Buffer
 -- at the FPGA-Pins to high-impedance or routes the output signal through those buffers.
 -- Unused Ports should be set as inputs.  
-constant pmodA_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others=> '0');
+constant pmodA_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others=> '1');
 constant pmodB_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
 constant pmodC_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
 constant jumper_dir : std_logic_vector (JUMPER_WIDTH-1 downto 0) := (others => '0');
@@ -188,13 +188,17 @@ constant PS2_2_dir : std_logic_vector (1 downto 0) := (others => '0'); -- (Data,
 
 -- Toplevel Component of your Design:
 -- In this example an implementation of the Crane Controller from sheet 5 of the VHDL-Kurs. 
-component Licht is
-  Generic (f_in, f_out : integer);
+component StepperTOP is
+  generic (f_in : integer);
   Port ( clk_i : in std_logic;
          rst_i : in std_logic;
-         enable_i : in std_logic; 
-         blue_leds_o : out std_logic_vector (7 downto 0));
+         direction_cw_i : in std_logic;
+         half_step_i : in std_logic;
+         step_frequency_i : in std_logic_vector(7 downto 0);
+         stepper_o : out std_logic_vector(3 downto 0));
 end component;
+
+signal StepperControl : std_logic_vector(3 downto 0);
 
 begin
 
@@ -211,14 +215,20 @@ PS2_1_dir_o <= PS2_1_dir;
 PS2_2_dir_o <= PS2_2_dir;
 
 -- Instantiation of the toplevelmodule of your Design:
-MovingLight:Licht
-generic map (f_in => 125000000, f_out => 10)
+Toplevel:StepperTOP
+generic map (f_in => 125000000)
 port map (clk_i => clk_i,
           rst_i => btn_i(3),
-          enable_i => btn_i(0),
-          blue_leds_o => n_leds_shield_o);
+          direction_cw_i => btn_i(0),
+          half_step_i => btn_i(1),
+          step_frequency_i => n_sw_shield_i,
+          stepper_o => StepperControl);
           
-leds_o <= btn_i;
-n_SSD_en_o <= "11111111";
+n_SSD_en_o <= ( others => '1' );
+n_leds_shield_o <= n_sw_shield_i;
+
+leds_o <= StepperControl;
+pmodA_o(3 downto 0) <= StepperControl;
+pmodA_o(7 downto 4) <= StepperControl;
 
 end Behavioral;

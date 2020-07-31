@@ -33,7 +33,7 @@ use work.records_p.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Lauflicht is
+entity OneDigitCounter is
     Port ( -- Ports to transmit the Modulename
            name_ptr_i : in std_logic_vector(CHAR_WIDTH-1 downto 0);
            name_len_o : out std_logic_vector(CHAR_WIDTH-1 downto 0);
@@ -162,9 +162,9 @@ entity Lauflicht is
             -- Crypto SDA 
             --crypto_sda : out std_logic;
            );
-end Lauflicht;
+end OneDigitCounter;
 
-architecture Behavioral of Lauflicht is
+architecture Behavioral of OneDigitCounter is
 
 -- Name:
 -- Usable Characters:
@@ -172,7 +172,7 @@ architecture Behavioral of Lauflicht is
 --(A, C, E, F, G, H, I, J, L, O)
 --(P, S, U, a, b, c, d, h, n, o)
 --(q, r, t, u, y)         
-constant name_str : string := "LAuFLICHt";
+constant name_str : string := "OnE dIGIt CountEr";
 
 -- Directions: (Set to 0 for Inputs, Set to 1 for Outputs)
 -- These constants can configure PMOD A, PMOD B, PMOD C, Jumper and the PS2 Ports as in- or output.
@@ -188,12 +188,13 @@ constant PS2_2_dir : std_logic_vector (1 downto 0) := (others => '0'); -- (Data,
 
 -- Toplevel Component of your Design:
 -- In this example an implementation of the Crane Controller from sheet 5 of the VHDL-Kurs. 
-component Licht is
-  Generic (f_in, f_out : integer);
-  Port ( clk_i : in std_logic;
-         rst_i : in std_logic;
-         enable_i : in std_logic; 
-         blue_leds_o : out std_logic_vector (7 downto 0));
+component OneDigitCountTOP is
+    Generic (f_in, f_out : integer);
+    Port ( clk_i : in STD_LOGIC;
+           rst_i : in STD_LOGIC;
+           enable_i : in STD_LOGIC;
+           up_ndown_i : in STD_LOGIC;
+           n_SSD_o : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
 begin
@@ -211,14 +212,15 @@ PS2_1_dir_o <= PS2_1_dir;
 PS2_2_dir_o <= PS2_2_dir;
 
 -- Instantiation of the toplevelmodule of your Design:
-MovingLight:Licht
-generic map (f_in => 125000000, f_out => 10)
+Toplevel:OneDigitCountTOP
+generic map (f_in => 125000000, f_out => 3)
 port map (clk_i => clk_i,
           rst_i => btn_i(3),
           enable_i => btn_i(0),
-          blue_leds_o => n_leds_shield_o);
+          up_ndown_i => btn_i(1),
+          n_SSD_o => n_SSD_o);
           
-leds_o <= btn_i;
-n_SSD_en_o <= "11111111";
+n_SSD_en_o <= "11111110";
+n_leds_shield_o <= ( others => '1' );
 
 end Behavioral;

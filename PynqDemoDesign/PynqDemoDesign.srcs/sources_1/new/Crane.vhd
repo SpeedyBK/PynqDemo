@@ -127,8 +127,8 @@ entity Crane is
            n_sw_shield_i : in std_logic_vector(7 downto 0); --(left downto right)
 
             -- Seven Segmend Displays 
-           n_digit_en_o : out std_logic_vector(7 downto 0); --(left downto right)
-           n_segments_o : out std_logic_vector(7 downto 0); --(a,b,c,d,e,f,g,dp)
+           n_SSD_en_o : out std_logic_vector(7 downto 0); --(left downto right)
+           n_SSD_o : out std_logic_vector(7 downto 0); --(a,b,c,d,e,f,g,dp)
 
             -- PS2 Interface
            ps2_1_dir_o : out std_logic_vector(1 downto 0); --(data, clk)
@@ -232,5 +232,6 @@ n_leds_shield_o(7) <= not pmodA_i(4);
 -- Duplicating the PmodA-output to the Board LEDS.
 leds_o <= int_pmod(3 downto 0);
 pmodA_o <= "0000" & int_pmod(3 downto 0);
+n_SSD_en_o <= "00000000";
 
 end Behavioral;
