@@ -183,25 +183,27 @@ constant name_str : string := "PonG";
 -- This is done by a multiplexer in the top-level design, which either switches Tri-State-Buffer
 -- at the FPGA-Pins to high-impedance or routes the output signal through those buffers.
 -- Unused Ports should be set as inputs.  
-constant pmodA_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
-constant pmodB_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
+constant pmodA_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '1');
+constant pmodB_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '1');
 constant pmodC_dir : std_logic_vector (PMOD_WIDTH-1 downto 0) := (others => '0');
 constant jumper_dir : std_logic_vector (JUMPER_WIDTH-1 downto 0) := (others => '0');
 constant PS2_1_dir : std_logic_vector (1 downto 0) := (others => '0'); -- (Data, CLK)
 constant PS2_2_dir : std_logic_vector (1 downto 0) := (others => '0'); -- (Data, CLK)
 
 -- Internal signals for example, if you want to duplicate a signal to two ports if needed.  
-signal int_pmod : std_logic_vector(7 downto 0);
+
 
 -- Toplevel Component of your Design:
 component pong_top IS
 	generic(
 		game_enable_clocks: integer := 2100000); -- Propox version 840000
 	port( 
-		clock : in  std_logic;
-		reset : in  std_logic;
-		-- Play Mode Selector
+		clock : in std_logic;
+		reset : in std_logic;
+		
+		-- Play Modus Selector (Shield-Switches on the right)
 		slide_sw_i : in std_logic_vector(1 downto 0);
+				
 		pmod_c : in std_logic_vector(7 downto 0);
 		blue_led : out std_logic_vector(7 downto 0);
 		
@@ -215,30 +217,18 @@ component pong_top IS
 		-- Sound Interface
 		aud_pwm_o : out std_logic;
 		aud_sd_o  : out std_logic;
-		
-		--lrcout_o 								: out std_logic;
-		--bclk_o 									: out std_logic;
-		--sclk_o 									: out std_logic;
-		--din_i 									: in 	std_logic;
-		--dout_o 									: out std_logic;
-		--sdout_o 								: out std_logic;
-		--ncs_o 									: out std_logic;
-		--mck_o 									: out std_logic;
-		--mode_o 									: out std_logic;
 
 		-- Seven Segment Display
 		ssd_data : out std_logic_vector(7 downto 0);
 		ssd_enable : out std_logic_vector(7 downto 0);
 
 		-- VGA Controller
-		VGA_HS, VGA_VS : out std_logic;
+		VGA_HS, VGA_VS : out  std_logic;
 		VGA_R, VGA_G, VGA_B	: out  std_logic_vector (3 downto 0);
 
 		-- leds
 		--;nled_o         		 	: out  std_logic_vector (7 downto 0)
-		led : out std_logic_vector(3 downto 0)
-		);
-
+		led : out std_logic_vector(3 downto 0));
 END component;
 
 begin
@@ -257,49 +247,32 @@ PS2_2_dir_o <= PS2_2_dir;
 
 -- Instantiation of the toplevelmodule of your Design:
 pong : pong_top 
-generic map ( game_enable_clocks => 2100000) -- Propox version 840000
-port map ( clock => clk_i,
-		   reset => btn_i(3),
-		   -- Play Mode Selector
-		   slide_sw_i => n_sw_shield_i(1 downto 0),
-		   pmod_c => pmodC_i,
-		   blue_led => n_leds_shield_o,
-		
-		-- Controller Interface
-		--rot_enc1_i 							: in  std_logic_vector(1 downto 0);
-		--push_button1_i 					    : in  std_logic;
-		
-		--rot_enc2_i 							: in  std_logic_vector(1 downto 0);
-		--push_button2_i 					    : in  std_logic;
+generic map(game_enable_clocks => 2100000) -- Propox version 840000
+port map   ( clock => clk_i,
+		     reset => btn_i(0),
+		     -- Play Modus Selector (Shield-Switches on the right)
+		     slide_sw_i => n_sw_shield_i(1 downto 0),
+				
+		     pmod_c => pmodC_i,
+		     blue_led => n_leds_shield_o,
 		  
-		-- Sound Interface
-		   aud_pwm_o => aud_pwm_o,
-		   aud_sd_o => aud_sd_o,
-		
-		--lrcout_o 								: out std_logic;
-		--bclk_o 									: out std_logic;
-		--sclk_o 									: out std_logic;
-		--din_i 									: in 	std_logic;
-		--dout_o 									: out std_logic;
-		--sdout_o 								: out std_logic;
-		--ncs_o 									: out std_logic;
-		--mck_o 									: out std_logic;
-		--mode_o 									: out std_logic;
+		     -- Sound Interface
+		     aud_pwm_o => aud_pwm_o,
+		     aud_sd_o => aud_sd_o,
 
-		-- Seven Segment Display
-		   ssd_data => n_SSD_o,
-		   ssd_enable => n_SSD_en_o,
+		     -- Seven Segment Display
+		     ssd_data => n_ssd_o,
+		     ssd_enable => n_ssd_en_o,
 
 		-- VGA Controller
-		   VGA_HS => open, 
-		   VGA_VS => open,
-		   VGA_R => open,
-		   VGA_G => open,
-		   VGA_B => open,
+		VGA_HS => pmodB_o(4),
+		VGA_VS => pmodB_o(5),
+		VGA_R => pmodA_o(3 downto 0),
+		VGA_G => pmodA_o(7 downto 4),
+		VGA_B => pmodB_o(3 downto 0),
 
 		-- leds
 		--;nled_o         		 	: out  std_logic_vector (7 downto 0)
-		   led => leds_o
-		);
+		led => leds_o);
 
 end Behavioral;

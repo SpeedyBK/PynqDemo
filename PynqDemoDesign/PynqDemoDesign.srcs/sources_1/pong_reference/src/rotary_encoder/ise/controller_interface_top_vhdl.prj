@@ -1,5 +1,0 @@
-vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\rotary_encoder\src\rot_enc_decoder.vhd"
-vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\rotary_encoder\ise\debounce.vhd"
-vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\rotary_encoder\src\reset_gen.vhd"
-vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\rotary_encoder\src\controller_interface.vhd"
-vhdl work "\\dr-teeth\pubdir\Lehrveranstaltungen\VHDL-Kurs\ss_10\Uebungen\06_project\rotary_encoder\src\controller_interface_top.vhd"

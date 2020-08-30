@@ -1,7 +1,0 @@
-vhdl work "../src/seven_seg_dec.vhd"
-vhdl work "../src/score_counter.vhd"
-vhdl work "../src/bin_to_bcd_dec.vhd"
-vhdl work "../src/score_display.vhd"
-vhdl work "../src/reset_gen.vhd"
-vhdl work "../src/debounce.vhd"
-vhdl work "../src/score_display_top.vhd"

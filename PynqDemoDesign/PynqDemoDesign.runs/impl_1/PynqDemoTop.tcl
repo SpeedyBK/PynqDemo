@@ -67,7 +67,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 2
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
@@ -82,7 +81,6 @@ set rc [catch {
   set_param project.isImplRun true
   add_files /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/bd/PS/PS.bd
   set_param project.isImplRun false
-  add_files -quiet /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/sources_1/pong_reference/ise/pong_reference/pong_reference.runs/impl_1/pong_top_routed.dcp
   read_xdc /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.srcs/constrs_1/imports/Downloads/Pynq_constraint_file.xdc
   set_param project.isImplRun true
   link_design -top PynqDemoTop -part xc7z020clg400-1

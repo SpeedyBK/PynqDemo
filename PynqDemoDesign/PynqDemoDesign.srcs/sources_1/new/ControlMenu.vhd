@@ -279,7 +279,7 @@ with mux_sel select
     name_datA <= std_logic_vector(to_unsigned(character'pos(name_str(to_integer(unsigned(name_ptr)))), 8)) when "00000000",
                 name_dat_i when others;
 
-process (name_ptr)                
+process (name_ptr, name_len, name_datA)                
 begin 
     if (signed(name_ptr) < 1 or (signed(name_ptr) > signed(name_len))) then 
         name_dat <= "11111111";

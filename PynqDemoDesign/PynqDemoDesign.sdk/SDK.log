@@ -7,3 +7,33 @@
 12:53:13 INFO  : Invoking Bootgen: bootgen -image Bootfile.bif -arch zynq -o /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/BOOT.bin
 12:53:13 INFO  : Creating new bif file /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/Bootfile.bif
 12:53:14 INFO  : Bootgen command execution is done.
+23:12:30 INFO  : Launching XSCT server: xsct -n -interactive /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/temp_xsdb_launch_script.tcl
+23:12:34 INFO  : XSCT server has started successfully.
+23:12:34 INFO  : Successfully done setting XSCT server connection channel  
+23:12:34 INFO  : Successfully done setting SDK workspace  
+23:12:42 INFO  : Registering command handlers for SDK TCF services
+23:12:42 INFO  : Processing command line option -hwspec /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf.
+23:12:43 INFO  : Checking for hwspec changes in the project PynqDemoTop_hw_platform_0.
+23:21:02 INFO  : Launching XSCT server: xsct -n -interactive /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/temp_xsdb_launch_script.tcl
+23:22:57 ERROR : (XSDB Server)Aufgelegt
+
+23:24:02 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+23:28:16 INFO  : Launching XSCT server: xsct -n -interactive /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/temp_xsdb_launch_script.tcl
+23:28:18 INFO  : XSCT server has started successfully.
+23:28:18 INFO  : Successfully done setting XSCT server connection channel  
+23:28:18 INFO  : Successfully done setting SDK workspace  
+23:28:23 INFO  : Registering command handlers for SDK TCF services
+23:28:23 INFO  : Processing command line option -hwspec /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf.
+23:28:24 INFO  : Checking for hwspec changes in the project PynqDemoTop_hw_platform_0.
+23:28:24 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1598821625000,  Project:1595501340000
+23:28:24 INFO  : The hardware specification for project 'PynqDemoTop_hw_platform_0' is different from /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf.
+23:28:25 INFO  : Copied contents of /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf into /PynqDemoTop_hw_platform_0/system.hdf.
+23:28:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:28:37 INFO  : 
+23:28:38 INFO  : Updating hardware inferred compiler options for FSBL.
+23:28:38 INFO  : Clearing existing target manager status.
+23:28:38 INFO  : Closing and re-opening the MSS file of ther project FSBL_bsp
+23:28:39 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:28:48 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:35:54 INFO  : Invoking Bootgen: bootgen -image Bootfile.bif -arch zynq -o /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/BOOT.bin -w on
+23:35:55 INFO  : Bootgen command execution is done.

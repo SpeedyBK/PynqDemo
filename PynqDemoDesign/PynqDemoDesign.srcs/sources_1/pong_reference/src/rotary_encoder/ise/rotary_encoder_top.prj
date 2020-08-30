@@ -1,4 +1,0 @@
-vhdl work "../src/rot_enc_decoder.vhd"
-vhdl work "../src/reset_gen.vhd"
-vhdl work "debounce.vhd"
-vhdl work "../src/rotary_encoder_top.vhd"

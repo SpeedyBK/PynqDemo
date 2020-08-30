@@ -1,6 +1,0 @@
-set -tmpdir "Z:/vhdlect1/pong/ise/xst/projnav.tmp"
-set -xsthdpdir "Z:/vhdlect1/pong/ise/xst"
-elaborate
--lso Z:/vhdlect1/pong/ise/pong_toplevel.lso
--ifn pong_toplevel.prj
--ifmt mixed

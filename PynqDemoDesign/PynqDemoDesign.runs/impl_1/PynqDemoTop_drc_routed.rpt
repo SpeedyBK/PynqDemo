@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Fri Jul 31 21:55:22 2020
-| Host         : Laptop running 64-bit Ubuntu 18.04.4 LTS
+| Date         : Sun Aug 30 23:06:23 2020
+| Host         : Laptop running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_drc -file PynqDemoTop_drc_routed.rpt -pb PynqDemoTop_drc_routed.pb -rpx PynqDemoTop_drc_routed.rpx
 | Design       : PynqDemoTop
 | Device       : xc7z020clg400-1
@@ -24,79 +24,79 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 31
+             Violations found: 39
 +----------+----------+---------------------------------+------------+
 | Rule     | Severity | Description                     | Violations |
 +----------+----------+---------------------------------+------------+
 | PDRC-153 | Warning  | Gated clock check               | 15         |
-| RPBF-3   | Warning  | IO port buffering is incomplete | 16         |
+| RPBF-3   | Warning  | IO port buffering is incomplete | 24         |
 +----------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net Menu/Selector/E[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr[0][name_len][-1111111107]_i_2/O, cell Menu/Selector/name_arr[0][name_len][-1111111107]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Menu/Selector/E[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[5][name_ptr][2]_i_1/O, cell Menu/Selector/name_arr_reg[5][name_ptr][2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net Menu/Selector/count_reg[0]_2[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[2][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[2][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Menu/Selector/count_reg[0]_4[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr[0][name_len][-1111111107]_i_2/O, cell Menu/Selector/name_arr[0][name_len][-1111111107]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net Menu/Selector/count_reg[0]_3[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[3][name_ptr][2]_i_1/O, cell Menu/Selector/name_arr_reg[3][name_ptr][2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Menu/Selector/count_reg[1]_1[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[3][name_ptr][2]_i_1/O, cell Menu/Selector/name_arr_reg[3][name_ptr][2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net Menu/Selector/count_reg[1]_0[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[1][name_ptr][4]_i_1/O, cell Menu/Selector/name_arr_reg[1][name_ptr][4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Menu/Selector/count_reg[1]_2[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[4][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[4][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net Menu/Selector/count_reg[1]_1[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[4][name_ptr][2]_i_1/O, cell Menu/Selector/name_arr_reg[4][name_ptr][2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Menu/Selector/count_reg[1]_4[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[6][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[6][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net Menu/Selector/count_reg[2]_1[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[5][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[5][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Menu/Selector/count_reg[2]_0[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[1][name_ptr][4]_i_1/O, cell Menu/Selector/name_arr_reg[1][name_ptr][4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__1/O, cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Menu/Selector/count_reg[7]_0[0] is a gated clock net sourced by a combinational pin Menu/Selector/name_arr_reg[2][name_ptr][3]_i_1/O, cell Menu/Selector/name_arr_reg[2][name_ptr][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1/O, cell Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__3_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__3/O, cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0/O, cell Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1/O, cell Pong/pong/controller_interface1/deb_rot_enc0/x_o_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4/O, cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0/O, cell Pong/pong/controller_interface1/deb_rot_enc1/x_o_reg_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net Pong/pong/controller_interface2/deb_rot_enc0/x_o_reg_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_rot_enc0/x_o_reg_LDC_i_1__2/O, cell Pong/pong/controller_interface2/deb_rot_enc0/x_o_reg_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4/O, cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net Pong/pong/controller_interface2/deb_rot_enc1/x_o_reg_LDC_i_1__3_n_0 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_rot_enc1/x_o_reg_LDC_i_1__3/O, cell Pong/pong/controller_interface2/deb_rot_enc1/x_o_reg_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface2/deb_rot_enc0/x_o_reg_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_rot_enc0/x_o_reg_LDC_i_1__1/O, cell Pong/pong/controller_interface2/deb_rot_enc0/x_o_reg_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net inter_mux_i_reg[btn][3]_i_1_n_0 is a gated clock net sourced by a combinational pin inter_mux_i_reg[btn][3]_i_1/O, cell inter_mux_i_reg[btn][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface2/deb_rot_enc1/x_o_reg_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_rot_enc1/x_o_reg_LDC_i_1__2/O, cell Pong/pong/controller_interface2/deb_rot_enc1/x_o_reg_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
@@ -106,7 +106,7 @@ Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net mux_to_menu_reg[btn][3]_i_1_n_0 is a gated clock net sourced by a combinational pin mux_to_menu_reg[btn][3]_i_1/O, cell mux_to_menu_reg[btn][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net mux_to_menu[jumper] is a gated clock net sourced by a combinational pin mux_to_menu_reg[btn][3]_i_1/O, cell mux_to_menu_reg[btn][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 RPBF-3#1 Warning
@@ -146,45 +146,85 @@ Related violations: <none>
 
 RPBF-3#8 Warning
 IO port buffering is incomplete  
-Device port pmodC[10] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[0] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#9 Warning
 IO port buffering is incomplete  
-Device port pmodC[1] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[1] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#10 Warning
 IO port buffering is incomplete  
-Device port pmodC[2] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[2] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#11 Warning
 IO port buffering is incomplete  
-Device port pmodC[3] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[3] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#12 Warning
 IO port buffering is incomplete  
-Device port pmodC[5] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[4] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#13 Warning
 IO port buffering is incomplete  
-Device port pmodC[6] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[5] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#14 Warning
 IO port buffering is incomplete  
-Device port pmodC[7] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[6] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#15 Warning
 IO port buffering is incomplete  
-Device port pmodC[8] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[7] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#16 Warning
+IO port buffering is incomplete  
+Device port pmodC[10] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#17 Warning
+IO port buffering is incomplete  
+Device port pmodC[1] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#18 Warning
+IO port buffering is incomplete  
+Device port pmodC[2] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#19 Warning
+IO port buffering is incomplete  
+Device port pmodC[3] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#20 Warning
+IO port buffering is incomplete  
+Device port pmodC[5] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#21 Warning
+IO port buffering is incomplete  
+Device port pmodC[6] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#22 Warning
+IO port buffering is incomplete  
+Device port pmodC[7] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#23 Warning
+IO port buffering is incomplete  
+Device port pmodC[8] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#24 Warning
 IO port buffering is incomplete  
 Device port pmodC[9] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>

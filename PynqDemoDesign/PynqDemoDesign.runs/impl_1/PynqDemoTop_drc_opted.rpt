@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Fri Jul 31 21:54:18 2020
-| Host         : Laptop running 64-bit Ubuntu 18.04.4 LTS
+| Date         : Sun Aug 30 23:05:10 2020
+| Host         : Laptop running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_drc -file PynqDemoTop_drc_opted.rpt -pb PynqDemoTop_drc_opted.pb -rpx PynqDemoTop_drc_opted.rpx
 | Design       : PynqDemoTop
 | Device       : xc7z020clg400-1
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 16
+             Violations found: 24
 +--------+----------+---------------------------------+------------+
 | Rule   | Severity | Description                     | Violations |
 +--------+----------+---------------------------------+------------+
-| RPBF-3 | Warning  | IO port buffering is incomplete | 16         |
+| RPBF-3 | Warning  | IO port buffering is incomplete | 24         |
 +--------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
@@ -70,45 +70,85 @@ Related violations: <none>
 
 RPBF-3#8 Warning
 IO port buffering is incomplete  
-Device port pmodC[10] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[0] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#9 Warning
 IO port buffering is incomplete  
-Device port pmodC[1] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[1] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#10 Warning
 IO port buffering is incomplete  
-Device port pmodC[2] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[2] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#11 Warning
 IO port buffering is incomplete  
-Device port pmodC[3] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[3] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#12 Warning
 IO port buffering is incomplete  
-Device port pmodC[5] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[4] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#13 Warning
 IO port buffering is incomplete  
-Device port pmodC[6] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[5] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#14 Warning
 IO port buffering is incomplete  
-Device port pmodC[7] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[6] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#15 Warning
 IO port buffering is incomplete  
-Device port pmodC[8] expects both input and output buffering but the buffers are incomplete.
+Device port pmodB[7] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#16 Warning
+IO port buffering is incomplete  
+Device port pmodC[10] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#17 Warning
+IO port buffering is incomplete  
+Device port pmodC[1] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#18 Warning
+IO port buffering is incomplete  
+Device port pmodC[2] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#19 Warning
+IO port buffering is incomplete  
+Device port pmodC[3] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#20 Warning
+IO port buffering is incomplete  
+Device port pmodC[5] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#21 Warning
+IO port buffering is incomplete  
+Device port pmodC[6] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#22 Warning
+IO port buffering is incomplete  
+Device port pmodC[7] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#23 Warning
+IO port buffering is incomplete  
+Device port pmodC[8] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#24 Warning
 IO port buffering is incomplete  
 Device port pmodC[9] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>

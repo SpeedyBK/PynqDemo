@@ -58,6 +58,8 @@ signal direction : std_logic := '1';
 signal half_step : std_logic := '1';
 signal step_enable : std_logic := '0';
 signal count : integer;
+signal motor_signals : std_logic_vector(3 downto 0);
+signal disable_motor : std_logic;
 
 begin
 
@@ -69,6 +71,8 @@ variable step_count : integer range 0 to 255;
 begin
     if (rst_i = '1') then 
         kstate <= waiting;
+        disable_motor <= '1';
+        blue_leds_o <= not "0000000";
         speed := 0; 
         delay := 0;
         direction <= '1';
@@ -76,6 +80,7 @@ begin
         case kstate is 
             when waiting =>
                 blue_leds_o <= not "0000001";
+                disable_motor <= '1';
                 speed := 0;
                 delay := 0;
                 magnet_o <= '0';
@@ -86,6 +91,7 @@ begin
                 end if;
             when magnetOn =>
                 blue_leds_o <= not "0000010";
+                disable_motor <= '0';
                 speed := 0;
                 step_count := 0;
                 magnet_o <= '1';
@@ -100,6 +106,7 @@ begin
                 end if;
             when moving =>
                 blue_leds_o <= not "0000100";
+                disable_motor <= '0';
                 if (step_count < 30 and step_enable = '1') then
                     -- Speed Up
                     speed := speed + 2;
@@ -128,6 +135,7 @@ begin
                 count <= step_count;
             when others =>
                 blue_leds_o <= not "0001000";
+                disable_motor <= '0';
                 speed := 0;
                 f := 0;
                 step_count := 0;
@@ -153,7 +161,11 @@ port map ( clk_i => clk_i,
            enable_i => step_enable,
            direction_cw_i => direction,
            half_step_mode_i => half_step,
-           motor_signals_o => motor_signals_o);
+           motor_signals_o => motor_signals);
+
+with disable_motor select 
+motor_signals_o <= motor_signals when '0',
+                   (others => '0') when others;
 
 
 end Behavioral;

@@ -67,7 +67,7 @@ begin
 end process;
 
 
-process(clk_i, enable_i)
+process(clk_i, enable_i, rst_i)
 begin
     if (rst_i = '1') then 
         enable <= '0';
