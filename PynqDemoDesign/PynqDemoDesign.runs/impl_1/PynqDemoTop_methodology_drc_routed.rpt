@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sun Aug 30 23:06:26 2020
+| Date         : Mon Aug 31 12:02:57 2020
 | Host         : Laptop running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_methodology -file PynqDemoTop_methodology_drc_routed.rpt -pb PynqDemoTop_methodology_drc_routed.pb -rpx PynqDemoTop_methodology_drc_routed.rpx
 | Design       : PynqDemoTop
@@ -23,14 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 189
+             Violations found: 193
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 3          |
 | LUTAR-1   | Warning          | LUT drives async reset alert  | 22         |
 | TIMING-18 | Warning          | Missing input or output delay | 52         |
-| TIMING-20 | Warning          | Non-clocked latch             | 112        |
+| TIMING-20 | Warning          | Non-clocked latch             | 116        |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -57,12 +57,12 @@ Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface1/deb_push_but/x_o_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface1/deb_push_but/x_o_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_2__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface1/deb_push_but/x_o_reg_C/CLR, Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_2__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface1/deb_push_but/x_o_reg_C/CLR, Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
@@ -87,12 +87,12 @@ Related violations: <none>
 
 LUTAR-1#8 Warning
 LUT drives async reset alert  
-LUT cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface2/deb_push_but/x_o_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface2/deb_push_but/x_o_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#9 Warning
 LUT drives async reset alert  
-LUT cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_2__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface2/deb_push_but/x_o_reg_C/CLR, Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_2__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/controller_interface2/deb_push_but/x_o_reg_C/CLR, Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#10 Warning
@@ -572,410 +572,430 @@ Related violations: <none>
 
 TIMING-20#31 Warning
 Non-clocked latch  
-The latch input_arr_reg[5][pmodC][1] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][1]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][0] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#32 Warning
 Non-clocked latch  
-The latch input_arr_reg[5][pmodC][2] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][2]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][1] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#33 Warning
 Non-clocked latch  
-The latch input_arr_reg[5][pmodC][3] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][3]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][2] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#34 Warning
 Non-clocked latch  
-The latch input_arr_reg[5][pmodC][5] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][5]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][3] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#35 Warning
 Non-clocked latch  
-The latch input_arr_reg[5][pmodC][6] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][6]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][4] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#36 Warning
 Non-clocked latch  
-The latch input_arr_reg[5][pmodC][7] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][7]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][5] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#37 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][btn][0] cannot be properly analyzed as its control pin input_arr_reg[6][btn][0]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][6] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#38 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][btn][1] cannot be properly analyzed as its control pin input_arr_reg[6][btn][1]/G is not reached by a timing clock
+The latch input_arr_reg[5][pmodC][7] cannot be properly analyzed as its control pin input_arr_reg[5][pmodC][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#39 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][btn][3] cannot be properly analyzed as its control pin input_arr_reg[6][btn][3]/G is not reached by a timing clock
+The latch input_arr_reg[6][btn][0] cannot be properly analyzed as its control pin input_arr_reg[6][btn][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#40 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][0] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][0]/G is not reached by a timing clock
+The latch input_arr_reg[6][btn][1] cannot be properly analyzed as its control pin input_arr_reg[6][btn][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#41 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][1] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][1]/G is not reached by a timing clock
+The latch input_arr_reg[6][btn][3] cannot be properly analyzed as its control pin input_arr_reg[6][btn][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#42 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][2] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][2]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][0] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#43 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][3] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][3]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][1] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#44 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][4] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][4]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][2] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#45 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][5] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][5]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][3] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#46 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][6] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][6]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][4] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#47 Warning
 Non-clocked latch  
-The latch input_arr_reg[6][n_sw_shield][7] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][7]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][5] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#48 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[btn][0] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][0]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][6] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#49 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[btn][1] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][1]/G is not reached by a timing clock
+The latch input_arr_reg[6][n_sw_shield][7] cannot be properly analyzed as its control pin input_arr_reg[6][n_sw_shield][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#50 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[btn][2] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][2]/G is not reached by a timing clock
+The latch inter_mux_i_reg[btn][0] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#51 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[btn][3] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][3]/G is not reached by a timing clock
+The latch inter_mux_i_reg[btn][1] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#52 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][0] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][0]/G is not reached by a timing clock
+The latch inter_mux_i_reg[btn][2] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#53 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][1] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][1]/G is not reached by a timing clock
+The latch inter_mux_i_reg[btn][3] cannot be properly analyzed as its control pin inter_mux_i_reg[btn][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#54 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][2] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][2]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][0] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#55 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][3] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][3]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][1] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#56 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][4] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][4]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][2] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#57 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][5] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][5]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][3] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#58 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][6] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][6]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][4] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#59 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[n_sw_shield][7] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][7]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][5] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#60 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[pmodA][4] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodA][4]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][6] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#61 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[pmodC][1] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][1]/G is not reached by a timing clock
+The latch inter_mux_i_reg[n_sw_shield][7] cannot be properly analyzed as its control pin inter_mux_i_reg[n_sw_shield][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#62 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[pmodC][2] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][2]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodA][4] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodA][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#63 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[pmodC][3] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][3]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][0] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#64 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[pmodC][5] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][5]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][1] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#65 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[pmodC][6] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][6]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][2] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#66 Warning
 Non-clocked latch  
-The latch inter_mux_i_reg[pmodC][7] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][7]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][3] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#67 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][0] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][0]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][4] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#68 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][1] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][1]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][5] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#69 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][2] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][2]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][6] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#70 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][3] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][3]/G is not reached by a timing clock
+The latch inter_mux_i_reg[pmodC][7] cannot be properly analyzed as its control pin inter_mux_i_reg[pmodC][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#71 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][4] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][4]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][0] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#72 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][5] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][5]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][1] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#73 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][6] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][6]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][2] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#74 Warning
 Non-clocked latch  
-The latch mux_to_base_reg[n_sw_shield][7] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][7]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][3] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#75 Warning
 Non-clocked latch  
-The latch mux_to_menu_reg[btn][0] cannot be properly analyzed as its control pin mux_to_menu_reg[btn][0]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][4] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#76 Warning
 Non-clocked latch  
-The latch mux_to_menu_reg[btn][1] cannot be properly analyzed as its control pin mux_to_menu_reg[btn][1]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][5] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#77 Warning
 Non-clocked latch  
-The latch mux_to_menu_reg[btn][3] cannot be properly analyzed as its control pin mux_to_menu_reg[btn][3]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][6] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#78 Warning
 Non-clocked latch  
-The latch name_arr[0][name_dat][-1111111105] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111105]/G is not reached by a timing clock
+The latch mux_to_base_reg[n_sw_shield][7] cannot be properly analyzed as its control pin mux_to_base_reg[n_sw_shield][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#79 Warning
 Non-clocked latch  
-The latch name_arr[0][name_dat][-1111111106] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111106]/G is not reached by a timing clock
+The latch mux_to_menu_reg[btn][0] cannot be properly analyzed as its control pin mux_to_menu_reg[btn][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#80 Warning
 Non-clocked latch  
-The latch name_arr[0][name_dat][-1111111107] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111107]/G is not reached by a timing clock
+The latch mux_to_menu_reg[btn][1] cannot be properly analyzed as its control pin mux_to_menu_reg[btn][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#81 Warning
 Non-clocked latch  
-The latch name_arr[0][name_dat][-1111111108] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111108]/G is not reached by a timing clock
+The latch mux_to_menu_reg[btn][3] cannot be properly analyzed as its control pin mux_to_menu_reg[btn][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#82 Warning
 Non-clocked latch  
-The latch name_arr[0][name_dat][-1111111109] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111109]/G is not reached by a timing clock
+The latch name_arr[0][name_dat][-1111111105] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111105]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#83 Warning
 Non-clocked latch  
-The latch name_arr[0][name_dat][-1111111110] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111110]/G is not reached by a timing clock
+The latch name_arr[0][name_dat][-1111111106] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111106]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#84 Warning
 Non-clocked latch  
-The latch name_arr[0][name_dat][-1111111111] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111111]/G is not reached by a timing clock
+The latch name_arr[0][name_dat][-1111111107] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111107]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#85 Warning
 Non-clocked latch  
-The latch name_arr[0][name_len][-1111111107] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111107]/G is not reached by a timing clock
+The latch name_arr[0][name_dat][-1111111108] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111108]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#86 Warning
 Non-clocked latch  
-The latch name_arr[0][name_len][-1111111108] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111108]/G is not reached by a timing clock
+The latch name_arr[0][name_dat][-1111111109] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111109]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#87 Warning
 Non-clocked latch  
-The latch name_arr[0][name_len][-1111111109] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111109]/G is not reached by a timing clock
+The latch name_arr[0][name_dat][-1111111110] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111110]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#88 Warning
 Non-clocked latch  
-The latch name_arr[0][name_len][-1111111110] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111110]/G is not reached by a timing clock
+The latch name_arr[0][name_dat][-1111111111] cannot be properly analyzed as its control pin name_arr[0][name_dat][-1111111111]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#89 Warning
 Non-clocked latch  
-The latch name_arr[0][name_len][-1111111111] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111111]/G is not reached by a timing clock
+The latch name_arr[0][name_len][-1111111107] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111107]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#90 Warning
 Non-clocked latch  
-The latch name_arr_reg[1][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][0]/G is not reached by a timing clock
+The latch name_arr[0][name_len][-1111111108] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111108]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#91 Warning
 Non-clocked latch  
-The latch name_arr_reg[1][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][1]/G is not reached by a timing clock
+The latch name_arr[0][name_len][-1111111109] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111109]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#92 Warning
 Non-clocked latch  
-The latch name_arr_reg[1][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][2]/G is not reached by a timing clock
+The latch name_arr[0][name_len][-1111111110] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111110]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#93 Warning
 Non-clocked latch  
-The latch name_arr_reg[1][name_ptr][3] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][3]/G is not reached by a timing clock
+The latch name_arr[0][name_len][-1111111111] cannot be properly analyzed as its control pin name_arr[0][name_len][-1111111111]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#94 Warning
 Non-clocked latch  
-The latch name_arr_reg[1][name_ptr][4] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][4]/G is not reached by a timing clock
+The latch name_arr_reg[1][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#95 Warning
 Non-clocked latch  
-The latch name_arr_reg[2][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][0]/G is not reached by a timing clock
+The latch name_arr_reg[1][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#96 Warning
 Non-clocked latch  
-The latch name_arr_reg[2][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][1]/G is not reached by a timing clock
+The latch name_arr_reg[1][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#97 Warning
 Non-clocked latch  
-The latch name_arr_reg[2][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][2]/G is not reached by a timing clock
+The latch name_arr_reg[1][name_ptr][3] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#98 Warning
 Non-clocked latch  
-The latch name_arr_reg[2][name_ptr][3] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][3]/G is not reached by a timing clock
+The latch name_arr_reg[1][name_ptr][4] cannot be properly analyzed as its control pin name_arr_reg[1][name_ptr][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#99 Warning
 Non-clocked latch  
-The latch name_arr_reg[3][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[3][name_ptr][0]/G is not reached by a timing clock
+The latch name_arr_reg[2][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#100 Warning
 Non-clocked latch  
-The latch name_arr_reg[3][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[3][name_ptr][1]/G is not reached by a timing clock
+The latch name_arr_reg[2][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#101 Warning
 Non-clocked latch  
-The latch name_arr_reg[3][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[3][name_ptr][2]/G is not reached by a timing clock
+The latch name_arr_reg[2][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#102 Warning
 Non-clocked latch  
-The latch name_arr_reg[4][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][0]/G is not reached by a timing clock
+The latch name_arr_reg[2][name_ptr][3] cannot be properly analyzed as its control pin name_arr_reg[2][name_ptr][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#103 Warning
 Non-clocked latch  
-The latch name_arr_reg[4][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][1]/G is not reached by a timing clock
+The latch name_arr_reg[3][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[3][name_ptr][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#104 Warning
 Non-clocked latch  
-The latch name_arr_reg[4][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][2]/G is not reached by a timing clock
+The latch name_arr_reg[3][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[3][name_ptr][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#105 Warning
 Non-clocked latch  
-The latch name_arr_reg[4][name_ptr][3] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][3]/G is not reached by a timing clock
+The latch name_arr_reg[3][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[3][name_ptr][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#106 Warning
 Non-clocked latch  
-The latch name_arr_reg[5][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[5][name_ptr][0]/G is not reached by a timing clock
+The latch name_arr_reg[4][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#107 Warning
 Non-clocked latch  
-The latch name_arr_reg[5][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[5][name_ptr][1]/G is not reached by a timing clock
+The latch name_arr_reg[4][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#108 Warning
 Non-clocked latch  
-The latch name_arr_reg[5][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[5][name_ptr][2]/G is not reached by a timing clock
+The latch name_arr_reg[4][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#109 Warning
 Non-clocked latch  
-The latch name_arr_reg[6][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[6][name_ptr][0]/G is not reached by a timing clock
+The latch name_arr_reg[4][name_ptr][3] cannot be properly analyzed as its control pin name_arr_reg[4][name_ptr][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#110 Warning
 Non-clocked latch  
-The latch name_arr_reg[6][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[6][name_ptr][1]/G is not reached by a timing clock
+The latch name_arr_reg[5][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[5][name_ptr][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#111 Warning
 Non-clocked latch  
-The latch name_arr_reg[6][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[6][name_ptr][2]/G is not reached by a timing clock
+The latch name_arr_reg[5][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[5][name_ptr][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#112 Warning
+Non-clocked latch  
+The latch name_arr_reg[5][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[5][name_ptr][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#113 Warning
+Non-clocked latch  
+The latch name_arr_reg[6][name_ptr][0] cannot be properly analyzed as its control pin name_arr_reg[6][name_ptr][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#114 Warning
+Non-clocked latch  
+The latch name_arr_reg[6][name_ptr][1] cannot be properly analyzed as its control pin name_arr_reg[6][name_ptr][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#115 Warning
+Non-clocked latch  
+The latch name_arr_reg[6][name_ptr][2] cannot be properly analyzed as its control pin name_arr_reg[6][name_ptr][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#116 Warning
 Non-clocked latch  
 The latch name_arr_reg[6][name_ptr][3] cannot be properly analyzed as its control pin name_arr_reg[6][name_ptr][3]/G is not reached by a timing clock
 Related violations: <none>

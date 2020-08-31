@@ -137,7 +137,7 @@ ssd_enable(0)          <= '1';
 VGA_HS <= h_sync_o;
 VGA_VS <= v_sync_o;
 
---blue_led <= not pmod_c;
+blue_led <= not pmod_c;
 
 rot_enc1_i <= pmod_c(7 downto 6);
 push_button1_i <= not pmod_c(5);

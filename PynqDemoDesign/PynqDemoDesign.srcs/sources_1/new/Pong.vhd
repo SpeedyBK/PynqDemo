@@ -208,11 +208,11 @@ component pong_top IS
 		blue_led : out std_logic_vector(7 downto 0);
 		
 		-- Controller Interface
-		--rot_enc1_i 							: in  std_logic_vector(1 downto 0);
-		--push_button1_i 					    : in  std_logic;
+--		rot_enc1_i 							: in  std_logic_vector(1 downto 0);
+--		push_button1_i 					    : in  std_logic;
 		
-		--rot_enc2_i 							: in  std_logic_vector(1 downto 0);
-		--push_button2_i 					    : in  std_logic;
+--		rot_enc2_i 							: in  std_logic_vector(1 downto 0);
+--		push_button2_i 					    : in  std_logic;
 		  
 		-- Sound Interface
 		aud_pwm_o : out std_logic;

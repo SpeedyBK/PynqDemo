@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sun Aug 30 23:06:23 2020
+| Date         : Mon Aug 31 12:02:56 2020
 | Host         : Laptop running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_drc -file PynqDemoTop_drc_routed.rpt -pb PynqDemoTop_drc_routed.pb -rpx PynqDemoTop_drc_routed.rpx
 | Design       : PynqDemoTop
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 39
+             Violations found: 41
 +----------+----------+---------------------------------+------------+
 | Rule     | Severity | Description                     | Violations |
 +----------+----------+---------------------------------+------------+
 | PDRC-153 | Warning  | Gated clock check               | 15         |
-| RPBF-3   | Warning  | IO port buffering is incomplete | 24         |
+| RPBF-3   | Warning  | IO port buffering is incomplete | 26         |
 +----------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
@@ -71,7 +71,7 @@ Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__3_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__3/O, cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__4_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__4/O, cell Pong/pong/controller_interface1/deb_push_but/x_o_reg_LDC_i_1__4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
@@ -86,7 +86,7 @@ Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4/O, cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__3_n_1 is a gated clock net sourced by a combinational pin Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__3/O, cell Pong/pong/controller_interface2/deb_push_but/x_o_reg_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
@@ -186,45 +186,55 @@ Related violations: <none>
 
 RPBF-3#16 Warning
 IO port buffering is incomplete  
-Device port pmodC[10] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[0] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#17 Warning
 IO port buffering is incomplete  
-Device port pmodC[1] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[10] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#18 Warning
 IO port buffering is incomplete  
-Device port pmodC[2] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[1] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#19 Warning
 IO port buffering is incomplete  
-Device port pmodC[3] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[2] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#20 Warning
 IO port buffering is incomplete  
-Device port pmodC[5] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[3] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#21 Warning
 IO port buffering is incomplete  
-Device port pmodC[6] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[4] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#22 Warning
 IO port buffering is incomplete  
-Device port pmodC[7] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[5] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#23 Warning
 IO port buffering is incomplete  
-Device port pmodC[8] expects both input and output buffering but the buffers are incomplete.
+Device port pmodC[6] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#24 Warning
+IO port buffering is incomplete  
+Device port pmodC[7] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#25 Warning
+IO port buffering is incomplete  
+Device port pmodC[8] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#26 Warning
 IO port buffering is incomplete  
 Device port pmodC[9] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
