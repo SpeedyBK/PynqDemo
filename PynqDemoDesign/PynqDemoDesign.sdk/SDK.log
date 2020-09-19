@@ -56,3 +56,29 @@
 12:15:36 WARN  : Linker script will not be updated automatically. Users need to update it manually.
 12:25:22 INFO  : Invoking Bootgen: bootgen -image Bootfile.bif -arch zynq -o /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/BOOT.bin -w on
 12:25:24 INFO  : Bootgen command execution is done.
+14:36:10 INFO  : Launching XSCT server: xsct -n -interactive /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/temp_xsdb_launch_script.tcl
+14:36:12 INFO  : XSCT server has started successfully.
+14:36:13 INFO  : Successfully done setting XSCT server connection channel  
+14:36:13 INFO  : Successfully done setting SDK workspace  
+14:36:17 INFO  : Registering command handlers for SDK TCF services
+14:36:17 INFO  : Processing command line option -hwspec /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf.
+14:36:18 INFO  : Checking for hwspec changes in the project PynqDemoTop_hw_platform_0.
+15:05:09 INFO  : Launching XSCT server: xsct -n -interactive /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/temp_xsdb_launch_script.tcl
+15:05:11 INFO  : XSCT server has started successfully.
+15:05:11 INFO  : Successfully done setting XSCT server connection channel  
+15:05:11 INFO  : Successfully done setting SDK workspace  
+15:05:15 INFO  : Registering command handlers for SDK TCF services
+15:05:16 INFO  : Processing command line option -hwspec /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf.
+15:05:16 INFO  : Checking for hwspec changes in the project PynqDemoTop_hw_platform_0.
+15:05:16 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1599137920000,  Project:1598868204000
+15:05:16 INFO  : The hardware specification for project 'PynqDemoTop_hw_platform_0' is different from /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf.
+15:05:17 INFO  : Copied contents of /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/PynqDemoTop.hdf into /PynqDemoTop_hw_platform_0/system.hdf.
+15:05:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:05:29 INFO  : 
+15:05:29 INFO  : Updating hardware inferred compiler options for FSBL.
+15:05:29 INFO  : Clearing existing target manager status.
+15:05:29 INFO  : Closing and re-opening the MSS file of ther project FSBL_bsp
+15:05:30 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:05:31 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:06:18 INFO  : Invoking Bootgen: bootgen -image Bootfile.bif -arch zynq -o /home/benjamin/Repositories/PynqDemo/PynqDemoDesign/PynqDemoDesign.sdk/BOOT.bin -w on
+15:06:19 INFO  : Bootgen command execution is done.

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Mon Aug 31 12:02:58 2020
+| Date             : Thu Sep 17 21:30:12 2020
 | Host             : Laptop running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file PynqDemoTop_power_routed.rpt -pb PynqDemoTop_power_summary_routed.pb -rpx PynqDemoTop_power_routed.rpx
 | Design           : PynqDemoTop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.450        |
+| Total On-Chip Power (W)  | 1.454        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.311        |
+| Dynamic (W)              | 1.316        |
 | Device Static (W)        | 0.139        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 68.3         |
-| Junction Temperature (C) | 41.7         |
+| Max Ambient (C)          | 68.2         |
+| Junction Temperature (C) | 41.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.009 |        4 |       --- |             --- |
-| Slice Logic    |     0.009 |     4587 |       --- |             --- |
-|   LUT as Logic |     0.007 |     2060 |     53200 |            3.87 |
-|   CARRY4       |     0.001 |      289 |     13300 |            2.17 |
-|   Register     |    <0.001 |     1433 |    106400 |            1.35 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |      218 |       --- |             --- |
-| Signals        |     0.006 |     2803 |       --- |             --- |
+| Clocks         |     0.010 |        4 |       --- |             --- |
+| Slice Logic    |     0.011 |     4959 |       --- |             --- |
+|   LUT as Logic |     0.009 |     2263 |     53200 |            4.25 |
+|   CARRY4       |     0.001 |      313 |     13300 |            2.35 |
+|   Register     |    <0.001 |     1501 |    106400 |            1.41 |
+|   F7/F8 Muxes  |    <0.001 |       17 |     53200 |            0.03 |
+|   Others       |     0.000 |      227 |       --- |             --- |
+| Signals        |     0.008 |     3016 |       --- |             --- |
 | I/O            |     0.032 |       79 |       125 |           63.20 |
 | PS7            |     1.256 |        1 |       --- |             --- |
 | Static Power   |     0.139 |          |           |                 |
-| Total          |     1.450 |          |           |                 |
+| Total          |     1.454 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.037 |       0.023 |      0.013 |
+| Vccint    |       1.000 |     0.042 |       0.028 |      0.013 |
 | Vccaux    |       1.800 |     0.015 |       0.001 |      0.014 |
 | Vcco33    |       3.300 |     0.010 |       0.009 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,15 +150,15 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| PynqDemoTop                 |     1.311 |
+| PynqDemoTop                 |     1.316 |
 |   Menu                      |     0.002 |
-|   Pong                      |     0.016 |
-|     pong                    |     0.016 |
+|   Pong                      |     0.020 |
+|     pong                    |     0.020 |
 |       clk_enable            |     0.001 |
 |       controller_interface1 |     0.002 |
 |       controller_interface2 |     0.002 |
-|       motion                |     0.002 |
-|       sound                 |     0.008 |
+|       motion                |     0.003 |
+|       sound                 |     0.010 |
 |   ProcessingSystem          |     1.256 |
 |     PS_i                    |     1.256 |
 |       processing_system7_0  |     1.256 |

@@ -61,7 +61,7 @@ signal hit_racket : std_logic;
 signal hit_wall : std_logic;
 signal hit_out : std_logic; 
 
-type state_t is (NoEvent, GameOver, HitWall, HitRacket, HitOut);
+type state_t is (NoEvent, GameOver, HitWall, HitRacket, HitOut, HitRacketWall, HitWallRacket, HitWallOut);
 signal state : state_t := NoEvent;
 
 signal bg_ena : std_logic;
@@ -168,11 +168,28 @@ begin
                     bg_ena <= '0';
                     bg_bass_ena <= '0';
                 end if;
-                if (racket_clr = '1') then 
+                if (hit_wall = '1') then 
+                    state <= HitRacketWall;
+                elsif (racket_clr = '1') then 
                     state <= NoEvent;
                 end if;
+            when HitRacketWall =>
+                debug_o <= "1001";
+                bg_ena <= '1';
+                bg_bass_ena <= '1';
+                wall_ena <= '1';
+                racket_ena <= '1';
+                out_ena <= '0';
+                looser_ena <= '0';
+                if (bg_clr = '1') then 
+                    bg_ena <= '0';
+                    bg_bass_ena <= '0';
+                end if;
+                if (racket_clr = '1') then 
+                    state <= HitWall;
+                end if;
             when HitWall => 
-                debug_o <= "1111";
+                debug_o <= "1010";
                 bg_ena <= '1';
                 bg_bass_ena <= '1';
                 wall_ena <= '1';
@@ -183,8 +200,42 @@ begin
                     bg_ena <= '0';
                     bg_bass_ena <= '0';
                 end if;
-                if (wall_clr = '1') then 
+                if (hit_racket = '1') then 
+                    state <= HitWallRacket;
+                elsif (hit_out <= '1') then 
+                    state <= HitWallOut;
+                elsif (wall_clr = '1') then 
                     state <= NoEvent;
+                end if;
+            when HitWallRacket =>
+                debug_o <= "1011";
+                bg_ena <= '1';
+                bg_bass_ena <= '1';
+                wall_ena <= '1';
+                racket_ena <= '1';
+                out_ena <= '0';
+                looser_ena <= '0';
+                if (bg_clr = '1') then 
+                    bg_ena <= '0';
+                    bg_bass_ena <= '0';
+                end if;
+                if (wall_clr = '1') then 
+                    state <= HitRacket;
+                end if;
+            when HitWallOut =>
+                debug_o <= "1100";
+                bg_ena <= '1';
+                bg_bass_ena <= '1';
+                wall_ena <= '1';
+                racket_ena <= '0';
+                out_ena <= '1';
+                looser_ena <= '0';
+                if (bg_clr = '1') then 
+                    bg_ena <= '0';
+                    bg_bass_ena <= '0';
+                end if;
+                if (wall_clr = '1') then 
+                    state <= HitOut;
                 end if;
             when others =>
                 state <= NoEvent;

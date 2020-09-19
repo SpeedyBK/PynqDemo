@@ -124,7 +124,9 @@ ARCHITECTURE behavior OF pong_top IS
     signal push_button1_i : std_logic;
     
     signal rot_enc2_i     : std_logic_vector(1 downto 0);
-    signal push_button2_i : std_logic;        
+    signal push_button2_i : std_logic;       
+    
+    signal bin_count_1, bin_count_2 : std_logic_vector(6 downto 0); 
 
 BEGIN
 
@@ -139,11 +141,11 @@ VGA_VS <= v_sync_o;
 
 blue_led <= not pmod_c;
 
-rot_enc1_i <= pmod_c(7 downto 6);
+rot_enc1_i <= pmod_c(3) & pmod_c(1);
 push_button1_i <= not pmod_c(5);
 
-rot_enc2_i <= pmod_c(3 downto 2);
-push_button2_i <= not pmod_c(1);
+rot_enc2_i <= pmod_c(2) & pmod_c(0);
+push_button2_i <= not pmod_c(4);
 
 
 
@@ -259,6 +261,8 @@ push_button2_i <= not pmod_c(1);
 			racket_y_pos2_i         => racket_y_pos2,
 			ball_x_i 				=> ball_x,
 			ball_y_i 				=> ball_y,
+            count_1_i               => bin_count_1,
+		    count_2_i               => bin_count_2,
 			h_sync_o 				=> h_sync_o,
 			v_sync_o 				=> v_sync_o,
 			red_o 					=> VGA_R,
@@ -293,8 +297,8 @@ push_button2_i <= not pmod_c(1);
                  push_but2_deb_i  => Npush_but_deb2,
                  seven_seg_leds_o => seven_seg_leds,
                  seven_seg_sel_o  => seven_seg_sel,
-                 count_1_o        => open, -- Debug Output of the game counter 1 in binary
-                 count_2_o        => open, -- Debug Output of the game counter 2 in binary
+                 count_1_o        => bin_count_1, -- Debug Output of the game counter 1 in binary
+                 count_2_o        => bin_count_2, -- Debug Output of the game counter 2 in binary
                  game_over_o      => game_over);
 	
 	nseven_seg_leds_o <= not seven_seg_leds;

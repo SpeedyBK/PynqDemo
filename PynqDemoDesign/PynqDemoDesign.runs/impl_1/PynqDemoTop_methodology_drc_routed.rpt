@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Mon Aug 31 12:02:57 2020
+| Date         : Thu Sep 17 21:30:10 2020
 | Host         : Laptop running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_methodology -file PynqDemoTop_methodology_drc_routed.rpt -pb PynqDemoTop_methodology_drc_routed.pb -rpx PynqDemoTop_methodology_drc_routed.rpx
 | Design       : PynqDemoTop
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 193
+             Violations found: 186
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 3          |
-| LUTAR-1   | Warning          | LUT drives async reset alert  | 22         |
+| LUTAR-1   | Warning          | LUT drives async reset alert  | 15         |
 | TIMING-18 | Warning          | Missing input or output delay | 52         |
 | TIMING-20 | Warning          | Non-clocked latch             | 116        |
 +-----------+------------------+-------------------------------+------------+
@@ -117,47 +117,12 @@ Related violations: <none>
 
 LUTAR-1#14 Warning
 LUT drives async reset alert  
-LUT cell Pong/pong/motion/ball_x[9]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/motion/ball_x_reg[0]/CLR, Pong/pong/motion/ball_x_reg[1]/CLR, Pong/pong/motion/ball_x_reg[2]/CLR, Pong/pong/motion/ball_x_reg[3]/CLR, Pong/pong/motion/ball_x_reg[4]/CLR, Pong/pong/motion/ball_x_reg[5]/CLR, Pong/pong/motion/ball_x_reg[7]/CLR, Pong/pong/motion/ball_x_reg[9]/CLR, Pong/pong/motion/ball_y_reg[0]/CLR, Pong/pong/motion/ball_y_reg[1]/CLR, Pong/pong/motion/ball_y_reg[2]/CLR, Pong/pong/motion/ball_y_reg[3]/CLR, Pong/pong/motion/ball_y_reg[8]/CLR, Pong/pong/motion/ball_y_reg[9]/CLR, Pong/pong/motion/ball_x_reg[6]/PRE (the first 15 of 20 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell Pong/pong/motion/ball_x[10]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/motion/ball_x_reg[0]/CLR, Pong/pong/motion/ball_x_reg[10]/CLR, Pong/pong/motion/ball_x_reg[1]/CLR, Pong/pong/motion/ball_x_reg[2]/CLR, Pong/pong/motion/ball_x_reg[3]/CLR, Pong/pong/motion/ball_x_reg[4]/CLR, Pong/pong/motion/ball_x_reg[5]/CLR, Pong/pong/motion/ball_x_reg[7]/CLR, Pong/pong/motion/ball_x_reg[9]/CLR, Pong/pong/motion/ball_y_reg[0]/CLR, Pong/pong/motion/ball_y_reg[10]/CLR, Pong/pong/motion/ball_y_reg[1]/CLR, Pong/pong/motion/ball_y_reg[2]/CLR, Pong/pong/motion/ball_y_reg[3]/CLR, Pong/pong/motion/ball_y_reg[8]/CLR (the first 15 of 30 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#15 Warning
 LUT drives async reset alert  
-LUT cell Pong/pong/motion/tmp_hit_racket_l[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/motion/tmp_hit_racket_l_reg[0]/CLR, Pong/pong/motion/tmp_hit_racket_l_reg[1]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#16 Warning
-LUT drives async reset alert  
-LUT cell Pong/pong/motion/tmp_hit_racket_r[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/motion/tmp_hit_racket_r_reg[0]/CLR, Pong/pong/motion/tmp_hit_racket_r_reg[1]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#17 Warning
-LUT drives async reset alert  
-LUT cell Pong/pong/motion/tmp_hit_wall[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/motion/tmp_hit_wall_reg[0]/CLR, Pong/pong/motion/tmp_hit_wall_reg[1]/CLR, Pong/pong/motion/tmp_hit_wall_reg[2]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#18 Warning
-LUT drives async reset alert  
-LUT cell Pong/pong/score_display_inst/Spielstandcounter/count_hits[2]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/motion/count_hits_reg[0]/CLR, Pong/pong/motion/count_hits_reg[1]/CLR, Pong/pong/motion/count_hits_reg[2]/CLR, Pong/pong/motion/speed_reg[0]/CLR, Pong/pong/motion/speed_reg[1]/CLR, Pong/pong/motion/speed_reg[2]/CLR, Pong/pong/motion/speed_reg[3]/CLR, Pong/pong/motion/speed_reg[4]/CLR, Pong/pong/motion/speed_reg[5]/CLR, Pong/pong/motion/speed_reg[6]/CLR, Pong/pong/motion/speed_reg[7]/CLR, Pong/pong/motion/speed_reg[8]/CLR, Pong/pong/motion/speed_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#19 Warning
-LUT drives async reset alert  
-LUT cell Pong/pong/sound/Activator/bg_ena_inv_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[1]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[2]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[3]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[4]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[5]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[6]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[7]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[1]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[2]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[3]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[4]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[5]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[6]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[7]/CLR, Pong/pong/sound/Melody_looser/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[0]/PRE (the first 15 of 83 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#20 Warning
-LUT drives async reset alert  
-LUT cell Pong/pong/sound/Activator/bg_ena_inv_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[1]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[2]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[3]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[4]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[5]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[6]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[7]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[1]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[2]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[3]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[4]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[5]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[6]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[7]/CLR, Pong/pong/sound/Melody_out/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[0]/PRE (the first 15 of 83 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#21 Warning
-LUT drives async reset alert  
-LUT cell Pong/pong/sound/Activator/looser_ena_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[1]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[2]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[3]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[4]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[5]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[6]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[7]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[1]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[2]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[3]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[4]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[5]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[6]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[7]/CLR, Pong/pong/sound/Melody_racket/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[0]/PRE (the first 15 of 80 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#22 Warning
-LUT drives async reset alert  
-LUT cell Pong/pong/sound/Activator/looser_ena_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[1]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[2]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[3]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[4]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[5]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[6]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[7]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[1]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[2]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[3]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[4]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[5]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[6]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/count_reg[7]/CLR, Pong/pong/sound/Melody_wall/ADDRESSGENERATOR/ADDRESS_COUNTER/address_o_reg[0]/PRE (the first 15 of 80 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell Pong/pong/score_display_inst/Spielstandcounter/FSM_onehot_state[6]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) Pong/pong/motion/FSM_onehot_state_reg[1]/CLR, Pong/pong/motion/FSM_onehot_state_reg[2]/CLR, Pong/pong/motion/FSM_onehot_state_reg[3]/CLR, Pong/pong/motion/FSM_onehot_state_reg[4]/CLR, Pong/pong/motion/FSM_onehot_state_reg[5]/CLR, Pong/pong/motion/FSM_onehot_state_reg[6]/CLR, Pong/pong/motion/FSM_onehot_state_reg[0]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-18#1 Warning

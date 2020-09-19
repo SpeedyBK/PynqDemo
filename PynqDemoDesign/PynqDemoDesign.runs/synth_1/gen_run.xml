@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1598868047">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1600370872">
   <File Type="VDS-TIMINGSUMMARY" Name="PynqDemoTop_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="PynqDemoTop.dcp"/>
   <File Type="RDS-UTIL-PB" Name="PynqDemoTop_utilization_synth.pb"/>
@@ -44,6 +44,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/Modules/Pong_2020/Score_Display/Binary_to_BCD.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Schreibtisch/Check_Wall.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Schreibtisch/Check_Wall.vhd"/>
+        <Attr Name="ImportTime" Val="1522820302"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -210,6 +218,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Schreibtisch/VGA_Numbers_prom.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Schreibtisch/VGA_Numbers_prom.vhd"/>
+        <Attr Name="ImportTime" Val="1522820300"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/Modules/Pong_2020/Sound_Interface/note_duration_fsm.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -314,6 +330,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/Modules/Pong_2020/pong_toplevel.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Schreibtisch/racket_check.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Schreibtisch/racket_check.vhd"/>
+        <Attr Name="ImportTime" Val="1522785840"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

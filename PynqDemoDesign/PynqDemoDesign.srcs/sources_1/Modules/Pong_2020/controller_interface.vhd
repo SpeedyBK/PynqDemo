@@ -109,6 +109,11 @@ begin
 		end if;
 	end process count_p;
 	
-	racket_y_pos_o <= std_logic_vector(to_unsigned(cnt,10));
+process(clock_i) -- Added a register, to meet timing contraints.
+begin 
+    if rising_edge(clock_i) then 
+	   racket_y_pos_o <= std_logic_vector(to_unsigned(cnt,10));
+    end if;
+end process;
 
 end controller_interface_arch;
